@@ -1,0 +1,1043 @@
+.upperBlueNav{
+    display: flex;
+    align-items: center;
+    width:auto;
+    top: 0;
+    background-color: #0096e6;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'Chianti Bold';
+    src: url(fonts/Chianti\ OSF\ BT\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Chianti Extra Bold';
+    src: url(fonts/Chianti\ XBd\ BT\ Extra\ Bold.ttf);
+}
+
+@font-face{
+    font-family: 'Lato Italic';
+    src: url(fonts/lato-italic.ttf);
+}
+
+.Icons{
+    margin-left: var(--marginLeft);
+}
+
+.Icons>a{
+    color: #75baee;
+}
+
+.Icons>a:hover{
+    color: white;
+}
+
+
+@media screen and (min-width: 1200px){
+    :root {
+        --marginRight: 60px;
+        --marginLeft:60px;
+        --chooseContPadding: 50px;
+        --chiantiBoldfont: 'Chianti Bold';
+        --chiantiExtraBoldfont: 'Chianti Extra Bold';
+        --latoItalicFont: 'Lato Italic';
+      }
+    
+    .imgSlide1, .imgSlide2, .imgSlide3{
+        background: url(images/slide_1.png);
+    }
+
+    .upperBlueNav{
+        justify-content: space-between;
+        height: 50px;
+    }
+    
+     
+    .textInUpperBlueNav{
+        margin-right: var(--marginRight);
+    }
+    
+    .textInUpperBlueNav>span, .textInUpperBlueNav>a{
+        float: right;
+        color: white;
+    }
+    
+    .header-1st-Part, .header-2d-Part{
+        font-size: 40px;
+        font-size: 40px;
+        font-family: 'Chianti Extra Bold';
+    }
+    
+    .header-1st-Part{
+        color: #0095E5 !important;
+    }
+    
+    .header-2d-Part{
+        color: #616262;
+    }
+    
+    .carousel-indicators
+    [data-bs-target]{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    
+    .chooseCont{
+        /* display: flex;
+        flex-direction: column; */
+        background-color: #0096e6;
+        margin-top: 30px;
+        padding-bottom: var(--chooseContPadding);
+    }
+    
+    
+    .containerColumn{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .chooseCont_row1{
+        justify-content: center;
+        display: flex;
+    }
+    
+    
+    .header-welcome{
+        font-family: 'Chianti Bold';
+        color: #0096e6;
+        font-size: 50px;
+    }
+    
+    .header-reason{
+        font-family: 'Chianti Bold';
+        color: white;
+        font-size: 50px;
+        padding-top: var(--chooseContPadding);
+        padding-bottom: 50px;
+    }
+    
+    .header-services{
+        font-family: 'Chianti Bold';
+        color: #0096e6;
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .header2-welcome{
+        font-size: 25px;
+         color:#0096e6;
+    }
+    
+    .welcomeText{
+        font-size: 17px;
+    }
+    
+    
+    .phone-address-container, .timer-container, .address-container {
+        padding-right: 0px !important;
+    }
+    
+    .rel{
+        position: relative;
+    }
+    
+    .infoOnBoard{
+        position: absolute;
+        top: 0;
+        right: 10;
+       
+       
+    }
+    
+    .bookAnAppointmentSpan{
+        font-family: 'Chianti Bold';
+    }
+    
+    .callOpeningHeaders{
+        font-family: 'Chianti Bold';
+        width: auto;
+    }
+    
+    .phoneOpeninghoursInfo{
+        width: auto;
+    }
+    
+    
+    .dentContainer{
+        display: flex;
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    
+    }
+    
+    .dentCont_div1{
+        width: 50%;
+    }
+    
+    .dentCont_div2{
+        display: flex;
+    }
+    
+    
+    .dentCont_div3{
+        display: flex;
+    }
+    
+    
+    
+    .dentCont_inner_img{
+        display: inline;
+        width: auto;
+    }
+    
+    .dentCont_inner_text{
+        display: inline;
+    }
+    
+    .whiteColor{
+        background-color: white;
+    }
+    
+    .separator_gray{
+        margin-bottom: 1px;
+    }
+    
+    .marginLeft{
+        margin-left: var(--marginLeft);
+    }
+    
+    .noPaddingLeft{
+        padding-left: 0px !important;
+    }
+    
+    
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: .5rem;
+    }
+    
+    .grayColor{
+        color: black;
+    }
+    
+    .dropdown-toggle::after {
+        color: gray;
+    }
+    
+    .header1InSlider{
+        font-family: 'Chianti Extra Bold';
+        font-size: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .carousel-caption {
+        color: #fff;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .thirdCarouselCaption{
+    
+        position: absolute;
+        display: flex;
+        top: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+    
+    
+    .welcomeContainer{
+        display: flex;
+        margin-right: var(--marginRight);
+    }
+    
+    .img_welcomeContainer{
+        height: 92%;
+        padding-right: 10px;
+    }
+    
+    
+    .myRow{
+        display: flex;
+        justify-content: space-between;
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+    }
+    
+    .chooseImg{
+        height: 158px;
+    }
+    
+    
+    .myColumn>img:hover{
+        cursor: pointer;
+        opacity: 80%;
+    }
+    
+    .myColumn{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 25%;
+    }
+    
+    .myColumnLeft{
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 25%;
+    }
+    
+    
+    
+    .myColumn>span{
+        color: white;
+        font-size: 18px;
+    }
+    
+    .myColumn>h2{
+        color: white;
+        font-size: 25px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .servicesRow{
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+    }
+    
+    .imgDiv_welcomeContainer{
+        margin-left: var(--marginLeft);
+    }
+    
+    .servicesRow span{
+        color: #0096e6;
+        font-size: 28px;
+    }
+    
+    .serviceCont{
+        margin-top: 30px;
+    }
+    
+    .btnSeeAllServices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        font-family: var(--chiantiExtraBoldfont);
+        font-size: 22px;
+        background-color: #0096e6;
+        color: white;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    
+    .btnSeeAllServices:hover{
+        opacity: 80%;
+        cursor: pointer;
+    }
+
+    .imgSlide1{
+        background: url(images/slide_1.png);
+    }
+
+    .imgSlide2{
+        background: url(images/slide_2.png);
+    }
+
+    .imgSlide3{
+        background: url(images/slide_3.png);
+    }
+    
+    .feedbacksContainer{
+        background-color: #f7f7f7;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    
+    
+    .patientsImg{
+        border-radius: 50%;
+    }
+    
+    .quotesImg{
+        display: flex;
+        justify-content: left;
+    }
+    
+    .patientsColumn span{
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        color: rgb(124, 122, 122);
+    }
+    
+    .patientsColumn{
+        width: 50%;
+    }
+    
+    .patientsNameSpan{
+        font-family: var(--chiantiExtraBoldfont);
+        color: rgb(73, 72, 72);
+    }
+    
+    .dateSpan{
+        font-style: italic;
+        font-family: Segoe UI;
+    }
+    
+    
+    .columnHelp{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .offerItalic {
+        font-family: var(--latoItalicFont);
+        font-size: 30px;
+        color: white;
+    }
+    
+    .headerHelp{
+        font-family: 'Chianti Bold';
+        font-size: 50px;
+        color: white;
+        text-align: left;
+    }
+    
+    
+    .btnBook{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        font-family: var(--chiantiExtraBoldfont);
+        font-size: 22px;
+        background-color: white;
+        color: #0096e6;
+        border-radius: 5px;
+    }
+    
+    .flexAlignCenter{
+        display: flex;
+        align-items: center;
+    }
+    
+    .helpCont {
+        background-color: #0096e6;
+       padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .recentNewsHeader{
+        font-family: var(--chiantiBoldfont);
+        color: #0096e6 !important;
+        font-size: 28px !important;
+    }
+    
+    .patientsColumn span{
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        color: rgb(124, 122, 122);
+        font-size: 18px;
+    }
+    
+    .columnHelp img{
+        padding-bottom: 10px;
+    }
+    
+    .blueColor{
+        color: #0096e6 !important;
+    }
+    
+    footer{
+        background-color: #353535;
+        padding-top: 60px;
+    }
+    
+    .headerInFooter{
+            font-family: 'Chianti Extra Bold';
+            color: white !important;
+            font-size: 20px !important;
+    }
+    
+    .whiteTextCursive{
+        color: #949494;
+        font-style: italic;
+    }
+    
+    .footerColortext{
+        color: #949494;
+    }
+    
+    
+    .footerAfterImgText{
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .myColumnLeft.second{
+        padding-left: 45px;
+    }
+    
+    .myColumnLeft.second span{
+        color: #0096e6;
+    }
+    
+    .white{
+        color: white !important;
+    }
+    
+    .lowestFooter{
+        background: #292929;
+        margin-left: 0;
+        margin-right: 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: var(--marginLeft);
+        padding-right: var(--marginRight);
+    }
+    
+    
+    
+    .iconsGray>a{
+        color: #8a8b8b !important;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    :root {
+        --marginRight: 20px;
+        --marginLeft:20px;
+        --chooseContPadding: 10px;
+        --chiantiBoldfont: 'Chianti Bold';
+        --chiantiExtraBoldfont: 'Chianti Extra Bold';
+        --latoItalicFont: 'Lato Italic';
+      }
+    
+
+    
+    .upperBlueNav{
+        flex-flow: column;
+        justify-content: center;
+    }
+    
+
+    
+    
+    
+    .textInUpperBlueNav>span, .textInUpperBlueNav>a{
+        float: right;
+        color: white;
+    }
+    
+    .header-1st-Part, .header-2d-Part{
+        font-size: 40px;
+        font-size: 40px;
+        font-family: 'Chianti Extra Bold';
+    }
+    
+    .header-1st-Part{
+        
+        color: #0095E5 !important;
+    }
+    
+    .header-2d-Part{
+        color: #616262;
+    }
+    
+    .carousel-indicators
+    [data-bs-target]{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    
+    .chooseCont{
+        background-color: #0096e6;
+        margin-top: 30px;
+        padding-bottom: var(--chooseContPadding);
+    }
+    
+    
+    .containerColumn{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .chooseCont_row1{
+        justify-content: center;
+        display: flex;
+    }
+    
+    
+    .header-welcome{
+        font-family: 'Chianti Bold';
+        color: #0096e6;
+        font-size: 50px;
+    }
+    
+    .header-reason{
+        font-family: 'Chianti Bold';
+        color: white;
+        font-size: 50px;
+        padding-top: var(--chooseContPadding);
+        padding-bottom: 50px;
+    
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+        text-align: center;
+    }
+    
+    .header-services{
+        font-family: 'Chianti Bold';
+        color: #0096e6;
+        font-size: 50px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .header2-welcome{
+        font-size: 25px;
+         color:#0096e6;
+    }
+    
+    .welcomeText{
+        font-size: 17px;
+    }
+    
+    
+    
+    .phone-address-container, .timer-container, .address-container {
+        padding-right: 0px !important;
+    }
+    
+    .rel{
+        position: relative;
+    }
+    
+    .infoOnBoard{
+        position: absolute;
+        top: 0;
+        right: 10;
+       
+       
+    }
+    
+    .bookAnAppointmentSpan{
+        font-family: 'Chianti Bold';
+    }
+    
+    .callOpeningHeaders{
+        font-family: 'Chianti Bold';
+        width: auto;
+    }
+    
+    .phoneOpeninghoursInfo{
+        width: auto;
+    }
+    
+    
+    .dentContainer{
+        display: flex;
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    
+    }
+    
+    
+    .WELCOMEDIV{
+    text-align: center;
+    padding-left: var(--marginLeft);
+    padding-right: var(--marginRight);
+    }
+    
+    .dentCont_inner_img{
+        display: block;
+        width: auto;
+    }
+    
+    .dentCont_inner_text{
+        display: inline;
+    }
+    
+    .whiteColor{
+        background-color: white;
+    }
+    
+    .separator_gray{
+        margin-bottom: 1px;
+    }
+    
+    .marginLeft{
+        margin-left: var(--marginLeft);
+    }
+    
+    .noPaddingLeft{
+        padding-left: 0px !important;
+    }
+    
+    
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: .5rem;
+    }
+    
+    .grayColor{
+        color: black;
+    }
+    
+    .dropdown-toggle::after {
+        color: gray;
+    }
+    
+    .header1InSlider{
+        font-family: 'Chianti Extra Bold';
+        font-size: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .carousel-caption {
+        color: #fff;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .thirdCarouselCaption{
+    
+        position: absolute;
+        display: flex;
+        top: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+    
+    
+    .welcomeContainer{
+        display: flex;
+        flex-direction: column;
+        margin-right: var(--marginRight);
+    }
+    
+    .img_welcomeContainer{
+      
+        width: 100%;
+        
+    }
+    
+    
+    .myRow{
+        display: flex;
+     
+         flex-direction: column;
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+    }
+    
+    .chooseImg{
+        height: 158px;
+    }
+    
+    
+    .myColumn>img:hover{
+        cursor: pointer;
+        opacity: 80%;
+    }
+    
+    .myColumn{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 40px;
+    
+    }
+    
+    .myColumnLeft{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 40px;
+    
+    }
+    
+    
+    
+    .myColumn>span{
+        color: white;
+        font-size: 18px;
+    }
+    
+    .myColumn>h2{
+        color: white;
+        font-size: 25px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .servicesRow{
+        margin-left: var(--marginLeft);
+        margin-right: var(--marginRight);
+    }
+    
+    .imgDiv_welcomeContainer{
+        margin-left: var(--marginLeft);
+    }
+    
+    .servicesRow span{
+        color: #0096e6;
+        font-size: 28px;
+        display: block;
+        text-align: center;
+    }
+    
+    .serviceCont{
+        margin-top: 30px;
+    }
+    
+    .btnSeeAllServices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        font-family: var(--chiantiExtraBoldfont);
+        font-size: 22px;
+        background-color: #0096e6;
+        color: white;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    
+    .btnSeeAllServices:hover{
+        opacity: 80%;
+        cursor: pointer;
+    }
+    
+    .feedbacksContainer{
+        background-color: #f7f7f7;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    
+    
+    .patientsImg{
+        border-radius: 50%;
+    }
+    
+    .quotesImg{
+        display: flex;
+        justify-content: left;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .recentNewsHeader{
+        font-family: var(--chiantiBoldfont);
+        color: #0096e6 !important;
+        font-size: 28px !important;
+        text-align: center !important;
+    }
+    
+    .patientsColumn span{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: rgb(124, 122, 122);
+        font-size: 16px;
+    }
+    
+    .mobileImg{
+        width: 85%;
+    }
+    
+    
+    
+    .patientsNameSpan{
+        font-family: var(--chiantiExtraBoldfont);
+        color: rgb(73, 72, 72);
+    }
+    
+    .dateSpan{
+        font-style: italic;
+        font-family: Segoe UI;
+    }
+    
+    
+    .columnHelp{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 40px;
+    }
+    
+    .offerItalic {
+        font-family: var(--latoItalicFont);
+        font-size: 30px;
+        color: white;
+    }
+    
+    .headerHelp{
+        font-family: 'Chianti Bold';
+        font-size: 50px;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    .btnBook{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        font-family: var(--chiantiExtraBoldfont);
+        font-size: 22px;
+        background-color: white;
+        color: #0096e6;
+        border-radius: 5px;
+    }
+    
+    .flexAlignCenter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .helpCont {
+        background-color: #0096e6;
+       padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    
+    
+    .columnHelp img{
+        padding-bottom: 10px;
+    }
+    
+    .blueColor{
+        color: #0096e6 !important;
+    }
+    
+    footer{
+        background-color: #353535;
+        padding-top: 60px;
+    }
+    
+    .headerInFooter{
+            font-family: 'Chianti Extra Bold';
+            color: white !important;
+            font-size: 20px !important;
+    }
+    
+    .whiteTextCursive{
+        color: #949494;
+        font-style: italic;
+    }
+    
+    .footerColortext{
+        color: #949494;
+    }
+    
+    
+    .footerAfterImgText{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    
+    .myColumnLeft.second span{
+        color: #0096e6;
+    }
+    
+    .white{
+        color: white !important;
+    }
+    
+    .lowestFooter{
+        background: #292929;
+        margin-left: 0;
+        margin-right: 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: var(--marginLeft);
+        padding-right: var(--marginRight);
+    }
+    
+    
+    
+    .iconsGray>a{
+        color: #8a8b8b !important;
+    }
+    }
