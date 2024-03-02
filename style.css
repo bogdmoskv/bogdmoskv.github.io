@@ -1,0 +1,627 @@
+:root{     /* в секции root определяются переменные */
+    --header-height: 90px;   /* создаем переменную header-height */
+}
+
+@font-face {
+    font-family: 'Blooming Elegant';
+    src: url(fonts/Blooming\ Elegant\ Sans.otf);
+}
+
+@font-face {
+    font-family: 'Cedora Bold';
+    src: url(fonts/Cedora-BoldStd.otf);
+}
+
+@font-face {
+    font-family: 'Purissima Bold';
+    src: url(fonts/Purissima\ Bold\ W00\ Regular.ttf);
+}
+
+@keyframes circleAnimation {
+    from {
+        margin-left:0px;
+    }
+
+    to {
+        margin-left:160px;
+    }
+}
+
+.mobile-center{
+    text-align: center !important;
+}
+
+.blue-text-color{
+    color: #0c5adb;
+}
+
+body{
+    height: 3000px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+header{
+    /* height: 90px; */
+    height: var(--header-height);
+    width: auto;
+    background-color: #00237d;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav>img{
+    padding: 28px;
+}
+
+/* .h1-title,  */
+.animation{
+    text-align: center;
+}
+
+.h2-title{
+    font-family: Blooming Elegant;
+    color: #0c5adb;
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.h1-title{
+    font-size: 45px;
+}
+
+.h1-title, .h1-title-solution-image-container{
+    font-family: Cedora Bold;
+}
+
+.h1-title-solution-image-container{
+    color: white;
+}
+
+.card-review{
+    position: relative;
+    width: 320px;
+    /* height: 180px; */
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.image-circle{
+    border-radius: 50%;
+}
+
+.card-review .triangle{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+}
+
+.review-content{
+    color:black;
+}
+
+.it-solution-cards-container .card{
+    width: 22em;
+    height: 15em;
+    position: relative;
+    perspective: 1000px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#progress-bar-30-years{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.it-solution-cards-container .front, .it-solution-cards-container .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.it-solution-cards-container .front{
+    background-color: #0c5adb;
+}
+
+.it-solution-cards-container .back{
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.it-solution-cards-container .card:hover .front{
+    transform: rotateY(180deg);
+}
+
+.it-solution-cards-container .card:hover .back{
+    transform: rotateY(360deg);
+}
+
+.it-solution-cards-container{
+    margin-top: -6em;
+}
+
+.div-for-join-btn{
+    visibility: hidden;
+    height: 0px;
+}
+
+.join, .readMoreBtn{
+    background-color: #0c5adb;
+    color: white;
+}
+
+.readMoreBtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.join2{
+    background-color: white;
+    color: #0c5adb;
+}
+
+.join, .join2{   
+    width: 16rem;
+    height: 4rem;
+    padding: 0.85em 0.75em;
+    border: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+
+.join::before, .join2::before{
+    content: '';
+    background: #00237d;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+    width: 100%;
+    height: 200%;
+    transition: all 0.35s;
+    rotate: 45deg;
+}
+
+/* при наведении на кнопку, применяю стили для псевдоэлемента */
+.join:hover::before, .join2:hover::before{
+    transform: scale(1.5, 2);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transition: all 0.35s;
+}
+
+.join2:hover{
+    color: white;
+}
+
+.info-title{
+    font-family: Cedora Bold;
+}
+
+.animation{
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.line{
+    height: 10px;
+    width: 180px;
+    background-color: #ccc;
+}
+
+.circle{
+    height: 20px;
+    width: 20px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #0c5adb;
+    margin-top: -4.5px;
+
+    animation-name: circleAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.team-card{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.team-card>img, .substrate{
+    width: 255px;
+    height: 306px;
+    margin-left: 10px;
+    margin-right: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.team-card>img{
+    z-index: 5;
+}
+
+.substrate{
+    z-index: 1;
+}
+
+.block{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.post-card, .service-card{
+    border-style: ridge;
+    transition: all 1s;
+    border-color: whitesmoke;
+    border-bottom-width: 3px;
+}
+
+
+.post-card:hover{
+    transform: scale(1.05);
+    border-style: solid;
+    border-color: gray;
+}
+
+.service-card{
+    border-bottom-color: #0c5adb;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #0c5adb;
+}
+
+.team-card:hover .substrate{
+    transform: rotate(-10deg);
+}
+
+.team-card:hover .rectangle{
+    background-color: #00237d;
+}
+
+.team-card:hover .position-title{
+    transform: translateY(-25px);
+    visibility: hidden; /* элемент становится НЕВИДИМЫМ */
+    opacity: 0; /* элемент ПРОЗАЧНЫЙ */
+}
+
+.team-card:hover .icons{
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.substrate{
+    background-color: #0c5adb;
+    position: absolute;
+    transition: all 1s;
+}
+
+
+.rectangle{
+    width: 250px;
+    height: 80px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-color: #0c5adb;
+    position: absolute;
+    top: 233px;
+    left: 40px;
+    transition: all 1s;
+    z-index: 6;
+}
+
+
+
+.rectangle>span{
+    color:white;
+    position: absolute;
+}
+
+.text-white{
+    color: white;
+}
+
+
+span.name-title{
+    font-size: 31px;
+    font-family: 'Purissima Bold';
+    top: 15px;
+    left: 55px;
+}
+
+span.position-title{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    top: 48px;
+    left: 55px;
+    visibility: visible;    /* Изачально элемент ВИДИМЫЙ*/
+    opacity: 1; /* Изначально элемент ВИДИМЫЙ и НЕПРОЗРАЧНЫЙ*/
+    transition: all 0.5s;
+}
+
+span.icons{
+    top: 80px;
+    left: 53px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+span.icons>a{
+    color: white;
+    margin-right: 12px;
+    text-decoration: none;
+}
+
+
+
+.case-study-col{
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden; /* Обрезать изображение, которое выходит за границы карточки*/
+}
+
+.case-study-col>img{
+    width: 100%;  /*делаем для изображения 100% ширины колонки */
+    transition: all 1s; /* Добавляем плавный переход при изменении масштаба */
+}
+
+.case-study-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0;  /* изначально делаем непрозрачным */
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.case-study-overlay-text-block{
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    height: 30%;
+    background-color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+/* При наведении на колонку, применяем стили для картинки, которая лежит в  case-study-col*/
+.case-study-col:hover > img{
+    transform: scale(1.05); /* Увеличить масштаб изображения при наведении на карточку */
+}
+
+/*При наведении на колонку, устанавливаем прозрачность для case-study-overlay*/
+.case-study-col:hover .case-study-overlay{
+    opacity: 0.5; /*при наведении, устанавливаем прозрачность в 0.5*/
+}
+
+.case-study-col:hover .case-study-overlay-text-block {
+    opacity: 1;
+    top: 35%;
+}
+
+
+
+.cn-bg-img{
+    /*height: 100vh;  устанавливаем высоту изображения на 100% от ВЫСОТЫ ВИДИМОЙ
+    области экрана*/
+
+    /* height: calc(100vh - var(--header-height)); */
+    height: 100vh;
+    width: 100%; /* устанавливаем ширину изображения на 100% от ширины родительского контейнера */
+
+    object-fit: cover; /*обеспечивает сохранение пропорций изображения и заполнение
+    всей видимой области, при этом некоторая часть изображения может быть обрезана*/
+}
+
+.cn-bg-overlay-img{
+    width: 100%
+}
+
+.left-col-ic{
+    align-self: flex-end;
+    text-align: center;
+}
+
+.right-col-ic{
+    color: white;
+    align-self:center;
+}
+
+.arrow-circle{
+    background-color: white;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+    text-align: center;
+    line-height: 6em;
+    position: relative; /*для пседоэлемента*/
+}
+
+.arrow-circle a{
+    text-decoration: none;
+    font-size: 4em;
+    color: #0c5adb;
+    background-color: transparent;
+}
+
+
+.ripple-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;  
+    animation: ripple-blue 1.5s linear infinite;
+}
+
+.ripple-circle-large{
+    width: 8em;
+    height: 8em;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.ripple-circle-medium{
+    width: 7em;
+    height: 7em;
+    background-color: rgba(255,255,255, 0.4);
+}
+
+.ripple-circle-small{
+    width: 5em;
+    height: 5em;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+
+
+.it-solution-image-container{
+    background: url(images/bg2.jpg) center/cover no-repeat;
+    height: 470px;
+    overflow: hidden; 
+}
+
+/* Перепроверить высоту, 100vh на большом мониторе выглядит не очень */
+
+.image-container{
+    background: url(images/cn-bg.jpg) center/cover no-repeat;
+    overflow: hidden;   /* для обрезки содержимого, которое выходит за границы контейнера*/
+    overflow-x: hidden;
+}
+
+.image-container .container-fluid, .image-container .row{
+    height: 100vh;
+}
+
+
+
+.testi-bg-img-container{
+    background: url(images/testi-bg.jpg) center/cover no-repeat;
+    /*overflow: hidden;    для обрезки содержимого, которое выходит за границы контейнера*/
+    /* overflow-x: hidden; */
+}
+
+.mt-8{
+    margin-top: 80px;
+}
+
+.pb-8{
+    padding-bottom: 80px;
+}
+
+/* для планшетов */
+@media (min-width: 481px) and (max-width: 830px){
+    .rectangle{
+        left: 22px;
+    }
+
+    .cn-bg-overlay-img{
+        width: 80%
+    }
+}
+
+/* для пк */
+@media (min-width: 821px){
+    .rectangle{
+        left: 10px;
+    }
+
+    .div-for-join-btn{
+        visibility: visible;
+        height: auto;
+    }
+
+    .cn-bg-overlay-img{
+        width: auto
+    }
+    
+    .left-col-ic{
+        text-align: right;
+    }
+
+    .image-container{
+        height: 800px;
+    }
+
+    .testi-bg-img-container{
+        height: auto;
+    }
+
+    .cn-bg-img{
+        height: 800px;
+    }
+
+    .image-container .container-fluid, .image-container .row{
+        height: 800px;
+    }
+
+    .mobile-center{
+        text-align: start !important;
+    }
+
+    #progress-bar-30-years{
+        justify-content: flex-start;
+    }
+
+    .h1-title-solution-image-container{
+        font-size: 2.7em;
+    }
+}
+
+
+@keyframes ripple-blue{
+    0%{
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
