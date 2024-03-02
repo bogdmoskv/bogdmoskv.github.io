@@ -1,25 +1,22 @@
-var first = document.querySelector('.imgSlide1');
-var second = document.querySelector('.imgSlide2');
-var third = document.querySelector('.imgSlide3');
-let scrWidth = $(window).width();
-setImage(scrWidth);
+function convertToJap(){
+    const ukrTimeInput = document.getElementById('ukrTime').value;
+    const [hour, minute] = ukrTimeInput.split(':');
+    const ukrHour = parseInt(hour);
+    const japHour = (ukrHour + 7) %24;
+    const japTime = `${japHour}:${minute}`;
+    document.getElementById('japTime').value = japTime;
+}
 
-function setImage(scrWidth){
-    if(scrWidth < 1200){
-        first.src="images/phone_slide1.png"
-        second.src="images/phone_slide1.png"
-        third.src="images/phone_slide1.png"
-    }
-    if(scrWidth > 1200){
-        first.src="images/slide_1.png"
-        second.src="images/slide_2.png"
-        third.src="images/slide_3.png"
-    }
-};
-   
+function convertToUkr(){
+    const japTimeInput = document.getElementById('japTime').value;
+    const [hour, minute] = japTimeInput.split(':');
+    const japHour = parseInt(hour);
+    const ukrHour = (japHour - 7 + 24)%24;
+    const ukrTime = `${ukrHour}:${minute}`;
+    document.getElementById('ukrTime').value = ukrTime;
+}
 
-
-  $(window).resize(function() {
-    var scrWidth = $(window).width();
-    setImage(scrWidth);
-});
+function clearFields(){
+    document.getElementById('ukrTime').value = '';
+    document.getElementById('japTime').value = '';
+}
