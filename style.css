@@ -355,6 +355,9 @@ nav>img{
     color: white;
 }
 
+.text-lightgray{
+    color: lightgray;
+}
 
 span.name-title{
     font-size: 31px;
@@ -387,6 +390,29 @@ span.icons>a{
     text-decoration: none;
 }
 
+.icons-2 a{
+    color: white;
+    margin-right: 12px;
+    text-decoration: none;
+}
+
+.icons-2 a:hover{
+    color: blue;
+}
+
+.services-ul{
+    list-style-type: "—   ";
+    color: white;
+}
+
+.services-ul li{
+    margin-top: 10px;
+}
+
+hr{
+    border-color: white;
+    border-width: 2px;
+}
 
 
 .case-study-col{
@@ -539,6 +565,23 @@ span.icons>a{
     height: 100vh;
 }
 
+.slider-container{
+    overflow: hidden; 
+    overflow-x: hidden;
+    height: auto;
+}
+
+.slide-1{
+    background: url(images/rs-slider1.jpg) center/cover no-repeat;
+}
+
+.slide-2{
+    background: url(images/slider-1.png) center/cover no-repeat;
+}
+
+.slide-3{
+    background: url(images/slider-2.png) center/cover no-repeat;
+}
 
 
 .testi-bg-img-container{
@@ -553,6 +596,21 @@ span.icons>a{
 
 .pb-8{
     padding-bottom: 80px;
+}
+
+footer{
+    height: auto;
+    background-color: rgb(17, 26, 58);
+}
+
+.follow-us-ref{
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.follow-us-ref:hover{
+    color: blue;
 }
 
 /* для планшетов */
@@ -587,6 +645,10 @@ span.icons>a{
 
     .image-container{
         height: 800px;
+    }
+
+    .slider-container{
+        height: 700px;
     }
 
     .testi-bg-img-container{
