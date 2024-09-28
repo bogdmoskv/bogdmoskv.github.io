@@ -114,11 +114,11 @@
 }
 
 .service-sidebar-image{
-    background-image: url(/Fre0n0.github.io/images/service-sidebar.jpg);
+    background-image: url(../images/service-sidebar.jpg);
 }
 
 .service-sidebar2-image{
-    background-image: url(/Fre0n0.github.io/images/service-sidebar1.jpg);
+    background-image: url(../images/service-sidebar1.jpg);
 }
 
 .service-sidebar-image, .service-sidebar2-image{
@@ -182,7 +182,7 @@
 
 .customs-clearance-1{
     position: relative;
-    background: url(/Fre0n0.github.io/images/customs-clearance-1.jpg) center/cover no-repeat;
+    background: url(../images/customs-clearance-1.jpg) center/cover no-repeat;
     overflow-x: hidden;
     overflow-y: hidden;
     background-repeat: repeat-y;

@@ -235,12 +235,12 @@ p{
 
 
 .image-container-1{
-    background: url(/Fre0n0.github.io/images/cn-bg.jpg) center/cover no-repeat;  
+    background: url(images/cn-bg.jpg) center/cover no-repeat;  
 }
 
 .image-container-2{
     position: relative;
-    background: url(/Fre0n0.github.io/images/customs-clearence-services.jpg) center/cover no-repeat;  
+    background: url(images/customs-clearence-services.jpg) center/cover no-repeat;  
 }
 
 .image-container-2::before{
