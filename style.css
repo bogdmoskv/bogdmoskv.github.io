@@ -1,235 +1,425 @@
-header {
-    background-color: #00237d;
-    width: auto;
-    top: 0;
-    position: sticky;
-    z-index: 10;
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-@font-face {
-    font-family: "Blooming Elegant";
-    src: url(Fonts/Blooming\ Elegant\ Sans.otf);
+.header{
+    background-color: rgb(36, 17, 131);
+    font-size: large;
 }
 
-@font-face {
-    font-family: "Cedora Bold";
-    src: url(Fonts/Cedora-BoldStd.otf);
+.header__text-block_color-white,
+.color-white{
+    color:white
 }
 
-@font-face {
-    font-family: "Purisma Bold";
-    src: url(Fonts/Purissima\ Bold\ W00\ Regular.ttf);
+.logo-image{
+    max-width: 15vw;
+}
+/* 
+.navbar-nav{
+    margin-left: 20vw;
+} */
+
+.nav-item{
+    color: rgb(36, 17, 131);
 }
 
-.text-white {
+.text-blue{
+    color: rgb(36, 17, 131) !important;
+    font-weight: 500;
+}
+
+.navbar li a:hover{
+    color: rgb(7, 215, 173) !important;
+}
+
+.header__icon:hover{
+    color: rgb(7, 215, 173);
+    cursor: pointer;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(31, 79, 97, 0);
+}
+
+.slide-2{
+    background: url(images/cargo.jpg) center/cover no-repeat;
+}
+
+.slide-1{
+    background: url(images/ship.jpg) center/cover no-repeat;
+}
+
+.slide-3{
+    background: url(images/truck1.jpg) center/cover no-repeat;
+}
+
+.slide-4{
+    background: url(images/plane1.jpg) center/cover no-repeat;
+}
+
+.slider-container{
+    height: 700px;
+}
+
+.animated-button{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.7s ease, transform 1.7s ease;
+    animation: slideIn 2.5s ease forwards;
+}
+
+.animated-heading-1{
+    opacity: 0;
+    animation: fadeIn1 4s ease forwards;
+}
+
+.animated-heading-2{
+    transition: opacity 4s ease, transform 4s ease;
+    animation: slideIn 5s ease forwards;
+}
+
+.animated-heading-2 span,
+.animated-heading-1 span{
+    /* background-color: rgb(11, 63, 168); */
+    font-size: 50px;
     color: white;
 }
 
-.mt-8 {
-    margin-top: 80px;
+.animated-heading-3{
+    transition: opacity 3s ease, transform 3s ease;
+    animation: slideIn 4s ease forwards;
 }
 
-.pb-8 {
-    padding-bottom: 80px;
+@keyframes fadeIn1{
+    from{
+        opacity: 0; /* Начальная непрозрачность (НЕВИДИМО) */
+    }
+    to{
+        opacity: 1;
+    }
 }
 
-.team-card>img,
-.team-card__substrate {
-    width: 255px;
-    height: 306px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+/* .carousel-item__text-block{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    margin-left: 25%;
+} */
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.team-card {
-    margin-bottom: 40px;
+
+.branded-button{
+    background: none;
+    color: white;
+    width: 16rem;
+    height: 4rem;
+    padding: 0.85em 0.75em;
+    border: 2px solid #0c5adb;
+    border-radius: 25px;
     position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.35s;
 }
 
-.team-card>img {
-    z-index: 2;
-}
-
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.team-card__substrate {
-    background-color: #0c5adb;
+.branded-button::before{
+    content: '';
+    background: #0c5adb;
     position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+    width: 100%;
+    height: 200%;
+    transition: all 0.35s;
+    rotate: 45deg;
+}
+
+.branded-button:hover::before{
+    transform: scale(1.5, 2);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transition: all 0.35s;
+}
+
+.image1{
+    max-width: 100%;
+}
+
+/* rem - кратное размеру шрифта корневого элемента (html)
+1.2rem - в 1.2 раза больше шрифт, установленного в корневом элементе.
+em - относительная единица. Является кратным разным шрифтам родительского  элемента.*/
+p{
+    font-size: 1,2rem;
+}
+
+.service-card{
+    border-style: ridge;
     transition: all 1s;
+    border-color: whitesmoke;
+    border-bottom-width: 3px;
+    border-bottom-color: #0c5adb;
+    height: 100%;
+}
+
+.carousel-indicators [databstarget]{
+    background-color: #0c5adb;
+}
+
+.service-card__image{
+    width: 100%;
+}
+
+.blue-text-color{
+    color: #0c5adb
+}
+
+.px-50{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.circle{
+    height: 20px;
+    width: 20px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #0c5adb;
+    margin-top: -4.5px;
+
+    animation-name: circleAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circleAnimation {
+    from {
+        margin-left:0px;
+    }
+
+    to {
+        margin-left:160px;
+    }
+}
+
+.line{
+    height: 10px;
+    width: 180px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.image-container-1, .image-container-2{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-repeat: repeat-y;
+    height: auto;
+}
+
+
+.image-container-1{
+    background: url(/Fre0n0.github.io/images/cn-bg.jpg) center/cover no-repeat;  
+}
+
+.image-container-2{
+    position: relative;
+    background: url(/Fre0n0.github.io/images/customs-clearence-services.jpg) center/cover no-repeat;  
+}
+
+.image-container-2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.team-card:hover .team-card__substrate {
-    transform: rotate(-10deg);
+.image-container-1 .container-fluid, .image-container-1 .row{
+    height: auto;
 }
 
+/* .left-col-ic{
+    align-self: flex-end;
+    text-align: center;
+} */
 
-.team-card__paralelogram {
+.text-align-justify{
+    text-align: justify;
+}
+
+.advantage-icon{
+    width: 50%;
+}
+
+#display, #display1, #display2, #display3{
+    font-size: 70px;
+}
+
+.achievement-card{
+    z-index: 2;
+}
+
+.record-card{
     background-color: #0c5adb;
-    position: absolute;
-    top: 240px;
-    width: 220px;
-    height: 70px;
-    z-index: 6;
-    clip-path: polygon(20% 0%, 95% 0%, 75% 100%, 0% 100%);
-}
-
-.team-card__paralelogram span {
-    color: white;
-    position: absolute;
-}
-
-.team-card__name-title {
-    font-size: 26px;
-    font-family: "Purisma Bold";
-    top: 12px;
-    left: 55px;
-}
-
-.team-card__position-title {
-    font-size: 17px;
-    font-family: "Noto Sans", sans-serif;
-    top: 40px;
-    left: 53px;
-    visibility: visible;
-    /*Изначально элемент видимый */
-    opacity: 1;
-    transition: all 0.5s;
-}
-
-.team-card:hover .team-card__position-title {
-    transform: translateY(-24px);
-    visibility: hidden;
-    opacity: 0;
-}
-
-.team-card__Icons {
-    top: 80px;
-    left: 53px;
-    visibility: hidden;
-    opacity: 0;
-
-}
-
-.team-card:hover .team-card__Icons {
-    top: 40px;
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.5s;
-}
-
-.team-card__Icons a {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-
-.team-card__famous-people {
+    clip-path: circle(50% at 50% 50%);
+    height: 87px;
+    width: 87px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.testi-bg-img-container__name-title {
-    font-family: "Noto Sans", sans-serif;
+.record-card-border{
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 67px;
+    width: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
 }
 
-.testi-bg-img-container__name-title,
-.testi-bg-img-container__main-title {
+.record-card-border:hover{
+    border: 3px solid #0c5adb;
+    height: 87px;
+    width: 87px;
+    text-align: center;
+}
+
+.triangle{
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: #0c5adb;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+
+.image-container-3{
+    background: url(/Fre0n0.github.io/images/ct_bg.jpg) center/cover no-repeat;
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 600px;
+}
+
+.image-container-4{
+    background-color: whitesmoke;
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 500px;
+}
+
+p{
+    font-size: 115%;
+}
+
+.circle-icon{
+    border-radius: 50%;
+    background-color: #07D7AD;
+    width: 80px;
+    height: 80px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 1s;
+}
+
+.circle-icon i{
     color: white;
+    font-size: 175%;
 }
 
-.text-about__people {
-    font-size: 13px;
+.circle-icon:hover{
+    width: 90px;
+    height: 90px;
+
 }
 
-.text-name {
-    font-family: "Noto Sans", sans-serif;
-    position: relative;
-    left: 145px;
-    top: 10px;
+.circle-icon:hover i{
+    color: gray;
 }
 
-.text-profession {
-    position: relative;
-    font-family: "Purisma Bold";
-    top: 30px;
-    left: 68px;
-    font-size: 20px;
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
 }
 
-.card-review__triangle {
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 0;
-    bottom: -20px;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #fff;
-}
-
-
-/* 
-    center - изображение должно быть выровнено по центру контейнера
-    cover - указывает, что изображение должно быть масштабировано так,
-        чтобы покрыть всю доступную область, при этом сохраняя свои пропорции.
-        Если пропорции изображения отличаются от пропорций контейнера,
-        изображение будет обрезано так, чтобы оно полностью покрывало 
-        контейнер без искажения
-
-    no-repeat указывает, что фоновое изображение не должно повторяться.
-    Т.е. изображение будет отображено только один раз, без повторений, 
-    даже если размер контейнера больше размера изображения
-*/
-.testi-bg-img-container {
-    background: url(Assets/testi-bg.jpg) center/cover no-repeat;
-    height: auto;
-}
-
-.card-review {
-    position: relative;
-    width: 320px;
-    height: auto;
-    background-color: #fff;
+.grid-item{
     padding: 20px;
 }
 
-.image-circle{
-    border-radius: 50%;
+.grid-container1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
 }
 
-.progressBar{
-    position: relative;
-    z-index: -1;    
+.text-size{
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.progress-bar__line{
-    content: '';
-    display: block;
-    width: 120px;
-    border-top: 7px #cbbdeb solid;
-    border-radius: 2px;
-    position: absolute;
-    z-index: -1;
-}
-
-.progress-bar__circle{
-    background: #0c59d1;
-    border-radius: 50%;
-    height: 1em;
-    width: 1em;
-    position: absolute;
-    top: -10px;
-    animation: move-circle-in-progress-bar 2s infinite;
-}
-
-
-@keyframes move-circle-in-progress-bar {
-    0%{
-        transform: translateX(0);
+@media (max-width: 768px){
+    .logo-image{
+        max-width: 60vw;
     }
-    100%{
-        transform: translateX(110px);
+
+    .slider-container{
+        overflow: hidden;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .px-50{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 769px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
     }
 }
