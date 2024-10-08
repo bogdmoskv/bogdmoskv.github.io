@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/headerStyle.css">
 </head>
 
 <body>
@@ -85,19 +86,34 @@
                     <li class="nav-item">
                         <a class="nav-link text-blue text-center" href="#">КОНТАКТИ</a>
                     </li>
-                    <!-- <li>
-                        <img src="../images/ukrainianFlag.png" width="20">
-                    </li> -->
-                    
 
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle dropdown-button" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="ukrainian-flag__icon" src="../images/ukrainianFlag.png" width="20">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item dropdown-item-icon" href="#">
+                                        <img class="ukrainian-flag__icon" src="../images/ukrainianFlag.png" width="20" data-value="ukrainian">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-item-icon" href="#">
+                                        <img class="ukrainian-flag__icon" src="../images/americanFlag.png" width="20" data-value="american">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                <!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
+
             </div>
         </div>
     </nav>
+
+    <!-- <script src="../scripts/header.js"></script> -->
 </body>
 
 </html>

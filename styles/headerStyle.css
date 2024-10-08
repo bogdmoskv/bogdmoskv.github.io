@@ -1,0 +1,12 @@
+.ukrainian-flag__icon{
+    margin-top: -4px;
+}
+
+.dropdown-button{
+    background-color: #d0e3f7 !important;
+}
+
+.dropdown-menu{
+    --bs-dropdown-min-width: 4rem;
+    --bs-dropdown-padding-y: 0.2rem;
+}

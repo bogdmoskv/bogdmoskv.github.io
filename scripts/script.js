@@ -12,6 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownMenu.classList.remove('show');
         });
     });
+
+
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event){
+            console.log('Icon click');
+            alert("Icon click");
+        });
+    });
 });
 
 
