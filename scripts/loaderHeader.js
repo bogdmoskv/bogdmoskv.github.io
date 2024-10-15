@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //получаем текущий выбранный язык из localStorage
     const selectedLanguage = localStorage.getItem('selectedLanguage');
 
+
+
     //Отображаем контент в зависимости от выбранного языка
     function updateContentDisplay(language) {
         //находим все элементы с классом, содержащим 'content-'
@@ -38,6 +40,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    //функция для установки пути к изображению в кнопке
+    function updateFlagIcon(language){
+        const buttonImg = document.querySelector('.dropdown-button img')
+        let flagSrc; 
+
+        switch(language){
+            case 'ukrainian':
+                flagSrc = '../images/ukrainianFlag.png';
+                break;
+            case 'american':
+                flagSrc = '../images/americanFlag.png';
+                break;
+            default:
+                flagSrc = '../images/ukrainianFlag.png';
+                break;
+        }
+
+        buttonImg.setAttribute('src', flagSrc);
+    }
+
 
     fetch('../elements/header.html')
         .then(response => response.text())
@@ -46,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             //вызываем функцию для обновления отображения контента
             updateContentDisplay(selectedLanguage);
+            updateFlagIcon(selectedLanguage);
 
             const dropdownItems = document.querySelectorAll('.dropdown-item-icon');
             const buttonImg = this.documentElement.querySelector('.dropdown-button img')
