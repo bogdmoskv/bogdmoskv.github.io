@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownItems = document.querySelectorAll('.dropdown-item');
 
     dropdownItems.forEach(item => {
-        item.addEventListener('click', function(event){
+        item.addEventListener('click', function (event) {
             console.log('Icon click');
             alert("Icon click");
         });
@@ -25,15 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function createTimer(counterId, maxCount, interval, suffix) {
+function createTimer(element, maxCount, interval, suffix) {
     var cnt = 0;
     var timer = window.setInterval(function () {
         cnt++;
 
         if (cnt === maxCount && suffix) {
-            document.getElementById(counterId).innerHTML = cnt + suffix;
+            element.innerHTML = cnt + suffix;
         } else {
-            document.getElementById(counterId).innerHTML = cnt;
+            element.innerHTML = cnt;
         }
 
         if (cnt == maxCount) {
@@ -42,10 +42,46 @@ function createTimer(counterId, maxCount, interval, suffix) {
     }, interval);
 }
 
-createTimer('display', 140, 28);
-createTimer('display1', 20, 200);
-createTimer('display2', 40, 100, 'K');
-createTimer('display3', 897, 0.01);
+
+let selectedLanguage = localStorage.getItem('selectedLanguage');
+if (!selectedLanguage) {
+    selectedLanguage = 'ukrainian';
+    localStorage.setItem('selectedLanguage', selectedLanguage);
+}
+
+//Выбираем все элементы, названия которых начинаются с display
+const displays = document.querySelectorAll('[class^="display"]');
+
+const startIndex = selectedLanguage === "ukrainian" ? 0 : 4; //0-3 для укр, 4-7 для англ
+const endIndex = startIndex + 4;
+
+for (let i = startIndex; i < endIndex; i++) {
+    if (i < displays.length) {
+        const displ = displays[i];
+        const className = displ.className;
+        let maxCount, interval, suffix;
+
+        displ.style.display = 'block';
+        if (className === "display1") {
+            maxCount = 20;
+            interval = 200;
+        } else if (className === "display2") {
+            maxCount = 40;
+            interval = 100;
+            suffix = 'K';
+        } else if (className === "display3") {
+            maxCount = 897;
+            interval = 0.01;
+        } else { //default: display
+            maxCount = 140;
+            interval = 28;
+        }
+
+        createTimer(displ, maxCount, interval, suffix);
+    }
+}
+
+
 
 document.querySelector('#formButton').addEventListener('click', function (event) {
     event.preventDefault(); //предотвращаем стандартное поведение отправки формы

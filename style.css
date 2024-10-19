@@ -271,7 +271,7 @@ p{
     width: 50%;
 }
 
-#display, #display1, #display2, #display3{
+.display, .display1, .display2, .display3{
     font-size: 70px;
 }
 

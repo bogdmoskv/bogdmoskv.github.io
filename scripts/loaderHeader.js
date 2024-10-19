@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //получаем текущий выбранный язык из localStorage
-    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    let selectedLanguage = localStorage.getItem('selectedLanguage');
 
 
 
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //функция для установки пути к изображению в кнопке
-    function updateFlagIcon(language){
+    function updateFlagIcon(language) {
         const buttonImg = document.querySelector('.dropdown-button img')
-        let flagSrc; 
+        let flagSrc;
 
-        switch(language){
+        switch (language) {
             case 'ukrainian':
                 flagSrc = '../images/ukrainianFlag.png';
                 break;
@@ -58,6 +58,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         buttonImg.setAttribute('src', flagSrc);
+    }
+
+
+    function createTimer(element, maxCount, interval, suffix) {
+        var cnt = 0;
+        var timer = window.setInterval(function () {
+            cnt++;
+
+            if (cnt === maxCount && suffix) {
+                element.innerHTML = cnt + suffix;
+            } else {
+                element.innerHTML = cnt;
+            }
+
+            if (cnt == maxCount) {
+                window.clearInterval(timer);
+            }
+        }, interval);
     }
 
 
@@ -100,14 +118,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     //обновляем изображение в кнопке на выбранную иконку
                     buttonImg.setAttribute('src', imgSrc);
-                    // alert("Icon click with data-value: " + dataValue);
 
                     localStorage.setItem('selectedLanguage', dataValue);
 
-                    //перезагрузка страницы для применения нового языка
-                    //location.reload();
-
                     updateContentDisplay(dataValue);
+                    
+                    selectedLanguage = localStorage.getItem('selectedLanguage');
+                    const displays = document.querySelectorAll('[class^="display"]');
+
+                    const startIndex = selectedLanguage === "ukrainian" ? 0 : 4; //0-3 для укр, 4-7 для англ
+                    const endIndex = startIndex + 4;
+
+                    for (let i = startIndex; i < endIndex; i++) {
+                        if (i < displays.length) {
+                            const displ = displays[i];
+                            const className = displ.className;
+                            let maxCount, interval, suffix;
+
+                            displ.style.display = 'block';
+                            if (className === "display1") {
+                                maxCount = 20;
+                                interval = 200;
+                            } else if (className === "display2") {
+                                maxCount = 40;
+                                interval = 100;
+                                suffix = 'K';
+                            } else if (className === "display3") {
+                                maxCount = 897;
+                                interval = 0.01;
+                            } else { //default: display
+                                maxCount = 140;
+                                interval = 28;
+                            }
+
+                            createTimer(displ, maxCount, interval, suffix);
+                        }
+                    }
+
+
                 });
             });
 
