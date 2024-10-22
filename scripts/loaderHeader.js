@@ -122,39 +122,65 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('selectedLanguage', dataValue);
 
                     updateContentDisplay(dataValue);
-                    
+
                     selectedLanguage = localStorage.getItem('selectedLanguage');
-                    const displays = document.querySelectorAll('[class^="display"]');
 
-                    const startIndex = selectedLanguage === "ukrainian" ? 0 : 4; //0-3 для укр, 4-7 для англ
-                    const endIndex = startIndex + 4;
 
-                    for (let i = startIndex; i < endIndex; i++) {
-                        if (i < displays.length) {
-                            const displ = displays[i];
-                            const className = displ.className;
-                            let maxCount, interval, suffix;
+                    //определяем наш наблюдатель
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            //если элемент виден в данный момент
+                            if (entry.isIntersecting) {
+                                //запускаем таймеры, когда элемент становится видимым
 
-                            displ.style.display = 'block';
-                            if (className === "display1") {
-                                maxCount = 20;
-                                interval = 200;
-                            } else if (className === "display2") {
-                                maxCount = 40;
-                                interval = 100;
-                                suffix = 'K';
-                            } else if (className === "display3") {
-                                maxCount = 897;
-                                interval = 0.01;
-                            } else { //default: display
-                                maxCount = 140;
-                                interval = 28;
+                                //Выбираем все элементы, названия которых начинаются с display
+                                const displays = document.querySelectorAll('[class^="display"]');
+
+                                const startIndex = selectedLanguage === "ukrainian" ? 0 : 4; //0-3 для укр, 4-7 для англ
+                                const endIndex = startIndex + 4;
+
+                                for (let i = startIndex; i < endIndex; i++) {
+                                    if (i < displays.length) {
+                                        const displ = displays[i];
+                                        const className = displ.className;
+                                        let maxCount, interval, suffix;
+
+                                        displ.style.display = 'block';
+                                        if (className === "display1") {
+                                            maxCount = 20;
+                                            interval = 200;
+                                        } else if (className === "display2") {
+                                            maxCount = 40;
+                                            interval = 100;
+                                            suffix = 'K';
+                                        } else if (className === "display3") {
+                                            maxCount = 897;
+                                            interval = 0.01;
+                                        } else { //default: display
+                                            maxCount = 140;
+                                            interval = 28;
+                                        }
+
+                                        createTimer(displ, maxCount, interval, suffix);
+                                    }
+                                }
+
+                                //останавливаем наблюдение, чтобы не запускать таймеры повторно
+                                observer.unobserve(entry.target);
                             }
+                        });
+                    }, {
+                        threshold: 0.1 //запускается, когда хотя бы 10% элемента видно
+                    });
 
-                            createTimer(displ, maxCount, interval, suffix);
-                        }
+
+                    const imgContainers2 = document.querySelectorAll('.image-container-2');
+
+                    if (imgContainers2.length > 0) {
+                        imgContainers2.forEach(imgContainer => {
+                            observer.observe(imgContainer);
+                        });
                     }
-
 
                 });
             });
