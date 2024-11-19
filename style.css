@@ -430,6 +430,104 @@ p {
     font-size: 125%;
 }
 
+/* .contact-us-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+} */
+
+
+.contact-us-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.contact-us-container.column-layout{
+    flex-direction: column;
+}
+
+.contact-text{
+    font-size: 14px;
+    color: black;
+    background-color: rgba(233, 238, 244, 0.6);
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 1s;
+}
+
+.contact-us-button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(174, 114, 231);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.messenger-icons{
+    display: none;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+    flex-direction: column;
+}
+
+.messenger-icons i{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.fa-viber{
+    background-color: rgb(102, 92, 172);
+}
+
+.fa-whatsapp{
+    background-color: limegreen;
+}
+
+.messenger-icons a{
+    text-decoration: none;
+}
+
+.messenger-icons.show{
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ??? подправить название */
+.hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
 
 @media (max-width: 768px) {
     .logo-image {
