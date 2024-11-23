@@ -486,8 +486,13 @@ p {
     gap: 10px;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s all;
+    transition: all 0.1s;
     flex-direction: column;
+}
+
+.text-justify{
+    text-align: justify;
+    text-align-last: center;
 }
 
 .messenger-icons i{
@@ -499,7 +504,7 @@ p {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.1s;
     text-align: center;
 }
 
