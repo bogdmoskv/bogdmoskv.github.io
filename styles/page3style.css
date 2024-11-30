@@ -190,15 +190,15 @@
 }
 
 .customs-clearance-1{
-    background: url(../images/customs-clearance-1.jpg) center/cover no-repeat;
+    background: url(../images/sea-freight-forwarding-services.jpg) center/cover no-repeat;
 }
 
 .customs-clearance-2{
-    background: url(../images/service8.jpg) center/cover no-repeat;
+    background: url(../images/service_7.jpg) center/cover no-repeat;
 }
 
 .customs-clearance-3{
-    background: url(../images/customs-clearance.jpg) center/cover no-repeat;
+    background: url(../images/air-freight-forwarding-services.jpg) center/cover no-repeat;
 }
 
 .customs-clearance-1::before, .customs-clearance-2::before, .customs-clearance-3::before{

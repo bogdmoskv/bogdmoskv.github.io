@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
     //получаем текущий выбранный язык из localStorage
     let selectedLanguage = localStorage.getItem('selectedLanguage');
 
-
-
     //Отображаем контент в зависимости от выбранного языка
     function updateContentDisplay(language) {
         //находим все элементы с классом, содержащим 'content-'
@@ -47,19 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         switch (language) {
             case 'ukrainian':
-                flagSrc = '../images/ukrainianFlag.png';
+                flagSrc = '../images/Flag_of_Ukraine.png';
                 break;
             case 'american':
-                flagSrc = '../images/americanFlag.png';
+                flagSrc = '../images/Flag_of_the_United_States_(51_stars).svg.png';
                 break;
             default:
-                flagSrc = '../images/ukrainianFlag.png';
+                flagSrc = '../images/Flag_of_Ukraine.png';
                 break;
         }
 
         buttonImg.setAttribute('src', flagSrc);
     }
-
 
     function createTimer(element, maxCount, interval, suffix) {
         var cnt = 0;
@@ -77,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, interval);
     }
-
 
     fetch('../elements/header.html')
         .then(response => response.text())
@@ -118,15 +114,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     //обновляем изображение в кнопке на выбранную иконку
                     buttonImg.setAttribute('src', imgSrc);
+                    // alert("Icon click with data-value: " + dataValue);
 
                     localStorage.setItem('selectedLanguage', dataValue);
 
+                    //перезагрузка страницы для применения нового языка
+                    //location.reload();
+
                     updateContentDisplay(dataValue);
 
-                    selectedLanguage = localStorage.getItem('selectedLanguage');
+                    selectedLanguage = localStorage.getItem('selectedLanguage')
 
-
-                    //определяем наш наблюдатель
                     const observer = new IntersectionObserver((entries, observer) => {
                         entries.forEach(entry => {
                             //если элемент виден в данный момент
@@ -170,18 +168,18 @@ document.addEventListener('DOMContentLoaded', function () {
                             }
                         });
                     }, {
-                        threshold: 0.1 //запускается, когда хотя бы 10% элемента видно
+                        threshold: 0.1 //запускается, когда видно хотя бы 10% 
                     });
 
-
                     const imgContainers2 = document.querySelectorAll('.image-container-2');
-
                     if (imgContainers2.length > 0) {
                         imgContainers2.forEach(imgContainer => {
                             observer.observe(imgContainer);
                         });
+
                     }
 
+                    location.reload();
                 });
             });
 

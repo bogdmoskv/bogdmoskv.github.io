@@ -180,7 +180,7 @@
     
 }
 
-.customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
+.customs-clearance-1, .customs-clearance-2, .customs-clearance-3, .customs-clearance-4, .customs-clearance-5{
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -190,18 +190,26 @@
 }
 
 .customs-clearance-1{
-    background: url(../images/customs-clearance-1.jpg) center/cover no-repeat;
+    background: url(../images/businessman_as-trans.jpeg) center/cover no-repeat;
 }
 
 .customs-clearance-2{
-    background: url(../images/service8.jpg) center/cover no-repeat;
+    background: url(../images/customs-broker.jpg) center/cover no-repeat;
 }
 
 .customs-clearance-3{
-    background: url(../images/customs-clearance.jpg) center/cover no-repeat;
+    background: url(../images/bulgaria_as-trans.jpeg) center/cover no-repeat;
 }
 
-.customs-clearance-1::before, .customs-clearance-2::before, .customs-clearance-3::before{
+.customs-clearance-4{
+    background: url(../images/poland_as-trans.jpeg) center/cover no-repeat;
+}
+
+.customs-clearance-5{
+    background: url(../images/ukraine_as-trans.jpeg) center/cover no-repeat;
+}
+
+.customs-clearance-1::before, .customs-clearance-2::before, .customs-clearance-3::before, .customs-clearance-4::before, .customs-clearance-5::before{
     content: '';
     position: absolute;
     top: 50%;
@@ -214,7 +222,7 @@
     transition: 2s ease;
 }
 
-.customs-clearance-1:hover:before, .customs-clearance-2:hover:before, .customs-clearance-3:hover:before{
+.customs-clearance-1:hover:before, .customs-clearance-2:hover:before, .customs-clearance-3:hover:before, .customs-clearance-4:hover:before, .customs-clearance-5:hover:before{
     opacity: 1;
     height: 100%;
     top: 0;
@@ -222,7 +230,7 @@
 }
 
 
-.customs-clearance-1::after, .customs-clearance-2::after, .customs-clearance-3::after{
+.customs-clearance-1::after, .customs-clearance-2::after, .customs-clearance-3::after, .customs-clearance-4::after, .customs-clearance-5::after{
     content: '';
     position: absolute;
     top: 0;
@@ -236,7 +244,7 @@
 }
 
 
-.customs-clearance-1:hover:after, .customs-clearance-2:hover:after, .customs-clearance-3:hover:after{
+.customs-clearance-1:hover:after, .customs-clearance-2:hover:after, .customs-clearance-3:hover:after, .customs-clearance-4:hover:after, .customs-clearance-5:hover:after{
     opacity: 1;
     width: 100%;
     left: 0;
@@ -245,4 +253,8 @@
 
 .fa-truck{
     margin-left: 0.75rem;
+}
+
+.opacity-0{
+    opacity: 0;
 }

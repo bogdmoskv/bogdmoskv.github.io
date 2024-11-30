@@ -3,10 +3,10 @@
 }
 
 .dropdown-button{
-    background-color: #d0e3f7 !important;
+    background-color: rgb(197, 221, 249); 
 }
 
 .dropdown-menu{
     --bs-dropdown-min-width: 4rem;
-    --bs-dropdown-padding-y: 0.2rem;
+    --bs-dropdown-padding-y: 0.2rem
 }
