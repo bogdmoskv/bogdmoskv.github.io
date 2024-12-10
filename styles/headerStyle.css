@@ -10,3 +10,9 @@
     --bs-dropdown-min-width: 4rem;
     --bs-dropdown-padding-y: 0.2rem
 }
+
+.language-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
