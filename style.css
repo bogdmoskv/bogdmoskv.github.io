@@ -341,16 +341,18 @@ rem - относительная единица. Является кратным
 }
 
 p{
-    font-size: 115%;
+    font-size: 110%;
+}
+
+footer a{
+    font-size:110%;
 }
 
 .circle-icon{
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-color: #07D7AD;
     width: 80px;
     height: 80px;
-    /* margin-left: auto;
-    margin-right: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -399,6 +401,8 @@ p{
     font-size: 20px;
     text-decoration: none;
 }
+
+
 
 .shadow{
     border: 7px black;
