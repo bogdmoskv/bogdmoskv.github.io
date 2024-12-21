@@ -174,15 +174,16 @@
 .advantage-icon1{
     height: 9.375rem;
     width: 9.375rem;
-    /* margin-top: 5px;
-    margin-bottom: 5px; */
     margin-top: 0.3125rem;
     margin-bottom: 0.3125rem;
 }
 
 .advantage-text{
-    height: 5.32rem;
-    
+    height: 13rem;
+}
+
+.advantage-text-2{
+    height: 10rem;
 }
 
 .customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
