@@ -270,7 +270,16 @@ rem - относительная единица. Является кратным
 }
 
 .advantage-icon{
-    width: 50%;
+    width: 7rem;
+}
+
+.row-advantage-icons{
+    display: flex;
+    align-items: stretch; /*обеспечивает одинаковую высоту для всех колонок */
+}
+
+.row-advantage-icons h4{
+    height: 4rem;
 }
 
 .display, .display1, .display2, .display3{
