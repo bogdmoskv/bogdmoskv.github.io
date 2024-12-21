@@ -182,9 +182,14 @@
     height: 12rem;
 }
 
+.advantage-text-insurance-icon{
+    height: 0;
+}
+
 .advantage-text-2{
     height: 9rem;
 }
+
 
 .customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
     position: relative;
@@ -252,3 +257,27 @@
 .fa-truck{
     margin-left: 0.75rem;
 }
+
+
+/* планшеты */
+@media (min-width: 768px) and (max-width: 1025px){
+    .advantage-text, .advantage-text-insurance-icon{
+        height: 8rem;
+    }
+
+    .advantage-text-2{
+        height: 4rem;
+    }
+}
+
+/* ПК */
+@media (min-width: 1025px) {
+    .advantage-text, .advantage-text-insurance-icon{
+        height: 5rem;
+    }
+    
+    .advantage-text-2{
+        height: 4rem;
+    }
+}
+
