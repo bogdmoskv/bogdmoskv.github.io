@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Найкраща міжнародна логістична компанія AS-Trans Київ, Україна</title>
+    <!-- <title>Найкраща міжнародна логістична компанія AS-Trans Київ, Україна</title> -->
     <meta name="description" content="Міжнародна логістична транспортна компанія АС-Транс ❇️митно-брокерські послуги ❇️митне оформлення вантажів ❇️Детальніше ТУТ!">
     <meta name="keywords" content="логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания">
     <link rel="canonical" href="https://bogdmoskv.github.io/" />
     <meta name="robots" content="index, follow" />
+    <title></title>
 
     <meta property="og:title" content="Найкраща міжнародна логістична компанія AS-Trans Київ, Україна">
     <meta property="og:description" content="Міжнародна логістична транспортна компанія АС-Транс ❇️митно-брокерські послуги ❇️митне оформлення вантажів ❇️Детальніше ТУТ!">
@@ -631,6 +632,13 @@
                 publicKey: "Obgg-ftcAlkqx3k9k",
             });
         })();
+
+        let selectedLanguage = localStorage.getItem('selectedLanguage');
+        if (selectedLanguage == "ukrainian"){
+            document.title = "Найкраща міжнародна логістична компанія AS-Trans Київ, Україна";
+        } else if (selectedLanguage == "american"){
+            document.title = "The Best International Logistics Company AS-Trans Kyiv, Ukraine";
+        }
     </script>
     <script src="scripts/script.js"></script>
     <script src="scripts/header.js"></script>

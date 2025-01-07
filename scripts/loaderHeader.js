@@ -114,12 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     //обновляем изображение в кнопке на выбранную иконку
                     buttonImg.setAttribute('src', imgSrc);
-                    // alert("Icon click with data-value: " + dataValue);
 
                     localStorage.setItem('selectedLanguage', dataValue);
-
-                    //перезагрузка страницы для применения нового языка
-                    //location.reload();
 
                     updateContentDisplay(dataValue);
 
