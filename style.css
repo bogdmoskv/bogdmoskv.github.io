@@ -44,19 +44,19 @@ html, body{
 }
 
 .slide-2{
-    background: url(images/cargo.jpg) center/cover no-repeat;
+    background: url(images/cargo.webp) center/cover no-repeat;
 }
 
 .slide-1{
-    background: url(images/ship.jpg) center/cover no-repeat;
+    background: url(images/ship.webp) center/cover no-repeat;
 }
 
 .slide-3{
-    background: url(images/truck1.jpg) center/cover no-repeat;
+    background: url(images/truck.webp) center/cover no-repeat;
 }
 
 .slide-4{
-    background: url(images/plane1.jpg) center/cover no-repeat;
+    background: url(images/plane1.webp) center/cover no-repeat;
 }
 
 .slider-container{
