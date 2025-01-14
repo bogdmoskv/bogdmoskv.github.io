@@ -43,13 +43,13 @@ html, body{
     background-color: rgba(31, 79, 97, 0);
 }
 
-.slide-2{
+/* .slide-2{
     background: url(images/cargo.webp) center/cover no-repeat;
 }
 
-/* .slide-1{
+.slide-1{
     background: url(images/ship.webp) center/cover no-repeat;
-} */
+}
 
 .slide-3{
     background: url(images/truck.webp) center/cover no-repeat;
@@ -57,11 +57,11 @@ html, body{
 
 .slide-4{
     background: url(images/plane1.webp) center/cover no-repeat;
-}
+} 
 
 .slider-container{
     height: 700px;
-}
+}*/
 
 .animated-button{
     opacity: 0;
