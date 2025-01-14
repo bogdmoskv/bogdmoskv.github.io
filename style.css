@@ -43,7 +43,7 @@ html, body{
     background-color: rgba(31, 79, 97, 0);
 }
 
-/* .slide-2{
+.slide-2{
     background: url(images/cargo.webp) center/cover no-repeat;
 }
 
@@ -61,7 +61,7 @@ html, body{
 
 .slider-container{
     height: 700px;
-}*/
+}
 
 .animated-button{
     opacity: 0;
