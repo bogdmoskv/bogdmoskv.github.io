@@ -195,7 +195,7 @@
 }
 
 .customs-clearance-1{
-    background: url(../images/customs-clearance-1.jpg) center/cover no-repeat;
+    background: url(../images/customs-clearance-1.webp) center/cover no-repeat;
 }
 
 .customs-clearance-2{
@@ -203,7 +203,7 @@
 }
 
 .customs-clearance-3{
-    background: url(../images/customs-clearance.jpg) center/cover no-repeat;
+    background: url(../images/customs-clearance.webp) center/cover no-repeat;
 }
 
 .customs-clearance-1::before, .customs-clearance-2::before, .customs-clearance-3::before{
