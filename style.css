@@ -444,6 +444,13 @@ body {
     padding: 20px;
 }
 
+.grid-item img{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 
 @media (min-width: 768px) {
     .logo-image {
@@ -457,6 +464,10 @@ body {
     .grid-container{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
+    }
+
+    .grid-item img{
+        max-width: 100%;
     }
 }
 
