@@ -35,7 +35,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -211,7 +210,7 @@
 }
 
 .customs-clearance-5{
-    background: url(../images/ukraine_as-trans.jpeg) center/cover no-repeat;
+    background: url(../images/ukraine_as-trans.jpg) center/cover no-repeat;
 }
 
 .customs-clearance-1::before, .customs-clearance-2::before, .customs-clearance-3::before, .customs-clearance-4::before, .customs-clearance-5::before{

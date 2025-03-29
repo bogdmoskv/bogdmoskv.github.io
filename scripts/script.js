@@ -12,6 +12,26 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownMenu.classList.remove('show');
         });
     });
+
+
+
+    let headers = document.querySelectorAll('.row-advantage-icons h4');
+    let maxHeight = 0;
+
+    // находим максимальную высоту
+    headers.forEach(function(header){
+        let height = header.offsetHeight;
+        if (height > maxHeight){
+            maxHeight = height;
+        }
+    });
+
+    maxHeight += 50;
+
+    //Устанавливаем максимальную высоту всем заголовкам
+    headers.forEach(function(header){
+        header.style.height = maxHeight + 'px';
+    })
 });
 
 
@@ -38,6 +58,34 @@ if (!selectedLanguage) {
     selectedLanguage = 'ukrainian';
     localStorage.setItem('selectedLanguage', selectedLanguage);
 }
+
+let contactContainer = document.querySelector('.contact-us-container');
+let contactButton = document.querySelector('.contact-us-button');
+let contactText = document.querySelector('.contact-text');
+let messengerIcons = document.querySelector('.messenger-icons');
+let contactButtonIcon = contactButton.querySelector('i');
+
+contactButton.addEventListener('click', ()=>{
+    //если иконки показываються, скрываем их
+    if (messengerIcons.classList.contains('show')){
+        messengerIcons.classList.remove('show');
+        contactText.classList.remove('hidden');
+        contactContainer.classList.remove('column-layout'); //возвращаем в row
+
+        contactButtonIcon.classList.remove('fa-solid', 'fa-rotate-left')
+        contactButtonIcon.classList.add('fa-regular', 'fa-message' );
+    }else{
+        contactText.classList.add('hidden');
+        contactContainer.classList.add('column-layout');
+
+        contactButtonIcon.classList.add('fa-solid', 'fa-rotate-left')
+        contactButtonIcon.classList.remove('fa-regular', 'fa-message' );
+
+        setTimeout(()=>{
+            messengerIcons.classList.add('show')
+        }, 10);
+    }
+})
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
