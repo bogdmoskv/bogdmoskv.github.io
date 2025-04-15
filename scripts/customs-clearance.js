@@ -4,11 +4,38 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-// window.addEventListener("languageChange", function(event){
-//     console.log("languageChange event happened");
-//     const newLanguage = event.detail.laguage;
-//     updateLanguageContent(newLanguage);
-// })
+
+window.addEventListener('load', ()=>{
+    setTimeout(matchTextHeight, 100);
+});
+
+//Срабатывает каждый раз, когда изменяется размер окна 
+window.addEventListener('resize', matchTextHeight);
+
+function matchTextHeight(){
+    setMaxHeight('.advantage-row-1 .advantage-text');
+    setMaxHeight('.advantage-row-2 .advantage-text');
+}
+
+
+function setMaxHeight(selector){
+    const textBlocks = document.querySelectorAll(selector);
+
+    let maxHeight = 0;
+
+    //сбросим старые высоты и найдём максимальную
+    textBlocks.forEach(el => {
+        el.style.height = 'auto';
+        maxHeight = Math.max(maxHeight, el.offsetHeight);
+    });
+
+    //зададим всем одинаковую
+    textBlocks.forEach(el => {
+        el.style.height = maxHeight + 30 + 'px';
+    });
+}
+
+
 
 function updateLanguageContent(selectedLanguage){
     if (selectedLanguage == "ukrainian"){

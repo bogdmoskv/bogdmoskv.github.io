@@ -195,6 +195,33 @@ body {
     animation-timing-function: linear;
 }
 
+
+.circle-icon{
+    background-color: #07D7AD;
+    /* width: 80px;
+    height: 80px; */
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 1s;
+}
+
+.circle-icon i{
+    color: white;
+    font-size: 175%;
+}
+
+.circle-icon:hover{
+    transform: scale(1.1);
+}
+
+.circle-icon:hover i{
+    color: gray;
+}
+
 @keyframes circleAnimation {
     from {
         margin-left: 0px;
