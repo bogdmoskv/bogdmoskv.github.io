@@ -29,9 +29,14 @@ function setMaxHeight(selector){
         maxHeight = Math.max(maxHeight, el.offsetHeight);
     });
 
+    const isMobile = window.innerWidth < 768;
+
     //зададим всем одинаковую
     textBlocks.forEach(el => {
-        el.style.height = maxHeight + 30 + 'px';
+        // el.style.height = maxHeight + 30 + 'px';
+        // el.style.height = maxHeight + 'px';
+
+        el.style.height = (isMobile ? maxHeight : maxHeight + 30) + 'px';
     });
 }
 
