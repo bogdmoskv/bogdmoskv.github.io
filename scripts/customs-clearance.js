@@ -41,6 +41,49 @@ function setMaxHeight(selector){
 }
 
 
+// Пробуем писать тестовый метод с учетом группировки элементов по строкам 
+// function setMaxHeight(selector){
+//     const textBlocks = document.querySelectorAll(selector);
+//     const isMobile = window.innerWidth < 768;
+
+
+//     //сбросим старые высоты и найдём максимальную
+//     textBlocks.forEach(el => el.style.height = 'auto');
+
+//     //группируем элементы по строкам (основываясь на top-координате)
+//     const rows = [];
+
+//     //зададим всем одинаковую
+//     textBlocks.forEach(el => {
+//         const top = el.getBoundingClientRect().top;
+
+//         //ищем уже существующую строку с примерно тем же top (с учетом небольшого разброса)
+//         let row = rows.find(r => Math.abs(r.top - top) <5);
+
+//         //если не найдена подходящая строка, значит текущий єлемент - начало новой строки
+//         if (!row){
+//             row = {top: top, elements: []};
+//             rows.push(row);
+//         }
+
+//         row.elements.push(el);
+//     });
+
+//     //Применяем высоты
+//     rows.forEach(row =>{
+//         if (row.elements.length === 1) return; //Один блок в строке - не трогаем
+
+//         let maxHeight = 0;
+//         row.elements.forEach(el => {
+//             maxHeight = Math.max(maxHeight, el.offsetHeight);
+//         });
+
+//         row.elements.forEach(el => {
+//             el.style.height = (isMobile ? maxHeight : maxHeight + 30) + 'px';
+//         });
+//     });
+// }
+
 
 function updateLanguageContent(selectedLanguage){
     if (selectedLanguage == "ukrainian"){
