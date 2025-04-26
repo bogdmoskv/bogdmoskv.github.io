@@ -15,6 +15,8 @@ window.addEventListener('resize', matchTextHeight);
 function matchTextHeight(){
     setMaxHeight('.advantage-row-1 .advantage-text');
     setMaxHeight('.advantage-row-2 .advantage-text');
+    setMaxHeight('.advantage-row-3 .advantage-text');
+    setMaxHeight('.advantage-row-4 .advantage-text');
 }
 
 
