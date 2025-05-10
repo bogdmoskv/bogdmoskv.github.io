@@ -191,22 +191,48 @@
     height: 9rem;
 }
 
-.customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
+/* .customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
     background-repeat: repeat-y;
-    height: 34.375rem;
+    height: 50rem;
     width: 100%;  
+}
+
+.customs-clearance-2{
+    background: url(../images/cert3.webp) center/cover no-repeat;
+} */
+
+.customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    width: 100%;  
+    height: auto;
+    min-height: 50rem;
+}
+
+.customs-clearance-2{
+    background: url(../images/cert3.webp);
+}
+
+.certificate-1{
+    height: 100%;
+}
+
+.certificate-1 img{
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 .customs-clearance-1{
     background: url(../images/sea-freight-forwarding-services.jpg) center/cover no-repeat;
 }
 
-.customs-clearance-2{
-    background: url(../images/service_7.jpg) center/cover no-repeat;
-}
 
 .customs-clearance-3{
     background: url(../images/air-freight-forwarding-services.jpg) center/cover no-repeat;
@@ -260,6 +286,12 @@
 
 .no-underline{
     text-decoration: none;
+}
+
+.advantages-list-label{
+    display: block;
+    font-weight: bold;
+    color: rgb(29, 29, 189);
 }
 
 /* планшеты */
