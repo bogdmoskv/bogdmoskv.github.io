@@ -1,0 +1,13 @@
+.icon-circle{
+    background-color: rgb(31, 31, 178);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle i{
+    color: white;
+}

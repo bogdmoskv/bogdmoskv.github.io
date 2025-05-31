@@ -1,7 +1,23 @@
-.background-1{
+.background-transportation-solutions {
     background: url(../images/International-transportation-solutions-.jpg) center/cover no-repeat;
-    height: auto;
+}
+
+.background-benefits-of-working {
+    background-color: rgb(36, 17, 131);
+}
+
+.background-transportation-solutions {
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+/* .background-benefits-of-working{
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+} */
+
+.background-transportation-solutions,
+.background-benefits-of-working {
+    height: auto;
+    /* clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); */
     position: relative;
     z-index: 1;
 
@@ -10,7 +26,8 @@
     justify-content: center;
 }
 
-.background-1::after{
+.background-transportation-solutions::after,
+.background-benefits-of-working::after {
     content: '';
     position: absolute;
     top: 0;
@@ -21,7 +38,7 @@
     z-index: -1;
 }
 
-.estonia-img{
+.estonia-img {
     max-height: 75%;
     max-width: 75%;
     object-fit: contain;
@@ -31,53 +48,64 @@
     border-radius: 40%;
 }
 
-.background-blue{
+.ukraine-estonia-img-card {
+    height: 100%;
+}
+
+.ukraine-estonia-img-card img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.background-blue {
     background-color: skyblue;
 }
 
 
-.border-radius{
+.border-radius {
     border-radius: 7px;
 }
 
-.bigger-paragraph{
-    font-size: 20px;  
+.bigger-paragraph {
+    font-size: 20px;
 }
 
-.estonia-button{
+.estonia-button {
     background-color: skyblue;
     text-decoration: none;
     color: white
 }
 
-#formButton{
+#formButton {
     background-color: skyblue;
     border: 0;
     border-radius: 0.75rem;
 }
 
-.padding-bottom{
+.padding-bottom {
     padding-bottom: 70px;
 }
 
-.images-width{
+.images-width {
     width: 100%;
 }
 
-.padding-kartinki{
+.padding-kartinki {
     padding-left: 2em;
     padding-right: 2em;
 }
 
-.padding-kartinki ul{
+.padding-kartinki ul {
     list-style-position: inside;
-} 
+}
 
-p.bigger-paragraph{
+p.bigger-paragraph {
     text-align: justify;
 }
 
-.grid-container{
+.grid-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,32 +113,32 @@ p.bigger-paragraph{
     margin: 0 auto;
 }
 
-.logistics-images{
-    width: 100%;
+.logistics-images {
+    width: 70%;
     margin: 0 auto;
 }
 
-.logistics-images img{
-    width: 60%; 
+.logistics-images img {
+    width: 60%;
     height: auto;
 
     object-fit: contain;
     flex-grow: 1;
 }
 
-.logicstic-blue{
+.logicstic-blue {
     color: rgb(39, 135, 186);
 }
 
-.grid-item{
+.grid-item {
     /* display: flex;
     flex-direction: column;
     justify-content: flex-start; */
-    text-align: center; 
+    text-align: center;
     padding: 10px;
 }
 
-.grid-item span{
+.grid-item span {
     display: block;
     min-height: 40px;
     margin-top: auto;
@@ -118,69 +146,93 @@ p.bigger-paragraph{
 }
 
 
+.icon-circle {
+    background-color: rgb(38, 209, 28);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+    flex-shrink: 0;
+}
+
+.icon-circle i {
+    color: white;
+}
+
 /* для планшетов */
-@media (min-width: 768px){
-    .grid-container{
+@media (min-width: 768px) {
+    .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
     }
 
-    .grid-item:nth-child(5){
+    .grid-item:nth-child(5) {
         grid-column: 3;
         grid-row: 2;
     }
 
-    .logistics-images img{
-        width: 100%; 
+    .logistics-images img {
+        width: 100%;
+    }
+
+    .ukraine-estonia-img-card img {
+        max-width: 80%;
+    }
+
+    .background-benefits-of-working {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
     }
 }
 
 
-@media (max-width: 1440px) and (min-width: 993px){
-    .mt-7{
+@media (max-width: 1440px) and (min-width: 993px) {
+    .mt-7 {
         margin-top: 7em;
     }
 
-    .padding-kartinki{
+    .padding-kartinki {
         padding-left: 4em;
         padding-right: 4em;
-    } 
-    
-    .grid-container{
+    }
+
+    .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
     }
 
-    .grid-item:nth-child(5){
+    .grid-item:nth-child(5) {
         grid-column: 3;
         grid-row: 2;
     }
-} 
+}
 
-@media (min-width: 1441px){
-    .mt-7{
+@media (min-width: 1441px) {
+    .mt-7 {
         margin-top: 7em;
     }
 
-    .estonia-img{
+    .estonia-img {
         max-height: 75%;
         max-width: 75%;
     }
 
-    .padding-kartinki{
+    .padding-kartinki {
         padding-left: 20em;
         padding-right: 20em;
-    }  
-    
-    .grid-container{
+    }
+
+    .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
     }
 
-    .grid-item:nth-child(5){
+    .grid-item:nth-child(5) {
         grid-column: 3;
         grid-row: 2;
     }
