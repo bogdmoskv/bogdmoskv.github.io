@@ -1,4 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+async function loadEmailConfig() {
+    const response = await fetch('../emailjs-config.json');
+    return await response.json();
+}
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+
     let dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(function (dropdown) {
@@ -13,15 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
-
     let headers = document.querySelectorAll('.row-advantage-icons h4');
     let maxHeight = 0;
 
     // находим максимальную высоту
-    headers.forEach(function(header){
+    headers.forEach(function (header) {
         let height = header.offsetHeight;
-        if (height > maxHeight){
+        if (height > maxHeight) {
             maxHeight = height;
         }
     });
@@ -29,9 +34,45 @@ document.addEventListener("DOMContentLoaded", function () {
     maxHeight += 50;
 
     //Устанавливаем максимальную высоту всем заголовкам
-    headers.forEach(function(header){
+    headers.forEach(function (header) {
         header.style.height = maxHeight + 'px';
     })
+
+    const config = await loadEmailConfig();
+    emailjs.init(config.publicKey);
+
+    document.querySelector('#formBtn').addEventListener('click', async function (event) {
+        event.preventDefault(); //предотвращаем стандартное поведение отправки формы
+
+        const name = document.getElementById('inputName').value;
+        const phone = document.getElementById('inputPhone').value;
+        const email = document.getElementById('InputEmail').value;
+        const messageText = document.getElementById('InputMessage').value;
+        const inputWebsite = document.getElementById('InputWebsite').value;
+        const inputTopic = document.getElementById('InputTheme').value;
+
+        const templateParams = {
+            from_name: name,
+            phone_number: phone,
+            to_email: email,
+            message: messageText,
+            input_website: inputWebsite,
+            input_topic: inputTopic
+        };
+
+        try {
+            const response = await emailjs.send(
+                config.serviceId,
+                config.templateId,
+                templateParams
+            );
+
+            alert('Сповіщення успішно відправлено!');
+        } catch (error) {
+            console.log('FAILED...', error);
+            alert("Помилка при відпраці сповіщення!");
+        }
+    });
 });
 
 
@@ -59,33 +100,6 @@ if (!selectedLanguage) {
     localStorage.setItem('selectedLanguage', selectedLanguage);
 }
 
-let contactContainer = document.querySelector('.contact-us-container');
-let contactButton = document.querySelector('.contact-us-button');
-let contactText = document.querySelector('.contact-text');
-let messengerIcons = document.querySelector('.messenger-icons');
-let contactButtonIcon = contactButton.querySelector('i');
-
-contactButton.addEventListener('click', ()=>{
-    //если иконки показываються, скрываем их
-    if (messengerIcons.classList.contains('show')){
-        messengerIcons.classList.remove('show');
-        contactText.classList.remove('hidden');
-        contactContainer.classList.remove('column-layout'); //возвращаем в row
-
-        contactButtonIcon.classList.remove('fa-solid', 'fa-rotate-left')
-        contactButtonIcon.classList.add('fa-regular', 'fa-message' );
-    }else{
-        contactText.classList.add('hidden');
-        contactContainer.classList.add('column-layout');
-
-        contactButtonIcon.classList.add('fa-solid', 'fa-rotate-left')
-        contactButtonIcon.classList.remove('fa-regular', 'fa-message' );
-
-        setTimeout(()=>{
-            messengerIcons.classList.add('show')
-        }, 10);
-    }
-})
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -134,46 +148,11 @@ const observer = new IntersectionObserver((entries, observer) => {
 });
 
 const imgContainers2 = document.querySelectorAll('.image-container-2');
-if (imgContainers2.length > 0){
+if (imgContainers2.length > 0) {
     imgContainers2.forEach(imgContainer => {
         observer.observe(imgContainer);
     });
-    
+
 }
 
-document.querySelector('#formButton').addEventListener('click', function (event) {
-    event.preventDefault(); //предотвращаем стандартное поведение отправки формы
 
-    const name = document.getElementById('nameInputId').value;
-    const phone = document.getElementById('phoneInputId').value;
-    const email = document.getElementById('emailInputId').value;
-
-    const templateParams = {
-        from_name: name,
-        phone_number: phone,
-        email: email
-    };
-
-    emailjs.send('service_l9d94jk', 'template_8lib7fg', templateParams).then(
-        (response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Сообщение отправлено успешно!');
-
-            const autoReplyParams = {
-                to_email: email
-            };
-            emailjs.send('service_l9d94jk', 'template_u37d75b', autoReplyParams).then(
-                (response) => {
-                    console.log('Auto-reply sent succesffully!', response.status, response.text);
-                },
-                (error) => {
-                    console.log('Auto-reply FAILED', error);
-                },
-            );
-        },
-        (error) => {
-            console.log('FAILED...', error);
-            alert('Ошибка при отправке сообщения :((');
-        },
-    );
-});

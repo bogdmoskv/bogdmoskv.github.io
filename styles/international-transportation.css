@@ -164,10 +164,8 @@
 }
 
 .advantage-icon1 {
-    height: 9.375rem;
-    width: 9.375rem;
-    /* margin-top: 5px;
-    margin-bottom: 5px; */
+    height: auto;
+    max-width: 14.5rem;
     margin-top: 0.3125rem;
     margin-bottom: 0.3125rem;
 }
@@ -186,8 +184,7 @@
 
 .customs-clearance-1,
 .customs-clearance-2,
-.customs-clearance-3,
-.customs-clearance-4 {
+.customs-clearance-3 {
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -201,21 +198,17 @@
 }
 
 .customs-clearance-2 {
-    background: url(../images/service_7.jpg) center/cover no-repeat;
+    background: url(../images/international-transportation/international-cargo-980x551.jpg) center/cover no-repeat;
 }
 
 .customs-clearance-3 {
-    background: url(../images/air-freight-forwarding-services.jpg) center/cover no-repeat;
+    background: url(../images/international-transportation/cargo-transportation.jpg) center/cover no-repeat;
 }
 
-.customs-clearance-4 {
-    background: url(../images/multimodal-transportation.jpg) center/cover no-repeat;
-}
 
 .customs-clearance-1::before,
 .customs-clearance-2::before,
-.customs-clearance-3::before,
-.customs-clearance-4::before {
+.customs-clearance-3::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -230,8 +223,7 @@
 
 .customs-clearance-1:hover:before,
 .customs-clearance-2:hover:before,
-.customs-clearance-3:hover:before,
-.customs-clearance-4:hover:before {
+.customs-clearance-3:hover:before {
     opacity: 1;
     height: 100%;
     top: 0;
@@ -241,8 +233,7 @@
 
 .customs-clearance-1::after,
 .customs-clearance-2::after,
-.customs-clearance-3::after,
-.customs-clearance-4::after {
+.customs-clearance-3::after {
     content: '';
     position: absolute;
     top: 0;
@@ -258,8 +249,7 @@
 
 .customs-clearance-1:hover:after,
 .customs-clearance-2:hover:after,
-.customs-clearance-3:hover:after,
-.customs-clearance-4:hover:after {
+.customs-clearance-3:hover:after {
     opacity: 1;
     width: 100%;
     left: 0;
@@ -274,8 +264,46 @@
     text-decoration: none;
 }
 
+.advantage-text {
+    text-align: justify !important;
+}
+
+.advantages-grid,
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 300px;
+    grid-column: auto;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    height: 100%;
+}
+
+.service-item img {
+    max-width: 80%;
+    height: auto;
+}
+
 /* планшеты */
-@media (min-width: 768px) and (max-width: 1025px) {
+@media (min-width: 768px) {
 
     .advantage-text,
     .advantage-text-insurance-icon {
@@ -284,6 +312,19 @@
 
     .advantage-text-2 {
         height: 4rem;
+    }
+
+    .advantages-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* 5ая карточка по центру во втором ряду */
+    .advantage-item:nth-child(5) {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
     }
 }
 
@@ -297,5 +338,22 @@
 
     .advantage-text-2 {
         height: 4rem;
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* сброс планшетного позиционирования 5й карточки */
+    .advantage-item:nth-child(5) {
+        grid-column: 3/4;
+        max-width: none;
+        margin: 0;
+    }
+
+    /* 4ая карточка в 1ую позицию 2го ряда */
+    .advantage-item:nth-child(4) {
+        grid-column: 1/2;
     }
 }

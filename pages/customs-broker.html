@@ -44,6 +44,8 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <div id="contact-widget"></div>
+
     <div class="main-menu">
         <div class="main-menu__img-container">
             <img class="main-menu__img" src="../images/bc-3.jpg" alt="">
@@ -125,27 +127,28 @@
                     <h3 class="text-blue content-ukrainian">Залишити заявку</h3>
                     <h3 class="text-blue content-american">Submit your application</h3>
 
-                    <form>
+                    <div>
                         <div class="mb-3">
-                            <label for="nameInput" class="form-label content-ukrainian">Ваше ім'я</label>
-                            <label for="nameInput" class="form-label content-american">Your name</label>
-                            <input type="text" class="form-control" id="nameInput">
+                            <label for="inputName" class="form-label content-ukrainian">Ваше ім'я</label>
+                            <label for="inputName" class="form-label content-american">Your name</label>
+                            <input type="text" class="form-control" id="inputName">
                         </div>
                         <div class="mb-3">
-                            <label for="phoneInput" class="form-label content-ukrainian">Ваш номер телефону:</label>
-                            <label for="phoneInput" class="form-label content-american">Your phone number:</label>
-                            <input type="text" class="form-control" id="phoneInput">
+                            <label for="inputPhone" class="form-label content-ukrainian">Ваш номер телефону:</label>
+                            <label for="inputPhone" class="form-label content-american">Your phone number:</label>
+                            <input type="text" class="form-control" id="inputPhone">
                         </div>
                         <div class="mb-3">
-                            <label for="emailInput" class="form-label content-ukrainian">Ваш email:</label>
-                            <label for="emailInput" class="form-label content-american">Your email:</label>
-                            <input type="email" class="form-control" id="emailInput">
+                            <label for="InputEmail" class="form-label content-ukrainian">Ваш email:</label>
+                            <label for="InputEmail" class="form-label content-american">Your email:</label>
+                            <input type="email" class="form-control" id="InputEmail">
                         </div>
-                        <button id="formButton" type="submit" class="btn btn-primary content-ukrainian">Відправити
-                            повідомлення</button>
-                        <button id="formButton" type="submit" class="btn btn-primary content-american">Send
-                            message</button>
-                    </form>
+
+                        <button id="formBtn" class="btn btn-primary">
+                            <span class="content-ukrainian">Відправити повідомлення</span>
+                            <span class="content-american">Send message</span>
+                        </button>
+                    </div>
                 </div>
                 <div
                     class="card p-4 mt-4 shadow bg-body rounded service-sidebar2-image d-flex justify-content-center align-items-center">
@@ -313,7 +316,8 @@
                                     </span>
                                 </h3>
                                 <div class="customs-clearance-1"></div>
-                                <p class="mt-3 content-ukrainian service__font__size">Список послуг митного брокера AS-Trans, Україна, є
+                                <p class="mt-3 content-ukrainian service__font__size">Список послуг митного брокера
+                                    AS-Trans, Україна, є
                                     досить широким.
                                     Отже, наші
                                     експерти можуть повністю представляти інтереси клієнта на митниці у відповідності
@@ -333,7 +337,8 @@
                                     other legal preparation of goods for easy and smooth customs clearance.
                                 </p>
 
-                                <p class="content-ukrainian service__font__size">Обов’язки митного брокера AS-Trans, залежно від узгоджених
+                                <p class="content-ukrainian service__font__size">Обов’язки митного брокера AS-Trans,
+                                    залежно від узгоджених
                                     умов
                                     співпраці, можуть включати:</p>
 
@@ -397,7 +402,8 @@
                                     </div>
                                 </div>
 
-                                <p class="content-ukrainian service__font__size">Крім того, послуги митного брокера можуть включати контроль
+                                <p class="content-ukrainian service__font__size">Крім того, послуги митного брокера
+                                    можуть включати контроль
                                     завантаження та
                                     вивантаження товарів,
                                     складаючи оптимальний маршрут доставки. Цей спеціаліст також може домовлятись з
@@ -410,7 +416,8 @@
                                     structures.
                                 </p>
 
-                                <p class="content-ukrainian service__font__size">Таким чином, брокер займається не лише представленням
+                                <p class="content-ukrainian service__font__size">Таким чином, брокер займається не лише
+                                    представленням
                                     інтересів клієнта у здійсненні
                                     іноземної
                                     економічної діяльності, а й, якщо необхідно, їх захисту.</p>
@@ -420,7 +427,8 @@
                                     protecting them.
                                 </p>
 
-                                <p class="content-ukrainian service__font__size">Усі права та зобов’язання сторін, а також перелік послуг,
+                                <p class="content-ukrainian service__font__size">Усі права та зобов’язання сторін, а
+                                    також перелік послуг,
                                     що надаються митним
                                     брокером компанії
                                     AS-Trans, Україна реєструється в угоді, яка обов’язково підписується на початку
@@ -548,26 +556,27 @@
                                 </p>
 
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
 
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1055"></div>
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/31e9515bc8.js" crossorigin="anonymous"></script>
     <script src="../scripts/loaderHeader.js"></script>
     <script src="../scripts/loaderFooter.js"></script>
+    <script src="../scripts/elements/contact-widget.js"></script>
     <script src="../scripts/page-setup.js"></script>
     <script src="../scripts/customs-broker.js"></script>
+    <script src="../scripts/page-setup/customs-broker-page-setup.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="module" src="../scripts/email-notifications/email-form-handler.js"></script>
 </body>
 
 </html>

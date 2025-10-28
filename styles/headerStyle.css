@@ -20,3 +20,9 @@
 .nav-item.dropdown:hover .dropdown-menu{
     display: block;
 }
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        align-items: center;
+    }
+}

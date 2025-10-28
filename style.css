@@ -22,7 +22,9 @@ body {
     text-align: justify;
 }
 
-
+.service__font__size{
+    font-size: 1.15rem;
+}
 
 .nav-item {
     color: rgb(36, 17, 131);
