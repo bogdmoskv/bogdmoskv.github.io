@@ -1,0 +1,317 @@
+.main-menu{
+    position: relative;
+}
+
+.main-menu__img{
+    height: 9.375rem;
+    object-fit: cover; /*сохранят пропорции изображения*/
+    width: 100%;
+}
+
+.main-menu__overlay{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /*не мешает взаимодействия с элементами снизу*/
+}
+
+/* .main-menu::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /*не мешает взаимодействия с элементами снизу
+} */
+
+.main-menu__button-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.main-menu__button{
+    background-color: #ffffff;
+    color: rgb(36, 17, 131);
+    border-radius: 1.5625rem;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.625rem 1.5625rem;
+    transition: all 1s;
+}
+
+.main-menu__button:hover{
+    color: #07D7AD;
+}
+
+.destination-box{
+    height: 3.125rem;
+    width: 15.625rem;
+    border: 2px solid gainsboro;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+    transition: all 1s;
+}
+
+.destination-box__figure{
+    clip-path: polygon(0 0, 59% 0, 100% 100%, 0 100%);
+    height: 2.9375rem;
+    width: 3.125rem;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.destination-box__figure--blue{
+    background-color: #0c5adb;
+    color: white;
+}
+
+.destination-box__sign{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination-box__sign--blue{
+    color: #0c5adb;
+}
+
+.destination-box__blue{
+    background-color: #0c5adb;
+    color: white;
+}
+
+.destination-box__figure i{
+    color: #0c5adb;
+    transition: all 0.5s;
+}
+
+
+.destination-box:hover .destination-box__figure{
+    background-color: #0c5adb;
+}
+
+.destination-box:hover i{
+    color: gainsboro;
+}
+
+.service-sidebar-image{
+    background-image: url(../images/service-sidebar.jpg);
+}
+
+.service-sidebar2-image{
+    background-image: url(../images/service-sidebar1.jpg);
+}
+
+.service-sidebar-image, .service-sidebar2-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.destination-box, .service-sidebar-image{
+    width: 70%;
+    /* max-width: 300px; */
+}
+
+.service-sidebar2-image{
+    width: 70%;
+    height: 31.25rem;
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-sidebar2-image i{
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.service__font__size{
+    font-size: 1.15rem;
+}
+
+#formButton{
+    background-color: #07D7AD;
+    border: 0;
+    border-radius: 0.75rem;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.advantage-icon1{
+    height: 9.375rem;
+    width: 9.375rem;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    margin-top: 0.3125rem;
+    margin-bottom: 0.3125rem;
+}
+
+.advantage-text{
+    height: 12rem;
+}
+
+.advantage-text-insurance-icon{
+    height: 0;
+}
+
+.advantage-text-2{
+    height: 9rem;
+}
+
+/* .customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-repeat: repeat-y;
+    height: 50rem;
+    width: 100%;  
+}
+
+.customs-clearance-2{
+    background: url(../images/cert3.webp) center/cover no-repeat;
+} */
+
+.customs-clearance-1, .customs-clearance-2, .customs-clearance-3{
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    width: 100%;  
+    height: auto;
+    min-height: 50rem;
+}
+
+.customs-clearance-2{
+    background: url(../images/cert3.webp);
+}
+
+.certificate-1{
+    height: 100%;
+}
+
+.certificate-1 img{
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.customs-clearance-1{
+    background: url(../images/sea-freight-forwarding-services.jpg) center/cover no-repeat;
+}
+
+
+.customs-clearance-3{
+    background: url(../images/air-freight-forwarding-services.jpg) center/cover no-repeat;
+}
+
+.customs-clearance-1::before, .customs-clearance-2::before, .customs-clearance-3::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 1;
+    transition: 2s ease;
+}
+
+.customs-clearance-1:hover:before, .customs-clearance-2:hover:before, .customs-clearance-3:hover:before{
+    opacity: 1;
+    height: 100%;
+    top: 0;
+    transition: 2s ease;
+}
+
+
+.customs-clearance-1::after, .customs-clearance-2::after, .customs-clearance-3::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 2;
+    transition: 2s ease;
+}
+
+
+.customs-clearance-1:hover:after, .customs-clearance-2:hover:after, .customs-clearance-3:hover:after{
+    opacity: 1;
+    width: 100%;
+    left: 0;
+    transition: 2s ease;
+}
+
+.fa-truck{
+    margin-left: 0.75rem;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
+.advantages-list-label{
+    display: block;
+    font-weight: bold;
+    color: rgb(29, 29, 189);
+}
+
+/* планшеты */
+@media (min-width: 768px) and (max-width: 1025px){
+    .advantage-text, .advantage-text-insurance-icon{
+        height: 8rem;
+    }
+
+    .advantage-text-2{
+        height: 4rem;
+    }
+}
+
+/* ПК */
+@media (min-width: 1025px) {
+    .advantage-text, .advantage-text-insurance-icon{
+        height: 5rem;
+    }
+    
+    .advantage-text-2{
+        height: 4rem;
+    }
+}

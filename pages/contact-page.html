@@ -6,17 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти AS-Trans</title>
 
+
+    <meta name="description"
+        content="Контакти AS-Trans ❇️ митно-брокерські послуги ❇️ митне оформлення вантажів ❇️ Детальніше ТУТ!">
+    <meta name="keywords"
+        content="логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания">
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Контакти AS-Trans">
+    <meta property="og:description"
+        content="Контакти AS-Trans ❇️ митно-брокерські послуги ❇️ митне оформлення вантажів ❇️ Детальніше ТУТ!">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https://fre0n0.github.io/index.html"> -->
+    <meta property="og:image" content="https://fre0n0.github.io/images/og-image.png">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="AS-Trans" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Контакти AS-Trans">
+    <meta name="twitter:description"
+        content="Контакти AS-Trans ❇️ митно-брокерські послуги ❇️ митне оформлення вантажів ❇️ Детальніше ТУТ!">
+    <meta name="twitter:image" content="https://fre0n0.github.io/images/og-image.png">
+
+
+
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
     <link rel="icon" href="images/og-image.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/page1style.css">
+    <link rel="stylesheet" href="../styles/contact-page.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 
     <style>
-        #map{
+        #map {
             height: 450px;
             width: 100%;
         }
@@ -26,6 +53,8 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <div id="contact-widget"></div>
+
     <div class="main-menu">
         <div class="main-menu__img-container">
             <img class="main-menu__img" src="../images/bc-3.jpg" alt="">
@@ -33,191 +62,194 @@
         </div>
 
         <div class="main-menu__button-container">
-            <a class="main-menu__button" href="../index.html">Домашня</a>
+            <a class="main-menu__button content-ukrainian" href="../index.html">Домашня</a>
+            <a class="main-menu__button content-american" href="../index.html">Home</a>
             <span class="color-white">>></span>
-            <a class="main-menu__button">Контакти</a>
-            
+            <a class="main-menu__button content-ukrainian">Контакти</a>
+            <a class="main-menu__button content-american">Contact</a>
+
         </div>
     </div>
 
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-12 mt-4 text-center d-flex  flex-column align-items-center">
-                <h2>Контакти</h2>
-                <p>Ми чекаємо, щоб и зв'язалися з нами</p>
-                <div id="map"></div>
-            </div>
-        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12 mt-4 text-center d-flex  flex-column align-items-center">
+                        <h2 class="content-ukrainian">Контакти</h2>
+                        <h2 class="content-american">Contact</h2>
 
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-12 col-lg-5 mt-4 mb-3 flex-column shadow">
-                <div class="d-flex flex-column">
-                    <h4 class="text-start text-blue mt-3">Запити</h4>
-                    <h4 class="text-start">Потрібно зробити запит?</h4>
-                </div>
-                <form class="w-100 align-items-center text-center">
-                    <div class="row mb-3">
-                      <div class="col-12 col-md-6">
-                          <label for="inputName" class="form-label">Ваше ім'я</label>
-                          <input type="text" class="form-control" id="inputName">
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="InputEmail" class="form-label">Електронна адреса</label>
-                        <input type="email" class="form-control" id="InputEmail">
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-6">
-                            <label for="inputPhone" class="form-label">Номер телефону</label>
-                            <input type="text" class="form-control" id="inputPhone">
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label for="InputWebsite" class="form-label">Вебсайт</label>
-                          <input type="text" class="form-control" id="InputWebsite">
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="InputTheme" class="form-label">Тема</label>
-                      <input type="text" class="form-control" id="InputTheme">
-                    </div>
-                    <div class="mb-3">
-                        <label for="InputMessage" class="form-label">Повідомлення</label>
-                        <input type="text" class="form-control" id="InputMessage">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Надіслати</button>
-                    </div>
-                  </form>
-            </div>
-            <div class="col-12 col-lg-5 ms-5 mt-4 flex-column ">
-                <h5 class="text-lg-start">ЗВ’ЯЖІТЬСЯ З НАМИ</h5>
-                <h4 class="text-blue text-lg-start">МИ ПОДБАЄМО ПРО ТРАНСПОРТУВАННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h4>
-                <h4 class="text-center">УКРАЇНА</h4>
 
-                <div class="container">
-                    <div class="row mt-3">
-                        <div class="col-1 p-0">
-                            <div class="blue-circle">
-                                <i class=" fas fa-map-marker-alt"></i>
-                        
-                            </div>
-                        </div>
-                        <div class="col-11 p-0">Київ вул. Радищева, 3 офіс Б-306, а/с 25</div>
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-1 p-0">
-                            <div class="blue-circle">
-                                <i class="fas fa-phone-alt"></i>
-                        
-                            </div>
-                        </div>
-                        <div class="col-11 p-0">+380 (98) 692-04-60</div>
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-1 p-0">
-                            <div class="blue-circle">
-                                <i class=" fas fa-phone-alt"></i> 
-                        
-                            </div>
-                        </div>
-                        <div class="col-11 p-0">+380 (67) 465-66-75</div>
+                        <p class="content-ukrainian service__font__size">Ми чекаємо, щоб и зв'язалися з нами</p>
+                        <p class="content-american service__font__size">We are waiting you to get in touch with us</p>
+                        <div id="map"></div>
                     </div>
                 </div>
-            </div> 
+            </div>
+
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12 col-xl-6 mb-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-flex flex-column align-items-start justify-content-center p-5 shadow">
+                                    <div class="d-flex flex-column">
+                                        <h4 class="text-start text-blue mt-3 content-ukrainian">Запити</h4>
+                                        <h4 class="text-start text-blue mt-3 content-american">INQUIRY NOW</h4>
+
+                                        <h4 class="text-start content-ukrainian mb-4">Потрібно зробити запит?</h4>
+                                        <h4 class="text-start content-american mb-4">Need to make an enquiry?</h4>
+                                    </div>
+
+                                    <div class="row w-100">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputName" class="form-label">
+                                                <span class="content-ukrainian">Ваше ім'я</span>
+                                                <span class="content-american">Your name</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="InputEmail" class="form-label">
+                                                <span class="content-ukrainian">Електронна адреса</span>
+                                                <span class="content-american">Email</span>
+                                            </label>
+                                            <input type="email" class="form-control" id="InputEmail">
+                                        </div>
+                                    </div>
+
+                                    <div class="row w-100">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="mb-3">
+                                                <label for="inputPhone" class="form-label">
+                                                    <span class="content-ukrainian">Номер телефону</span>
+                                                    <span class="content-american">Phone number</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="inputPhone">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="mb-3">
+                                                <label for="InputWebsite" class="form-label">
+                                                    <span class="content-ukrainian">Вебсайт</span>
+                                                    <span class="content-american">Website</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="InputWebsite">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row w-100">
+                                        <div class="col-12 mb-3">
+                                            <div class="mb-3">
+                                                <label for="InputTheme" class="form-label">
+                                                    <span class="content-ukrainian">Тема</span>
+                                                    <span class="content-american">Topic</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="InputTheme">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row w-100">
+                                        <div class="col-12 mb-3">
+                                            <div class="mb-3">
+                                                <label for="InputMessage" class="form-label">
+                                                    <span class="content-ukrainian">Повідомлення</span>
+                                                    <span class="content-american">Message</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="InputMessage">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button id="formBtn" type="submit" class="btn btn-primary">
+                                        <span class="content-ukrainian">Надіслати</span>
+                                        <span class="content-american">Submit Message</span>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="container">
+                            <div class="row">
+                                <div>
+                                    <h4 class="text-start content-ukrainian">ЗВ’ЯЖІТЬСЯ З НАМИ</h4>
+                                    <h4 class="text-start content-american">GET IN TOUCH WITH US</h4>
+
+                                    <h4 class="text-start text-blue mt-3 content-ukrainian">МИ ПОДБАЄМО ПРО
+                                        ТРАНСПОРТУВАННЯ ДЛЯ
+                                        ВАШОГО БІЗНЕСУ</h4>
+                                    <h4 class="text-start text-blue mt-3 content-american">WE TAKE CARE ABOUT
+                                        TRANSPORTATION FOR
+                                        YOUR BUSINESS</h4>
+
+                                    <h4 class="text-center mt-4 content-ukrainian">УКРАЇНА</h4>
+                                    <h4 class="text-center mt-4 content-american">UKRAINE</h4>
+                                </div>
+
+                                <div class="container mt-3">
+                                    <div class="d-flex align-items-center my-3">
+                                        <div class="icon-circle me-2">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <span class="content-ukrainian service__font__size">Київ вул. Радищева, 3 офіс
+                                            Б-306,
+                                            а/с 25</span>
+                                        <span class="content-american service__font__size">Kyiv st. Radishcheva, 3
+                                            office B-306,
+                                            PO box 25</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-3">
+                                        <div class="icon-circle me-2">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <span class="service__font__size">+380 (98) 692-04-60</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-3">
+                                        <div class="icon-circle me-2">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <span class="service__font__size">+380 (67) 465-66-75</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
-    
 
-   
-    
 
-    <footer class="bg-primary text-white text-center text-lg-start">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!--Grid row-->
-            <div class="row">
-                <!--Grid column-->
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <img src="../images/logo-2.png" alt="">
 
-                    <p>
-                        Понад 20 років досвіду та знання міжнародних стандартів, технологічних змін та промислових
-                        систем, ми прагнемо надавати найкращі та економічні рішення для наших шановних клієнтів.
-                    </p>
-                </div>
-                <!--Grid column-->
 
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Напрями</h5>
 
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Латвія</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Фінляндія</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Норвегія</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Китай</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Естонія</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Швеція</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Україна-Литва</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">З Фінляндії</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Зі Швеції</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
 
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">Посилання</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!" class="text-white text-size">Про нас</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Контакти</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white text-size">Блог</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-            </div>
-            <!--Grid row-->
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/31e9515bc8.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script src="../scripts/script.js"></script>
-    <script src="../scripts/header.js"></script>
     <script src="../scripts/loaderHeader.js"></script>
+    <script src="../scripts/loaderFooter.js"></script>
+    <script src="../scripts/elements/contact-widget.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="../scripts/contact-page.js"></script>
-    <script src="../scripts/contact-page.js"></script>
+    <script src="../scripts/page-setup/contact-page-setup.js"></script>
 </body>
 
 </html>

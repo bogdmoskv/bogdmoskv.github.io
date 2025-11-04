@@ -1,7 +1,6 @@
-let selectedLanguage = localStorage.getItem('selectedLanguage');
+let selectedLanguage = localStorage.getItem('selectedLanguage')
 if (selectedLanguage == "ukrainian"){
-    document.title = "Про компанію AS-Trans";
+    document.title = "Про компанію AS-Trans"
 } else if (selectedLanguage == "american"){
-    document.title = "About AS-Trans";
+    document.title = "About AS-Trans"
 }
-

@@ -5,46 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Найкраща міжнародна логістична компанія AS-Trans Київ, Україна</title>
-    <meta name="description" content="Міжнародна логістична транспортна компанія АС-Транс ❇️митно-брокерські послуги ❇️митне оформлення вантажів ❇️Детальніше ТУТ!">
-    <meta name="keywords" content="логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания">
-    <!-- <link rel="canonical" href="https://bogdmoskv.github.io/index.html" /> -->
+    <meta name="keywords"
+        content="логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As Trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортная компания, транспортна компанія">
+    <link rel="canonical" href="https://fre0n0.github.io" />
     <meta name="robots" content="index, follow" />
 
-    <meta property="og:title" content="Найкраща міжнародна логістична компанія AS-Trans Київ, Україна">
-    <meta property="og:description" content="Міжнародна логістична транспортна компанія АС-Транс ❇️митно-брокерські послуги ❇️митне оформлення вантажів ❇️Детальніше ТУТ!">
-    <meta property="og:type" content="website">
-    <!-- <meta property="og:url" content="https://bogdmoskv.github.io/"> -->
-    <meta property="og:image" content="https://bogdmoskv.github.io/images/og-image.png">
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="AS-Trans" />
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Найкраща міжнародна логістична компанія AS-Trans Київ, Україна">
-    <meta name="twitter:description" content="Міжнародна логістична транспортна компанія АС-Транс ❇️митно-брокерські послуги ❇️митне оформлення вантажів ❇️Детальніше ТУТ!">
-    <meta name="twitter:image" content="https://bogdmoskv.github.io/images/og-image.png">
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "AS-Trans",
-            "url": "https://bogdmoskv.github.io/",
-            "logo": "https://bogdmoskv.github.io/images/og-image.png"
-        }
-    </script>
-    
-    <link rel="icon" href="images/og-image.ico" type="image/x-icon">
-   
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
     <!-- Предзагрузка изображений -->
-    <link rel="predload" href="images/cargo.webp" as="image">
-    <link rel="predload" href="images/ship.webp" as="image">
-    <link rel="predload" href="images/truck.webp" as="image">
-    <link rel="predload" href="images/plane1.webp" as="image">
+    <link rel="preload" href="images/cargo.webp" as="image">
+    <link rel="preload" href="images/ship.webp" as="image">
+    <link rel="preload" href="images/plane1.webp" as="image">
+    <link rel="preload" href="images/truck1.webp" as="image">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -52,6 +26,9 @@
 <body>
 
     <div id="header-placeholder"></div>
+
+    <div id="contact-widget"></div>
+
 
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -67,19 +44,30 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-container slide-1 d-flex justify-content-center align-items-center text-white">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 text-left text-md-center carousel-item__text-block">
-                                <h1 class="animated-heading-2">
+                                <h1 class="animated-heading-2 content-ukrainian">
                                     <span>Міжнародні</span>
                                 </h1>
-                                <h1 class="animated-heading-2">
+                                <h1 class="animated-heading-2 content-ukrainian">
                                     <span>транспортні рішення</span>
                                 </h1>
 
-                                <div class="mt-5 d-none d-md-block" >
-                                    <button class="branded-button animated-button" onclick="window.location.href='/pages/contact-page.html';">
-                                        <a href="/pages/contact-page.html">Зв'язатися з нами</a>
+                                <h1 class="animated-heading-2 content-american" style="display: none;">
+                                    <span>International</span>
+                                </h1>
+                                <h1 class="animated-heading-2 content-american" style="display: none;">
+                                    <span>transportation solutions</span>
+                                </h1>
+
+                                <div class="mt-5 d-none d-md-block">
+                                    <button class="branded-button animated-button"
+                                        onclick="window.location.href='/pages/contact-page.html';">
+                                        <a class="content-ukrainian" href="/pages/contact-page.html">Зв'язатися з
+                                            нами</a>
+                                        <a class="content-american" href="/pages/contact-page.html"
+                                            style="display: none;">Contact us</a>
                                     </button>
                                 </div>
                             </div>
@@ -89,15 +77,25 @@
             </div>
             <div class="carousel-item">
                 <div class="slider-container slide-2 d-flex justify-content-center align-items-center text-white">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 text-left text-md-center carousel-item__text-block">
-                                <h1 class="animated-heading-1"><span>Послуги</span> </h1>
-                                <h1 class="animated-heading-1"><span>з митного оформлення</span></h1>
+                                <h1 class="animated-heading-1 content-ukrainian"><span>Послуги</span> </h1>
+                                <h1 class="animated-heading-1 content-ukrainian"><span>з митного оформлення</span></h1>
+
+                                <h1 class="animated-heading-1 content-american" style="display: none;">
+                                    <span>Customs</span>
+                                </h1>
+                                <h1 class="animated-heading-1 content-american" style="display: none;"><span>clearance
+                                        services</span></h1>
 
                                 <div class="mt-5 d-none d-md-block">
-                                    <button class="branded-button animated-button" onclick="window.location.href='/pages/contact-page.html';">
-                                        <a href="/pages/contact-page.html">Зв'язатися з нами</a>
+                                    <button class="branded-button animated-button"
+                                        onclick="window.location.href='/pages/contact-page.html';">
+                                        <a class="content-ukrainian" href="/pages/contact-page.html">Зв'язатися з
+                                            нами</a>
+                                        <a class="content-american" href="/pages/contact-page.html"
+                                            style="display: none;">Contact us</a>
                                     </button>
                                 </div>
                             </div>
@@ -107,15 +105,25 @@
             </div>
             <div class="carousel-item">
                 <div class="slider-container slide-3 d-flex justify-content-center align-items-center text-white">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 text-left text-md-center">
-                                <h1 class="animated-heading-1"><span>Аутсорсинг</span></h1>
-                                <h1 class="animated-heading-1"><span>зовнішньоекономічної діяльності</span></h1>
+                                <h1 class="animated-heading-1 content-ukrainian"><span>Аутсорсинг</span></h1>
+                                <h1 class="animated-heading-1 content-ukrainian"><span>зовнішньоекономічної
+                                        діяльності</span></h1>
+
+                                <h1 class="animated-heading-1 content-american" style="display: none;"><span>Foreign
+                                        economic</span></h1>
+                                <h1 class="animated-heading-1 content-american" style="display: none;"><span>activity
+                                        outsourcing</span></h1>
 
                                 <div class="mt-5 d-none d-md-block">
-                                    <button class="branded-button animated-button" onclick="window.location.href='/pages/contact-page.html';">
-                                        <a href="/pages/contact-page.html">Зв'язатися з нами</a>
+                                    <button class="branded-button animated-button"
+                                        onclick="window.location.href='/pages/contact-page.html';">
+                                        <a class="content-ukrainian" href="/pages/contact-page.html">Зв'язатися з
+                                            нами</a>
+                                        <a class="content-american" href="/pages/contact-page.html"
+                                            style="display: none;">Contact us</a>
                                     </button>
                                 </div>
                             </div>
@@ -125,15 +133,25 @@
             </div>
             <div class="carousel-item">
                 <div class="slider-container slide-4 d-flex justify-content-center align-items-center text-white">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 text-left text-md-center">
-                                <h1 class="animated-heading-1"><span>Перевезення вантажів</span></h1>
-                                <h1 class="animated-heading-1"><span>по Україні</span></h1>
+                                <h1 class="animated-heading-1 content-ukrainian"><span>Перевезення вантажів</span></h1>
+                                <h1 class="animated-heading-1 content-ukrainian"><span>по Україні</span></h1>
+
+                                <h1 class="animated-heading-1 content-american" style="display: none;">
+                                    <span>Transportation of goods</span>
+                                </h1>
+                                <h1 class="animated-heading-1 content-american" style="display: none;"><span>in
+                                        Ukraine</span></h1>
 
                                 <div class="mt-5 d-none d-md-block">
-                                    <button class="branded-button animated-button" onclick="window.location.href='/pages/contact-page.html';">
-                                        <a href="/pages/contact-page.html">Зв'язатися з нами</a>
+                                    <button class="branded-button animated-button"
+                                        onclick="window.location.href='/pages/contact-page.html';">
+                                        <a class="content-ukrainian" href="/pages/contact-page.html">Зв'язатися з
+                                            нами</a>
+                                        <a class="content-american" href="/pages/contact-page.html"
+                                            style="display: none;">Contact us</a>
                                     </button>
                                 </div>
                             </div>
@@ -154,49 +172,60 @@
         </button>
     </div>
 
-    <div class="container-fluid px-3 px-lg-5 mt-5">
+    <div class="container mt-5">
         <div class="row">
-
-            <div class="col-12 col-md-6 mt-auto mb-auto content-ukrainian">
+            <div
+                class="col-12 col-md-6 mt-auto mb-auto d-flex justify-content-xxl-end flex-column content-ukrainian custom-translation">
                 <h2 class="text-blue text-center text-md-start">ТРАНСПОРТНО-ЛОГІСТИЧНА КОМПАНІЯ</h2>
                 <h2 class="text-blue text-center text-md-start">AS-TRANS, МІСТО КИЇВ</h2>
-                <p class="text-center text-md-start">Транспортно-логістична компанія AS-TRANS, місто Київ, надає
-                    комплексні логістичні та митно-брокерські послуги.</p>
-                <p class="text-center text-md-start">Ми працюємо на ринку України вже понад 20 років, що дозволяє нам
-                    швидко, якісно та за доступною вартістю, організовувати міжнародні вантажоперевезення, вести
-                    експедиційну діяльність у всьому світі, а також надавати митні послуги нашим клієнтам.</p>
-                <p class="text-center text-md-start">Логістична компанія AS-TRANS гарантує повну конфіденційність
-                    послуг. На сьогоднішній день ми готові здійснити перевезення будь-якого вантажу – звичайного,
-                    небезпечного, що вимагає особливих умов транспортування, у тому числі й температурних режимів,
-                    гарантуючи при цьому безпеку та збереження вантажу.</p>
+                <div class="justified-text service__font__size">
+                    <p>Транспортно-логістична компанія AS-TRANS, місто Київ, надає
+                        комплексні логістичні та митно-брокерські послуги.</p>
+                    <p>Ми працюємо на ринку України вже понад 20 років, що дозволяє нам
+                        швидко, якісно та за доступною вартістю, організовувати міжнародні вантажоперевезення, вести
+                        експедиційну діяльність у всьому світі, а також надавати митні послуги нашим клієнтам.</p>
+                    <p>Логістична компанія AS-TRANS гарантує повну конфіденційність
+                        послуг. На сьогоднішній день ми готові здійснити перевезення будь-якого вантажу – звичайного,
+                        небезпечного, що вимагає особливих умов транспортування, у тому числі й температурних режимів,
+                        гарантуючи при цьому безпеку та збереження вантажу.</p>
+                </div>
             </div>
 
 
-
-            <div class="col-12 col-md-6 mt-auto mb-auto content-american" style="display: none; ">
+            <div class="col-12 col-md-6 mt-auto mb-auto d-flex justify-content-xxl-end flex-column content-american custom-translation d-none"
+                style="display: none;">
                 <h2 class="text-blue text-center text-md-start">TRANSPORT AND LOGISTICS COMPANY</h2>
                 <h2 class="text-blue text-center text-md-start">AS-TRANS, KYIV</h2>
-                <p class="text-center text-md-start">Transport and logistics company AS-TRANS, Kyiv, provides a full
-                    range of logistics and customs brokerage services. Your business will be able to take advantage of
-                    the many opportunities that exist in this market with our help.</p>
-                <p class="text-center text-md-start">The AS-TRANS company has been working in Ukraine for more than two
-                    decades. This allows us to organize international cargo transportation, conduct forwarding
-                    activities around the world quickly, efficiently and at an affordable cost. Our business also
-                    provides customs services to our clients.</p>
-                <p class="text-center text-md-start">Our transport and logistics company’s main goal is to provide
-                    complete confidentiality of the services. Today we are ready to carry out the transportation of any
-                    type of cargo. AS-TRANS can deliver ordinary, dangerous cargoes, the ones requiring special
-                    transportation conditions, including temperature conditions, while guaranteeing safety and security.
-                </p>
+                <div class="justified-text service__font__size">
+                    <p>Transport and logistics company AS-TRANS, Kyiv, provides a full
+                        range of logistics and customs brokerage services. Your business will be able to take advantage
+                        of
+                        the many opportunities that exist in this market with our help.</p>
+                    <p>The AS-TRANS company has been working in Ukraine for more than two
+                        decades. This allows us to organize international cargo transportation, conduct forwarding
+                        activities around the world quickly, efficiently and at an affordable cost. Our business also
+                        provides customs services to our clients.</p>
+                    <p>Our transport and logistics company’s main goal is to provide
+                        complete confidentiality of the services. Today we are ready to carry out the transportation of
+                        any
+                        type of cargo. AS-TRANS can deliver ordinary, dangerous cargoes, the ones requiring special
+                        transportation conditions, including temperature conditions, while guaranteeing safety and
+                        security.</p>
+                </div>
             </div>
 
-            <div class="col-12 col-md-6">
-                <img class="image1" src="../images/image1.webp" alt="main-image-1" title="Головна 1">
+
+            <div class="col-12 col-md-6 d-flex justify-content-xxl-start align-items-center">
+                <img class="img-fluid" src="images/image1.webp" alt="Головна 1" title="Головна 1">
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+
+
+
+
+    <div class="container">
         <div class="row mt-5">
             <div class="col-12 content-ukrainian">
                 <h1 class="h1-title text-center">МІЖНАРОДНІ ПЕРЕВЕЗЕННЯ, ЩО</h1>
@@ -207,7 +236,9 @@
                     </div>
                 </div>
 
-                <p class="px-3 px-lg-0 px-50 text-center">Транспортно-логістична компанія AS-TRANS здійснює міжнародні
+                <p class="text-justify-mobile_center-tablet service__font__size">Транспортно-логістична компанія
+                    AS-TRANS здійснює
+                    міжнародні
                     вантажоперевезення під ключ (Door to Door – доставка товару “від дверей до дверей”) на найкращих
                     умовах для клієнта.</p>
 
@@ -222,20 +253,25 @@
                     </div>
                 </div>
 
-                <p class="px-3 px-lg-0 px-50 text-center">The AS-TRANS transport and logistics company provides international cargo transportation on a turnkey basis (door-to-door delivery of goods, pickup/dropoff at an agreed location etc.) on the best terms for the client.</p>
+                <p class="text-justify-mobile_center-tablet service__font__size">The AS-TRANS transport and logistics
+                    company provides
+                    international cargo transportation on a turnkey basis (door-to-door delivery of goods,
+                    pickup/dropoff at an agreed location etc.) on the best terms for the client.</p>
 
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+
+    <div class="container">
         <div class="row mt-3 mb-5">
             <div class="col-12 col-lg-3 content-ukrainian">
-                <div class="card service-card d-flex jusify-content-center align-items-center p-3">
-                    <img class="service-card__image" src="images/service1.webp" alt="international cargo" title="Головна 2" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center p-3">
+                    <img class="img-fluid" src="images/service1.webp" alt="international cargo" title="Головна 2">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">МІЖНАРОДНІ ПЕРЕВЕЗЕННЯ</h4>
-                        <div class="text-center"><small>Перевезення вантажів власним автомобільним транспортом (ліцензія
+                        <div class="text-center service__font__size"><small>Перевезення вантажів власним автомобільним
+                                транспортом (ліцензія
                                 Міністерства транспорту та зв’язку України серія АТ №062250). Ми здійснюємо вантажні
                                 перевезення комплектних, збірних та небезпечних вантажів власним автомобільним
                                 транспортом з будь-якої точки ЄС та України із застосуванням книжок ЕКМТ/ЕСМТ</small>
@@ -247,22 +283,24 @@
             </div>
 
             <div class="col-12 col-lg-3 content-ukrainian">
-                <div class="card service-card d-flex jusify-content-center align-items-center mt-4 mt-md-0 p-3">
-                    <img class="service-card__image" src="../images/service2.webp" alt="multimodal transportation" title="Головна 3" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center mt-4 mt-md-0 p-3">
+                    <img class="img-fluid" src="images/service2.webp" alt="multimodal transportation" title="Головна 3">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">МУЛЬТИМОДАЛЬНІ ПЕРЕВЕЗЕННЯ</h4>
-                        <div class="text-center"><small>Морські контейнерні перевезення, авіа доставка дрібних вантажів.
+                        <div class="text-center service__font__size"><small>Морські контейнерні перевезення, авіа
+                                доставка дрібних вантажів.
                                 Можемо організувати будь-які схеми експортних та імпортних перевезень</small></div>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-3 content-ukrainian">
-                <div class="card service-card d-flex jusify-content-center align-items-center mt-4 mt-md-0 p-3">
-                    <img class="service-card__image" src="../images/service3.webp" alt="cargo consolidation" title="Головна 4" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center mt-4 mt-md-0 p-3">
+                    <img class="img-fluid" src="images/service3.webp" alt="cargo consolidation" title="Головна 4">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">ПОСЛУГИ З КОНСОЛІДАЦІЇ</h4>
-                        <div class="text-center"><small>Послуги з консолідації вантажів до терміналів країн ЄС – Польща
+                        <div class="text-center service__font__size"><small>Послуги з консолідації вантажів до
+                                терміналів країн ЄС – Польща
                                 (оформлення/склад), Словаччина (оформлення/склад). Експедиційні перевезення здійснюються
                                 виключно ліцензійним транспортом. Місцезнаходження вантажу контролюється по всьому шляху
                                 прямування.</small></div>
@@ -271,11 +309,12 @@
             </div>
 
             <div class="col-12 col-lg-3 content-ukrainian">
-                <div class="card service-card d-flex jusify-content-center align-items-center mt-4 mt-md-0 p-3">
-                    <img class="service-card__image" src="../images/service4.webp" alt="customs clearance" title="Головна 5" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center mt-4 mt-md-0 p-3">
+                    <img class="img-fluid" src="images/service4.webp" alt="customs clearance" title="Головна 5">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">МИТНЕ ОФОРМЛЕННЯ</h4>
-                        <div class="text-center"><small>Експорту/імпорт та транзит територією України (ліцензія
+                        <div class="text-center service__font__size"><small>Експорту/імпорт та транзит територією
+                                України (ліцензія
                                 Державної митної служби України серія АВ № 542705 / дозвіл на провадження
                                 митно-брокерської діяльності)</small></div>
                     </div>
@@ -283,11 +322,16 @@
             </div>
 
             <div class="col-12 col-lg-3 content-american" style="display: none;">
-                <div class="card service-card d-flex jusify-content-center align-items-center p-3">
-                    <img class="service-card__image" src="images/service1.webp" alt="international cargo" title="international cargo" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center p-3">
+                    <img class="img-fluid" src="images/service1.webp" alt="international cargo"
+                        title="international cargo">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">INTERNATIONAL CARGO</h4>
-                        <div class="text-center"><small>Transportation using our own trucks (license of the Ministry of Transport and Communication of Ukraine AD No.062250). We offer cargo transportation of complete, groupage and dangerous goods by our own transport from anywhere in the EU and Ukraine using ECMT books</small>
+                        <div class="text-center service__font__size"><small>Transportation using our own trucks (license
+                                of the Ministry of
+                                Transport and Communication of Ukraine AD No.062250). We offer cargo transportation of
+                                complete, groupage and dangerous goods by our own transport from anywhere in the EU and
+                                Ukraine using ECMT books</small>
                         </div>
 
 
@@ -296,104 +340,138 @@
             </div>
 
             <div class="col-12 col-lg-3 content-american" style="display: none;">
-                <div class="card service-card d-flex jusify-content-center align-items-center mt-4 mt-md-0 p-3">
-                    <img class="service-card__image" src="../images/service2.webp" alt="multimodal transportation" title="multimodal transportation" width="350" height="220">
+                <div class="card service-card d-flex r align-items-center mt-4 mt-md-0 p-3">
+                    <img class="img-fluid" src="images/service2.webp" alt="multimodal transportation"
+                        title="multimodal transportation">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">MULTIMODAL TRANSPORTATION</h4>
-                        <div class="text-center"><small>We offer a wide range of shipping methods – sea container transportation, air delivery of small cargoes, etc. We can organize any schemes of export and import shipments</small></div>
+                        <div class="text-center service__font__size"><small>We offer a wide range of shipping methods –
+                                sea container
+                                transportation, air delivery of small cargoes, etc. We can organize any schemes of
+                                export and import shipments</small></div>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-3 content-american" style="display: none;">
-                <div class="card service-card d-flex jusify-content-center align-items-center mt-4 mt-md-0 p-3">
-                    <img class="service-card__image" src="../images/service3.webp" alt="cargo consolidation" title="cargo consolidation" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center mt-4 mt-md-0 p-3">
+                    <img class="img-fluid" src="images/service3.webp" alt="cargo consolidation"
+                        title="cargo consolidation">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">CARGO CONSOLIDATION</h4>
-                        <div class="text-center"><small>Services to the terminals of the EU countries – Poland (clearance/warehouse), Slovakia (clearance/warehouse). Forwarding transportation is carried out exclusively by licensed transport. The location of the cargo is controlled along the entire route.</small></div>
+                        <div class="text-center service__font__size"><small>Services to the terminals of the EU
+                                countries – Poland
+                                (clearance/warehouse), Slovakia (clearance/warehouse). Forwarding transportation is
+                                carried out exclusively by licensed transport. The location of the cargo is controlled
+                                along the entire route.</small></div>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-3 content-american" style="display: none;">
-                <div class="card service-card d-flex jusify-content-center align-items-center mt-4 mt-md-0 p-3">
-                    <img class="service-card__image" src="../images/service4.webp" alt="customs clearance" title="customs clearance" width="350" height="220">
+                <div class="card service-card d-flex  align-items-center mt-4 mt-md-0 p-3">
+                    <img class="img-fluid" src="images/service4.webp" alt="customs clearance" title="customs clearance">
                     <div class="info">
                         <h4 class="mt-3 info-title text-center">CUSTOMS CLEARANCE</h4>
-                        <div class="text-center"><small>Of export/import and transit through the territory of Ukraine (license of the State Customs Service of Ukraine AB No. 542705 / permission to conduct customs brokerage activities)</small></div>
+                        <div class="text-center service__font__size"><small>Of export/import and transit through the
+                                territory of Ukraine
+                                (license of the State Customs Service of Ukraine AB No. 542705 / permission to conduct
+                                customs brokerage activities)</small></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <div class="image-container-1 mt-2">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row mt-5 mb-5">
-                <div class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto px-3 px-lg-5 color-white content-ukrainian">
+                <div
+                    class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto px-3 px-lg-5 color-white content-ukrainian">
                     <h2 class="mt-5 mb-4">
                         <i>ЧОМУ</i>
                         <span class="text-warning">AS-TRANS</span>
                         <i>НАЙКРАЩА ЛОГІСТИЧНА КОМПАНІЯ В УКРАЇНІ</i>
                     </h2>
-                    <p class="text-align-justify">Логістична компанія AS-TRANS здатна приємно здивувати навіть
+                    <p class="text-align-justify service__font__size">Логістична компанія AS-TRANS здатна приємно
+                        здивувати навіть
                         найвибагливіших клієнтів.</p>
-                    <p class="text-align-justify">AS-TRANS – це перевізник, експедитор та митний брокер в одній особі,
+                    <p class="text-align-justify service__font__size">AS-TRANS – це перевізник, експедитор та митний
+                        брокер в одній особі,
                         що реалізує кожну вимогу клієнта. Усі домовленості виконуються точно за графіком, відповідно до
                         завдань замовника.</p>
-                    <p class="text-align-justify">Звернувшись до нашої транспортно-логістичної компанії, Ви зможете
+                    <p class="text-align-justify service__font__size">Звернувшись до нашої транспортно-логістичної
+                        компанії, Ви зможете
                         оцінити не лише професіоналізм та високий стандарт обслуговування.</p>
                 </div>
 
                 <div class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto content-ukrainian">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row row-advantage-icons">
                             <div
                                 class="col d-flex flex-column align-items-center justify-content-center mt-lg-auto mb-lg-auto">
-                                <img class="advantage-icon" src="../images/advantage1.webp" alt="advantage1" title="advantage1">
+                                <img class="advantage-icon" src="images/advantage1.webp" alt="advantage1"
+                                    title="advantage1">
                                 <h4 class="text-center color-white">МАКСИМУМ ЧАСУ ДЛЯ ВЕДЕННЯ БІЗНЕСУ</h4>
                             </div>
                             <div
                                 class="col d-flex flex-column align-items-center justify-content-center mt-lg-auto mb-lg-auto">
-                                <img class="advantage-icon" src="../images/advantage2.png" alt="advantage2" title="advantage2">
+                                <img class="advantage-icon" src="images/advantage2.png" alt="advantage2"
+                                    title="advantage2">
                                 <h4 class="text-center color-white">ЗНИЖЕННЯ СОБІВАРТОСТІ ТОВАРУ</h4>
                             </div>
                             <div
                                 class="col d-flex flex-column align-items-center justify-content-center mt-lg-auto mb-lg-auto">
-                                <img class="advantage-icon" src="../images/advantage3.png" alt="advantage3" title="advantage3">
+                                <img class="advantage-icon" src="images/advantage3.png" alt="advantage3"
+                                    title="advantage3">
                                 <h4 class="text-center color-white">ПІДВИЩЕННЯ ЕФЕКТИВНОСТІ ПІДПРИЄМСТВА</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto px-3 px-lg-5 color-white content-american" style="display: none;">
+                <div class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto px-3 px-lg-5 color-white content-american"
+                    style="display: none;">
                     <h2 class="mt-5 mb-4">
                         <i>WHY</i>
                         <span class="text-warning">AS-TRANS</span>
                         <i>IS THE BEST LOGISTICS COMPANY IN UKRAINE</i>
                     </h2>
-                    <p class="text-align-justify">The logistics company AS-TRANS is able to satisfy even the most demanding customers.
-                        AS -TRANS is a carrier, freight forwarder and customs broker all rolled into one, that fulfills each client’s requirements.</p>
-                    <p class="text-align-justify">All agreements are carried out exactly on schedule, in accordance with the customer’s tasks.</p>
-                    <p class="text-align-justify">By partnering with our transport and logistics company you will be able to appreciate not only professionalism and a high standard of service. We are always striving for new ways of providing services that exceed expectations while maintaining professionalism among staff members at all times!</p>
+                    <p class="text-align-justify service__font__size">The logistics company AS-TRANS is able to satisfy
+                        even the most
+                        demanding customers.
+                        AS -TRANS is a carrier, freight forwarder and customs broker all rolled into one, that fulfills
+                        each client’s requirements.</p>
+                    <p class="text-align-justify service__font__size">All agreements are carried out exactly on
+                        schedule, in accordance with
+                        the customer’s tasks.</p>
+                    <p class="text-align-justify service__font__size">By partnering with our transport and logistics
+                        company you will be
+                        able to appreciate not only professionalism and a high standard of service. We are always
+                        striving for new ways of providing services that exceed expectations while maintaining
+                        professionalism among staff members at all times!</p>
                 </div>
 
-                <div class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto content-american" style="display: none;">
-                    <div class="container-fluid">
+                <div class="col-12 col-lg-6 text-center text-lg-start mt-auto mb-auto content-american"
+                    style="display: none;">
+                    <div class="container">
                         <div class="row">
                             <div
                                 class="col d-flex flex-column align-items-center justify-content-center mt-lg-auto mb-lg-auto">
-                                <img class="advantage-icon" src="../images/advantage1.webp" alt="advantage1" title="advantage1">
+                                <img class="advantage-icon" src="images/advantage1.webp" alt="advantage1"
+                                    title="advantage1">
                                 <h4 class="text-center color-white">MAXIMUM BUSINESS PRODUCTIVITY</h4>
                             </div>
                             <div
                                 class="col d-flex flex-column align-items-center justify-content-center mt-lg-auto mb-lg-auto">
-                                <img class="advantage-icon" src="../images/advantage2.png" alt="advantage2" title="advantage2">
+                                <img class="advantage-icon" src="images/advantage2.png" alt="advantage2"
+                                    title="advantage2">
                                 <h4 class="text-center color-white">REDUCTION IN THE COST OF GOODS</h4>
                             </div>
                             <div
                                 class="col d-flex flex-column align-items-center justify-content-center mt-lg-auto mb-lg-auto">
-                                <img class="advantage-icon" src="../images/advantage3.png" alt="advantage3" title="advantage3">
+                                <img class="advantage-icon" src="images/advantage3.png" alt="advantage3"
+                                    title="advantage3">
                                 <h4 class="text-center color-white">IMPROVING THE EFFICIENCY OF THE COMPANY</h4>
                             </div>
                         </div>
@@ -403,10 +481,12 @@
         </div>
     </div>
 
+
     <div class="image-container-2">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row mt-5 mb-5">
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
+                <div
+                    class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-user-friends"></i>
@@ -416,7 +496,8 @@
                     <div class="display"></div>
                     <h4>НАДІЙНІ ПАРТНЕРИ</h4>
                 </div>
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
+                <div
+                    class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-chart-pie"></i>
@@ -426,7 +507,8 @@
                     <div class="display1"></div>
                     <h4>РОКІВ НА РИНКУ</h4>
                 </div>
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
+                <div
+                    class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-truck-loading"></i>
@@ -436,7 +518,8 @@
                     <div class="display2"></div>
                     <h4>ДОСТАВЛЕНО ВАНТАЖІВ</h4>
                 </div>
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
+                <div
+                    class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-ukrainian">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-thumbs-up"></i>
@@ -447,7 +530,8 @@
                     <h4>ЗАДОВОЛЕНІ КЛІЄНТИ</h4>
                 </div>
 
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american" style="display: none;">
+                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american"
+                    style="display: none;">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-user-friends"></i>
@@ -457,7 +541,8 @@
                     <div class="display"></div>
                     <h4>RELIABLE PARTNERS</h4>
                 </div>
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american" style="display: none;">
+                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american"
+                    style="display: none;">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-chart-pie"></i>
@@ -467,7 +552,8 @@
                     <div class="display1"></div>
                     <h4>YEARS ON THE MARKET</h4>
                 </div>
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american" style="display: none;">
+                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american"
+                    style="display: none;">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-truck-loading"></i>
@@ -477,7 +563,8 @@
                     <div class="display2"></div>
                     <h4>CARGO DELIVERED</h4>
                 </div>
-                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american" style="display: none;">
+                <div class="achievement-card col-12 col-lg-3 text-center text-lg-left mt-auto mb-auto color-white content-american"
+                    style="display: none;">
                     <div class="record-card">
                         <div class="record-card-border">
                             <i class="fas fa-thumbs-up"></i>
@@ -490,8 +577,10 @@
             </div>
         </div>
     </div>
+
+
     <div class="image-container-4">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row mt-5">
                 <div class="col-12 content-ukrainian">
                     <h1 class="h1-title text-center">ГЕОГРАФІЯ <span class="blue-text-color">ПЕРЕВЕЗЕННЯ</span></h1>
@@ -512,82 +601,99 @@
                 </div>
 
                 <div class="grid-container">
-                    <div class="grid-item"><img src="images/China.png" alt="China" title="China" width="220" height="100"></div>
-                    <div class="grid-item"><img src="images/Turkey.png" alt="Turkey" title="Turkey" width="220" height="105"></div>
-                    <div class="grid-item"><img src="images/Moldova.png" alt="Moldova" title="Moldova" width="220" height="100"></div>
-                    <div class="grid-item"><img src="images/Romania.png" alt="Romania" title="Romania" width="220" height="100"></div>
-                    <div class=" grid-item"><img src="images/Ukraine.png" alt="Ukraine" title="Ukraine" width="220" height="100"></div>
-                    <div class=" grid-item"><img src="images/Bulgaria.png" alt="Bulgaria" title="Bulgaria" width="220" height="100"></div>
-                    <div class=" grid-item"><img src="images/Finland.png" alt="Finland" title="Finland" width="220" height="100"></div>
-                    <div class=" grid-item"><img src="images/Estonia.png" alt="Estonia" title="Estonia" width="220" height="100"></div>
-                    <div class=" grid-item"><img src="images/Lithuania.png" alt="Lithuania" title="Lithuania" width="220" height="100"></div>
-                    <div class=" grid-item"><img src="images/Latvia.png" alt="Latvia" title="Latvia" width="220" height="100"></div>
+                    <div class="grid-item"><img src="images/China.png" alt="China" title="China" class="img-fluid">
+                    </div>
+                    <div class="grid-item"><img src="images/Turkey.png" alt="Turkey" title="Turkey" class="img-fluid">
+                    </div>
+                    <div class="grid-item"><img src="images/Moldova.png" alt="Moldova" title="Moldova"
+                            class="img-fluid"></div>
+                    <div class="grid-item"><img src="images/Romania.png" alt="Romania" title="Romania"
+                            class="img-fluid"></div>
+                    <div class=" grid-item"><img src="images/Ukraine.png" alt="Ukraine" title="Ukraine"
+                            class="img-fluid"></div>
+                    <div class=" grid-item"><img src="images/Bulgaria.png" alt="Bulgaria" title="Bulgaria"
+                            class="img-fluid"></div>
+                    <div class=" grid-item"><img src="images/Finland.png" alt="Finland" title="Finland"
+                            class="img-fluid"></div>
+                    <div class=" grid-item"><img src="images/Estonia.png" alt="Estonia" title="Estonia"
+                            class="img-fluid"></div>
+                    <div class=" grid-item"><img src="images/Lithuania.png" alt="Lithuania" title="Lithuania"
+                            class="img-fluid"></div>
+                    <div class=" grid-item"><img src="images/Latvia.png" alt="Latvia" title="Latvia" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+
     <div class="image-container-3">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row pt-5 mb-5">
-                <div class="col-12 col-lg-6 d-flex justify-content-center flex-column content-ukrainian">
+                <div class="col-12 col-lg-6 d-flex justify-content-start flex-column content-ukrainian">
                     <h2 class="text-blue text-center content-ukrainian">ЗВ'ЯЖІТЬСЯ З НАМИ</h2>
-                    <p class="px-3 px-lg-0 px-50 text-center content-ukrainian">Ми подбаємо про транспортування для вашого бізнесу</p>
+                    <p class="px-3 px-lg-0 px-50 text-center content-ukrainian service__font__size">Ми подбаємо про
+                        транспортування для
+                        вашого бізнесу</p>
                     <h2 class="text-blue text-center content-american">CONTACT US</h2>
-                    <p class="px-3 px-lg-0 px-50 text-center content-american">We will take care of transportation for your business</p>
+                    <p class="px-3 px-lg-0 px-50 text-center content-american service__font__size">We will take care of
+                        transportation for
+                        your business</p>
 
                     <div class="container-fluid">
                         <div class="row my-3">
-                            <div class="col-3 d-flex justify-content-end align-items-center">
+                            <div class="col-3 col-md-2 d-flex justify-content-start align-items-center">
                                 <div class="circle-icon">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                             </div>
-                            <div class="col-9 content-ukrainian">
+                            <div class="col-9 col-md-10 content-ukrainian">
                                 <h3>АДРЕСА</h3>
-                                <p>Україна, Київ
+                                <p class="service__font__size">Україна, Київ
                                     вул. Радищева, 3
                                     офіс Б-306, а/с 25</p>
                             </div>
-                            <div class="col-9 content-american">
+                            <div class="col-9 col-md-10 content-american">
                                 <h3>ADRESS</h3>
-                                <p>Ukraine, Kiyv
+                                <p class="service__font__size">Ukraine, Kiyv
                                     st. Radishcheva, 3
                                     office B-306, PO box 25</p>
                             </div>
                         </div>
 
                         <div class="row my-3">
-                            <div class="col-3 d-flex justify-content-end align-items-center">
+                            <div class="col-3 col-md-2 d-flex justify-content-start align-items-center">
                                 <div class="circle-icon">
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                             </div>
-                            <div class="col-9 content-ukrainian">
+                            <div class="col-9 col-md-10 content-ukrainian">
                                 <h3>ТЕЛЕФОНУЙТЕ</h3>
-                                <p>+380 (98) 692-04-60
+                                <p class="service__font__size">+380 (98) 692-04-60
                                     &nbsp; +380 (44) 594-72-60</p>
                             </div>
-                            <div class="col-9 content-american ">
+                            <div class="col-9 col-md-10 content-american">
                                 <h3>CALL US</h3>
-                                <p>+380 (98) 692-04-60
+                                <p class="service__font__size">+380 (98) 692-04-60
                                     &nbsp; +380 (44) 594-72-60</p>
                             </div>
                         </div>
 
                         <div class="row my-3">
-                            <div class="col-3 d-flex justify-content-end align-items-center">
+                            <div class="col-3 col-md-2 d-flex justify-content-start align-items-center">
                                 <div class="circle-icon">
                                     <i class="fa-regular fa-envelope"></i>
                                 </div>
                             </div>
-                            <div class="col-9 content-ukrainian">
+                            <div class="col-9 col-md-10 content-ukrainian">
                                 <h3>EMAIL</h3>
-                                <p>order@as-trans.com.ua</p>
+                                <p class="service__font__size">order@as-trans.com.ua</p>
                             </div>
-                            <div class="col-9 content-american">
+                            <div class="col-9 col-md-10 content-american">
                                 <h3>EMAIL</h3>
-                                <p>order@as-trans.com.ua</p>
+                                <p class="service__font__size">order@as-trans.com.ua</p>
                             </div>
                         </div>
                     </div>
@@ -597,60 +703,51 @@
                     <div class="card p-5 shadow bg-body rounded">
                         <h3 class="text-blue content-ukrainian">Потрібна допомога?</h3>
                         <h3 class="text-blue content-american">Need help?</h3>
-                        <form>
+                        <div class="service__font__size">
                             <div class="mb-3 ">
-                                <label for="nameInputId" class="form-label content-ukrainian">Ваше ім'я</label>
-                                <label for="nameInputId" class="form-label content-american">Your name:</label>
-                                <input type="text" class="form-control" id="nameInputId">
+                                <label for="inputName" class="form-label content-ukrainian">Ваше ім'я</label>
+                                <label for="inputName" class="form-label content-american">Your name:</label>
+                                <input type="text" class="form-control" id="inputName">
 
                             </div>
                             <div class="mb-3 ">
-                                <label for="phoneInputId" class="form-label content-ukrainian">Ваш номер телефону:</label>
-                                <label for="phoneInputId" class="form-label content-american">Your phone number:</label>
-                                <input type="text" class="form-control" id="phoneInputId">
+                                <label for="inputPhone" class="form-label content-ukrainian">Ваш номер
+                                    телефону:</label>
+                                <label for="inputPhone" class="form-label content-american">Your phone number:</label>
+                                <input type="text" class="form-control" id="inputPhone">
                             </div>
                             <div class="mb-3">
-                                <label for="emailInputId" class="form-label content-ukrainian">Ваш email:</label>
-                                <label for="emailInputId" class="form-label content-american">Your email:</label>
-                                <input type="text" class="form-control" id="emailInputId">
+                                <label for="InputEmail" class="form-label content-ukrainian">Ваш email:</label>
+                                <label for="InputEmail" class="form-label content-american">Your email:</label>
+                                <input type="text" class="form-control" id="InputEmail">
                             </div>
 
-                            <button id="formButton" type="submit" class="btn btn-primary">
+                            <button id="formBtn" type="submit" class="btn btn-primary">
                                 <span class="content-ukrainian">Відправити повідомлення</span>
                                 <span class="content-american">Send message</span></button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1055"></div>
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/31e9515bc8.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "Obgg-ftcAlkqx3k9k",
-            });
-        })();
 
-        let selectedLanguage = localStorage.getItem('selectedLanguage');
-        if (selectedLanguage == "ukrainian"){
-            document.title = "Найкраща міжнародна логістична компанія AS-Trans Київ, Україна";
-        } else if (selectedLanguage == "american"){
-            document.title = "The Best International Logistics Company AS-Trans Kyiv, Ukraine";
-        }
-
-
-    </script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/header.js"></script>
     <script src="scripts/loaderHeader.js"></script>
     <script src="scripts/loaderFooter.js"></script>
+    <script src="scripts/elements/contact-widget.js"></script>
+    <script src="scripts/main-page.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="module" src="../scripts/email-notifications/email-form-handler.js"></script>
 </body>
 
 </html>

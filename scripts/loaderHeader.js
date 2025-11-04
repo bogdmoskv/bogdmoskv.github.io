@@ -1,20 +1,3 @@
-//localStorage предоставляет возможность хранить данные на стороне клиента (в браузере)
-//Данные, сохранённые в localStorage, остаются доступными даже после закрытия вкладки или браузера, что
-//делаемт его полезным для сохранения информации..
-
-//Основные характеристики localStorage:
-//1. Долговечность. Данные в localStorage сохраняются в браузере до тех пор, пока не будут удалены вручную.
-//Они не исчезают после закрытия вкладки или браузера.
-
-//2. Объём хранения. Большинство браузеров позволяют хранить около 5-10 Мб данных на домен. Этого достаточно 
-//для хранения различных настроек и небольшой информации
-
-//3. Ключ-значение. localStorage работает по принципу хранения данных в формате "ключ-значение". Это означает,
-//что можно сохранить данные, привязанные  копределнному ключу и впоследствии легко извлечь их
-
-//4. Операции с localStorage происходят мгновенно, и не нужно беспокоиться о задержках при их использовании.
-
-
 document.addEventListener('DOMContentLoaded', function () {
     //устанавливаем язык по умолчанию на украинский, если он не установлен
     if (!localStorage.getItem('selectedLanguage')) {
@@ -36,6 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 element.style.display = 'none'; //скрываем контент для других языков
             }
         });
+    }
+
+    function toggleFlexContent(language){
+         //находим все элементы с классом, содержащим 'content-'
+         const contentElements = document.querySelectorAll('.custom-translation[class*="content-"]');
+
+         contentElements.forEach(element => {
+             if (element.classList.contains(`content-${language}`)) {
+                 element.classList.remove('d-none'); //!!!ДОБАВЛЕНО
+                 element.style.display = 'block'; //отображаем контент для выбранного языка             
+             } else {
+                 element.classList.add('d-none');
+                 element.style.display = 'none'; //скрываем контент для других языков
+             }
+         });
     }
 
     //функция для установки пути к изображению в кнопке
@@ -82,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             //вызываем функцию для обновления отображения контента
             updateContentDisplay(selectedLanguage);
+            toggleFlexContent(selectedLanguage); //!!!
             updateFlagIcon(selectedLanguage);
 
             const dropdownItems = document.querySelectorAll('.dropdown-item-icon');
@@ -118,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('selectedLanguage', dataValue);
 
                     updateContentDisplay(dataValue);
+                    toggleFlexContent(dataValue);
 
                     selectedLanguage = localStorage.getItem('selectedLanguage')
 

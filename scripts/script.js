@@ -1,4 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+async function loadEmailConfig() {
+    const response = await fetch('../emailjs-config.json');
+    return await response.json();
+}
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+
     let dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(function (dropdown) {
@@ -11,6 +18,60 @@ document.addEventListener("DOMContentLoaded", function () {
             let dropdownMenu = this.querySelector(".dropdown-menu");
             dropdownMenu.classList.remove('show');
         });
+    });
+
+    let headers = document.querySelectorAll('.row-advantage-icons h4');
+    let maxHeight = 0;
+
+    // находим максимальную высоту
+    headers.forEach(function (header) {
+        let height = header.offsetHeight;
+        if (height > maxHeight) {
+            maxHeight = height;
+        }
+    });
+
+    maxHeight += 50;
+
+    //Устанавливаем максимальную высоту всем заголовкам
+    headers.forEach(function (header) {
+        header.style.height = maxHeight + 'px';
+    })
+
+    const config = await loadEmailConfig();
+    emailjs.init(config.publicKey);
+
+    document.querySelector('#formBtn').addEventListener('click', async function (event) {
+        event.preventDefault(); //предотвращаем стандартное поведение отправки формы
+
+        const name = document.getElementById('inputName').value;
+        const phone = document.getElementById('inputPhone').value;
+        const email = document.getElementById('InputEmail').value;
+        const messageText = document.getElementById('InputMessage').value;
+        const inputWebsite = document.getElementById('InputWebsite').value;
+        const inputTopic = document.getElementById('InputTheme').value;
+
+        const templateParams = {
+            from_name: name,
+            phone_number: phone,
+            to_email: email,
+            message: messageText,
+            input_website: inputWebsite,
+            input_topic: inputTopic
+        };
+
+        try {
+            const response = await emailjs.send(
+                config.serviceId,
+                config.templateId,
+                templateParams
+            );
+
+            alert('Сповіщення успішно відправлено!');
+        } catch (error) {
+            console.log('FAILED...', error);
+            alert("Помилка при відпраці сповіщення!");
+        }
     });
 });
 
@@ -38,6 +99,7 @@ if (!selectedLanguage) {
     selectedLanguage = 'ukrainian';
     localStorage.setItem('selectedLanguage', selectedLanguage);
 }
+
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -86,46 +148,11 @@ const observer = new IntersectionObserver((entries, observer) => {
 });
 
 const imgContainers2 = document.querySelectorAll('.image-container-2');
-if (imgContainers2.length > 0){
+if (imgContainers2.length > 0) {
     imgContainers2.forEach(imgContainer => {
         observer.observe(imgContainer);
     });
-    
+
 }
 
-document.querySelector('#formButton').addEventListener('click', function (event) {
-    event.preventDefault(); //предотвращаем стандартное поведение отправки формы
 
-    const name = document.getElementById('nameInputId').value;
-    const phone = document.getElementById('phoneInputId').value;
-    const email = document.getElementById('emailInputId').value;
-
-    const templateParams = {
-        from_name: name,
-        phone_number: phone,
-        email: email
-    };
-
-    emailjs.send('service_l9d94jk', 'template_8lib7fg', templateParams).then(
-        (response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Сообщение отправлено успешно!');
-
-            const autoReplyParams = {
-                to_email: email
-            };
-            emailjs.send('service_l9d94jk', 'template_u37d75b', autoReplyParams).then(
-                (response) => {
-                    console.log('Auto-reply sent succesffully!', response.status, response.text);
-                },
-                (error) => {
-                    console.log('Auto-reply FAILED', error);
-                },
-            );
-        },
-        (error) => {
-            console.log('FAILED...', error);
-            alert('Ошибка при отправке сообщения :((');
-        },
-    );
-});
