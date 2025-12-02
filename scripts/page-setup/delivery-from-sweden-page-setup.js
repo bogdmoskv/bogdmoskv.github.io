@@ -1,67 +1,29 @@
+import { getSelectedLanguage, updateLanguageContent } from '../utils/language-manager.js';
+
 document.addEventListener('DOMContentLoaded', function () {
-    let selectedLanguage = localStorage.getItem('selectedLanguage')
-    updateLanguageContent(selectedLanguage);
-})
-
-function updateLanguageContent(selectedLanguage) {
-    if (selectedLanguage == "ukrainian") {
-        document.title = "Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину"
-
-        document.querySelector('meta[property="og:description"]').setAttribute(
-            'content',
-            'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину ❇️ транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!'
-        )
-
-        document.querySelector('meta[name="keywords"]').setAttribute(
-            'content',
-            'логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания'
-        )
-
-        document.querySelector('meta[property="og:title"]').setAttribute(
-            'content',
-            'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину'
-        )
-
-        document.querySelector('meta[name="twitter:title"]').setAttribute(
-            'content',
-            'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину'
-        )
-
-        document.querySelector('meta[name="twitter:description"]').setAttribute(
-            'content',
-            'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину ❇️ транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!'
-        )
-    } else if (selectedLanguage == "american") {
-        document.title = "Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey"
-
-        document.querySelector('meta[property="og:description"]').setAttribute(
-            'content',
-            'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey ❇️ transport company AS-Trans ❇️ customs brokerage services ❇️ More HERE!'
-        )
-
-        document.querySelector('meta[name="description"]').setAttribute(
-            'content',
-            'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey ❇️ transport company AS-Trans ❇️ customs brokerage services ❇️ More HERE!'
-        )
-
-        document.querySelector('meta[name="keywords"]').setAttribute(
-            'content',
-            'logistics, AS-Trans, AS trans, As trans, transport, transportation, services, broker, customs clearance, transport company'
-        )
-
-        document.querySelector('meta[property="og:title"]').setAttribute(
-            'content',
-            'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey'
-        )
-
-        document.querySelector('meta[name="twitter:title"]').setAttribute(
-            'content',
-            'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey'
-        )
-
-        document.querySelector('meta[name="twitter:description"]').setAttribute(
-            'content',
-            'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey ❇️ transport company AS-Trans ❇️ customs brokerage services ❇️ More HERE!'
-        )
-    }
-}
+    const selectedLanguage = getSelectedLanguage();
+    const pageConfig = {
+        ukrainian: {
+            meta: {
+                title: "Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину",
+                ogDescription: 'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину ❇️ транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!',
+                keywords: 'логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания',
+                ogTitle: 'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину',
+                twitterTitle: 'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину',
+                twitterDescription: 'Перевезення зі Швеції в Молдову, Румунію, Болгарію, Туреччину ❇️ транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!'
+            }
+        },
+        american: {
+            meta: {
+                title: "Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey",
+                ogDescription: 'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey ❇️ transport company AS-Trans ❇️ customs brokerage services ❇️ More HERE!',
+                description: 'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey ❇️ transport company AS-Trans ❇️ customs brokerage services ❇️ More HERE!',
+                keywords: 'logistics, AS-Trans, AS trans, As trans, transport, transportation, services, broker, customs clearance, transport company',
+                ogTitle: 'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey',
+                twitterTitle: 'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey',
+                twitterDescription: 'Transportation from Sweden to Moldova, Romania, Bulgaria, Turkey ❇️ transport company AS-Trans ❇️ customs brokerage services ❇️ More HERE!'
+            }
+        }
+    };
+    updateLanguageContent(selectedLanguage, pageConfig);
+});

@@ -56,22 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         buttonImg.setAttribute('src', flagSrc);
     }
 
-    function createTimer(element, maxCount, interval, suffix) {
-        var cnt = 0;
-        var timer = window.setInterval(function () {
-            cnt++;
-
-            if (cnt === maxCount && suffix) {
-                element.innerHTML = cnt + suffix;
-            } else {
-                element.innerHTML = cnt;
-            }
-
-            if (cnt == maxCount) {
-                window.clearInterval(timer);
-            }
-        }, interval);
-    }
+    // createTimer доступен глобально через timer-utils.js
 
     fetch('../elements/header.html')
         .then(response => response.text())

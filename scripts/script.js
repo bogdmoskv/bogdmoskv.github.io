@@ -76,22 +76,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 
-function createTimer(element, maxCount, interval, suffix) {
-    var cnt = 0;
-    var timer = window.setInterval(function () {
-        cnt++;
-
-        if (cnt === maxCount && suffix) {
-            element.innerHTML = cnt + suffix;
-        } else {
-            element.innerHTML = cnt;
-        }
-
-        if (cnt == maxCount) {
-            window.clearInterval(timer);
-        }
-    }, interval);
-}
+// createTimer доступен глобально через timer-utils.js
 
 
 let selectedLanguage = localStorage.getItem('selectedLanguage');

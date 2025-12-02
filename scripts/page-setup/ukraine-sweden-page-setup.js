@@ -1,67 +1,29 @@
+import { getSelectedLanguage, updateLanguageContent } from '../utils/language-manager.js';
+
 document.addEventListener('DOMContentLoaded', function () {
-    let selectedLanguage = localStorage.getItem('selectedLanguage')
-    updateLanguageContent(selectedLanguage);
-})
-
-function updateLanguageContent(selectedLanguage) {
-    if (selectedLanguage == "ukrainian") {
-        document.title = "Перевезення вантажів до Швеції. Доставка зі Швеції"
-
-        document.querySelector('meta[property="og:description"]').setAttribute(
-            'content',
-            'Вантажоперевезення в Швецію ❇️ Доставка зі Швеції ❇️ Транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!'
-        )
-
-        document.querySelector('meta[name="keywords"]').setAttribute(
-            'content',
-            'логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания'
-        )
-
-        document.querySelector('meta[property="og:title"]').setAttribute(
-            'content',
-            'Перевезення вантажів до Швеції. Доставка зі Швеції'
-        )
-
-        document.querySelector('meta[name="twitter:title"]').setAttribute(
-            'content',
-            'Перевезення вантажів до Швеції. Доставка зі Швеції'
-        )
-
-        document.querySelector('meta[name="twitter:description"]').setAttribute(
-            'content',
-            'Вантажоперевезення в Швецію ❇️ Доставка зі Швеції ❇️ Транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!'
-        )
-    } else if (selectedLanguage == "american") {
-        document.title = "Transportation of goods to Sweden. Delivery from Sweden"
-
-        document.querySelector('meta[property="og:description"]').setAttribute(
-            'content',
-            'Cargo transportation to Sweden ❇️ Delivery from Sweden ❇️ AS-Trans transport company ❇️ customs brokerage services ❇️ More HERE!'
-        )
-
-        document.querySelector('meta[name="description"]').setAttribute(
-            'content',
-            'Cargo transportation to Sweden ❇️ Delivery from Sweden ❇️ AS-Trans transport company ❇️ customs brokerage services ❇️ More HERE!'
-        )
-
-        document.querySelector('meta[name="keywords"]').setAttribute(
-            'content',
-            'logistics, AS-Trans, AS trans, As trans, transport, transportation, services, broker, customs clearance, transport company'
-        )
-
-        document.querySelector('meta[property="og:title"]').setAttribute(
-            'content',
-            'Transportation of goods to Sweden. Delivery from Sweden'
-        )
-
-        document.querySelector('meta[name="twitter:title"]').setAttribute(
-            'content',
-            'Transportation of goods to Sweden. Delivery from Sweden'
-        )
-
-        document.querySelector('meta[name="twitter:description"]').setAttribute(
-            'content',
-            'Cargo transportation to Sweden ❇️ Delivery from Sweden ❇️ AS-Trans transport company ❇️ customs brokerage services ❇️ More HERE!'
-        )
-    }
-}
+    const selectedLanguage = getSelectedLanguage();
+    const pageConfig = {
+        ukrainian: {
+            meta: {
+                title: "Перевезення вантажів до Швеції. Доставка зі Швеції",
+                ogDescription: 'Вантажоперевезення в Швецію ❇️ Доставка зі Швеції ❇️ Транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!',
+                keywords: 'логистика, логістика, AS-Trans, АС-Транс, ас транс, Ас транс, As trans, транспорт, перевезення, перевозки, услуги, послуги, брокер, митне оформлення, таможенное оформление, транспортна компанія, транспортная компания',
+                ogTitle: 'Перевезення вантажів до Швеції. Доставка зі Швеції',
+                twitterTitle: 'Перевезення вантажів до Швеції. Доставка зі Швеції',
+                twitterDescription: 'Вантажоперевезення в Швецію ❇️ Доставка зі Швеції ❇️ Транспортна компанія AS-Trans ❇️ Послуги митного брокера ❇️ Детальніше ТУТ!'
+            }
+        },
+        american: {
+            meta: {
+                title: "Transportation of goods to Sweden. Delivery from Sweden",
+                ogDescription: 'Cargo transportation to Sweden ❇️ Delivery from Sweden ❇️ AS-Trans transport company ❇️ customs brokerage services ❇️ More HERE!',
+                description: 'Cargo transportation to Sweden ❇️ Delivery from Sweden ❇️ AS-Trans transport company ❇️ customs brokerage services ❇️ More HERE!',
+                keywords: 'logistics, AS-Trans, AS trans, As trans, transport, transportation, services, broker, customs clearance, transport company',
+                ogTitle: 'Transportation of goods to Sweden. Delivery from Sweden',
+                twitterTitle: 'Transportation of goods to Sweden. Delivery from Sweden',
+                twitterDescription: 'Cargo transportation to Sweden ❇️ Delivery from Sweden ❇️ AS-Trans transport company ❇️ customs brokerage services ❇️ More HERE!'
+            }
+        }
+    };
+    updateLanguageContent(selectedLanguage, pageConfig);
+});
