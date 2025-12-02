@@ -431,17 +431,26 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/31e9515bc8.js" crossorigin="anonymous"></script>
-    <script src="../scripts/utils/timer-global.js"></script>
-    <script src="../scripts/utils/component-loader.js"></script>
-    <script type="module" src="../scripts/utils/header-language-handler.js"></script>
-    <script src="../scripts/loaderHeader.js"></script>
-    <script src="../scripts/loaderFooter.js"></script>
-    <script src="../scripts/elements/contact-widget.js"></script>
-    <script src="../scripts/page-setup.js"></script>
-    <script src="../scripts/about-us.js"></script>
-    <script type="module" src="../scripts/page-setup/about-us-page-setup.js"></script>
+    <!-- External libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/31e9515bc8.js" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+
+    <!-- Utility scripts (load first) -->
+    <script src="../scripts/utils/timer-global.js" defer></script>
+    <script src="../scripts/utils/component-loader.js" defer></script>
+    
+    <!-- Module scripts -->
+    <script type="module" src="../scripts/utils/header-language-handler.js" defer></script>
+    <script type="module" src="../scripts/email-notifications/email-form-handler.js" defer></script>
+    
+    <!-- Page-specific scripts -->
+    <script src="../scripts/loaderHeader.js" defer></script>
+    <script src="../scripts/loaderFooter.js" defer></script>
+    <script src="../scripts/elements/contact-widget.js" defer></script>
+    <script src="../scripts/page-setup.js" defer></script>
+    <script src="../scripts/about-us.js" defer></script>
+    <script type="module" src="../scripts/page-setup/about-us-page-setup.js" defer></script>
 </body>
 
 </html>

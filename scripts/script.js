@@ -1,11 +1,10 @@
-async function loadEmailConfig() {
-    const response = await fetch('../emailjs-config.json');
-    return await response.json();
-}
+/**
+ * Main page script - handles dropdowns, header sizing, and intersection observer for timers
+ * Email functionality is handled by email-form-handler.js module
+ */
 
-
-document.addEventListener("DOMContentLoaded", async () => {
-
+document.addEventListener("DOMContentLoaded", () => {
+    // Dropdown menu handlers
     let dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(function (dropdown) {
@@ -20,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
+    // Header height normalization
     let headers = document.querySelectorAll('.row-advantage-icons h4');
     let maxHeight = 0;
 
@@ -37,55 +37,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     headers.forEach(function (header) {
         header.style.height = maxHeight + 'px';
     })
-
-    const config = await loadEmailConfig();
-    emailjs.init(config.publicKey);
-
-    document.querySelector('#formBtn').addEventListener('click', async function (event) {
-        event.preventDefault(); //предотвращаем стандартное поведение отправки формы
-
-        const name = document.getElementById('inputName').value;
-        const phone = document.getElementById('inputPhone').value;
-        const email = document.getElementById('InputEmail').value;
-        const messageText = document.getElementById('InputMessage').value;
-        const inputWebsite = document.getElementById('InputWebsite').value;
-        const inputTopic = document.getElementById('InputTheme').value;
-
-        const templateParams = {
-            from_name: name,
-            phone_number: phone,
-            to_email: email,
-            message: messageText,
-            input_website: inputWebsite,
-            input_topic: inputTopic
-        };
-
-        try {
-            const response = await emailjs.send(
-                config.serviceId,
-                config.templateId,
-                templateParams
-            );
-
-            alert('Сповіщення успішно відправлено!');
-        } catch (error) {
-            console.log('FAILED...', error);
-            alert("Помилка при відпраці сповіщення!");
-        }
-    });
 });
 
 
-// createTimer доступен глобально через timer-utils.js
+// createTimer доступен глобально через timer-global.js
 
-
+// Language initialization
 let selectedLanguage = localStorage.getItem('selectedLanguage');
 if (!selectedLanguage) {
     selectedLanguage = 'ukrainian';
     localStorage.setItem('selectedLanguage', selectedLanguage);
 }
 
-
+// Intersection Observer for timer animations
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         //если элемент виден в данный момент
