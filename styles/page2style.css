@@ -247,7 +247,6 @@
     transition: 2s ease;
 }
 
-
 .customs-clearance-1:hover:after, .customs-clearance-2:hover:after, .customs-clearance-3:hover:after, .customs-clearance-4:hover:after, .customs-clearance-5:hover:after{
     opacity: 1;
     width: 100%;

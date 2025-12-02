@@ -22,9 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+/**
+ * Импорт централизованной конфигурации
+ */
+import { languageConfig } from '../core/config.js';
+
     // Callback после загрузки компонента
     function initContactWidget(placeholderElement, html) {
-        const selectedLanguage = localStorage.getItem('selectedLanguage') || 'ukrainian';
+        const selectedLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
         
         // Применяем логику переключения языков к элементам виджета
         updateContactWidgetLanguage(selectedLanguage);
@@ -42,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Обработчик клика на кнопку контактов
         contactButton.addEventListener('click', () => {
-            const currentLanguage = localStorage.getItem('selectedLanguage') || 'ukrainian';
+            const currentLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
 
             // Если иконки показываются, скрываем их
             if (messengerIcons.classList.contains('show')) {

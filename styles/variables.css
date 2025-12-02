@@ -1,0 +1,263 @@
+:root {
+    /* ============================================
+       BRAND COLORS
+       ============================================ */
+    
+    /* Primary Brand Colors */
+    --color-primary-blue: #0c5adb;
+    --color-primary-blue-rgb: rgb(36, 17, 131);
+    --color-primary-blue-rgb-values: 36, 17, 131;
+    
+    --color-accent-teal: #07D7AD;
+    --color-accent-teal-rgb: rgb(7, 215, 173);
+    --color-accent-teal-rgb-values: 7, 215, 173;
+    
+    /* ============================================
+       SEMANTIC COLORS
+       ============================================ */
+    
+    /* Text Colors */
+    --color-text-primary: rgb(36, 17, 131);
+    --color-text-secondary: #333333;
+    --color-text-white: #ffffff;
+    --color-text-gray: #666666;
+    --color-text-light-gray: #999999;
+    
+    /* Background Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f5f5f5;
+    --color-bg-dark: rgb(36, 17, 131);
+    --color-bg-light-blue: rgb(197, 221, 249);
+    --color-bg-overlay: rgba(0, 0, 0, 0.5);
+    --color-bg-overlay-light: rgba(233, 238, 244, 0.6);
+    
+    /* Border Colors */
+    --color-border-primary: #0c5adb;
+    --color-border-secondary: #cccccc;
+    --color-border-light: gainsboro;
+    --color-border-white: #ffffff;
+    
+    /* Interactive Colors */
+    --color-hover-primary: #07D7AD;
+    --color-hover-secondary: rgb(7, 215, 173);
+    --color-active-primary: #0c5adb;
+    
+    /* Status Colors */
+    --color-success: rgb(38, 209, 28);
+    --color-error: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: rgb(39, 135, 186);
+    
+    /* Messenger Colors */
+    --color-viber: rgb(102, 92, 172);
+    --color-whatsapp: limegreen;
+    --color-contact-button: rgb(174, 114, 231);
+    
+    /* ============================================
+       SPACING & SIZES
+       ============================================ */
+    
+    /* Base Spacing Unit */
+    --spacing-base: 1rem; /* 16px */
+    
+    /* Spacing Scale */
+    --spacing-xs: 0.25rem;   /* 4px */
+    --spacing-sm: 0.5rem;    /* 8px */
+    --spacing-md: 1rem;      /* 16px */
+    --spacing-lg: 1.5rem;    /* 24px */
+    --spacing-xl: 2rem;      /* 32px */
+    --spacing-2xl: 3rem;     /* 48px */
+    --spacing-3xl: 4rem;     /* 64px */
+    
+    /* Specific Spacing Values */
+    --spacing-10px: 10px;
+    --spacing-15px: 15px;
+    --spacing-20px: 20px;
+    --spacing-70px: 70px;
+    
+    /* ============================================
+       TYPOGRAPHY SIZES
+       ============================================ */
+    
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;     /* 12px */
+    --font-size-sm: 0.875rem;    /* 14px */
+    --font-size-base: 1rem;      /* 16px */
+    --font-size-md: 1.15rem;     /* ~18.4px */
+    --font-size-lg: 1.25rem;     /* 20px */
+    --font-size-xl: 1.5rem;      /* 24px */
+    --font-size-2xl: 2rem;       /* 32px */
+    --font-size-3xl: 2.5rem;     /* 40px */
+    --font-size-4xl: 3rem;       /* 48px */
+    --font-size-5xl: 3.5rem;     /* 56px */
+    --font-size-display: 4.375rem; /* 70px */
+    --font-size-heading-large: 3.125rem; /* 50px */
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* ============================================
+       COMPONENT SIZES
+       ============================================ */
+    
+    /* Button Sizes */
+    --button-height-sm: 2.5rem;   /* 40px */
+    --button-height-md: 4rem;      /* 64px */
+    --button-width-sm: 8rem;       /* 128px */
+    --button-width-md: 16rem;      /* 256px */
+    --button-padding-x: 0.75rem;   /* 12px */
+    --button-padding-y: 0.85rem;   /* ~13.6px */
+    --button-border-radius: 1.5625rem; /* 25px */
+    --button-border-radius-sm: 0.75rem; /* 12px */
+    
+    /* Icon Sizes */
+    --icon-size-sm: 1.25rem;      /* 20px */
+    --icon-size-md: 2rem;          /* 32px */
+    --icon-size-lg: 3.5rem;        /* 56px */
+    --icon-size-xl: 4.375rem;      /* 70px */
+    --icon-size-circle-sm: 67px;
+    --icon-size-circle-md: 87px;
+    --icon-size-circle-lg: 80px;
+    
+    /* Card Sizes */
+    --card-border-width: 2px;
+    --card-border-width-thick: 3px;
+    --card-border-radius: 0.5rem;
+    --card-padding: 1.25rem;
+    
+    /* Container Sizes */
+    --container-max-width: 1200px;
+    --slider-height: 700px;
+    --logo-max-width-mobile: 60vw;
+    --logo-max-width-tablet: 30vw;
+    --logo-max-width-desktop: 15vw;
+    --logo-max-width-large: 12vw;
+    --logo-max-width-xl: 7vw;
+    
+    /* ============================================
+       BORDERS & SHADOWS
+       ============================================ */
+    
+    /* Border Widths */
+    --border-width-thin: 1px;
+    --border-width-normal: 2px;
+    --border-width-thick: 3px;
+    --border-width-thicker: 8px;
+    
+    /* Border Radius */
+    --border-radius-sm: 0.25rem;   /* 4px */
+    --border-radius-md: 0.5rem;     /* 8px */
+    --border-radius-lg: 1rem;       /* 16px */
+    --border-radius-xl: 1.25rem;    /* 20px */
+    --border-radius-full: 50%;
+    --border-radius-button: 1.5625rem; /* 25px */
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    
+    /* ============================================
+       ANIMATIONS & TRANSITIONS
+       ============================================ */
+    
+    /* Transition Durations */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-medium: 0.35s;
+    --transition-slow: 0.5s;
+    --transition-slower: 1s;
+    --transition-slowest: 1.7s;
+    --transition-very-slow: 2s;
+    --transition-extremely-slow: 2.5s;
+    --transition-ultra-slow: 3s;
+    --transition-super-slow: 4s;
+    --transition-mega-slow: 5s;
+    
+    /* Transition Timing Functions */
+    --ease-linear: linear;
+    --ease-in: ease-in;
+    --ease-out: ease-out;
+    --ease-in-out: ease-in-out;
+    --ease-default: ease;
+    
+    /* Animation Durations */
+    --animation-duration-fast: 0.3s;
+    --animation-duration-normal: 0.5s;
+    --animation-duration-medium: 1s;
+    --animation-duration-slow: 2s;
+    --animation-duration-slower: 2.5s;
+    --animation-duration-slowest: 3s;
+    --animation-duration-very-slow: 4s;
+    --animation-duration-extremely-slow: 5s;
+    
+    /* Animation Timing Functions */
+    --animation-ease: ease;
+    --animation-ease-in-out: ease-in-out;
+    --animation-linear: linear;
+    
+    /* Animation Iterations */
+    --animation-iteration-once: 1;
+    --animation-iteration-infinite: infinite;
+    
+    /* Transform Values */
+    --transform-translate-y-sm: translateY(20px);
+    --transform-translate-y-md: translateY(50px);
+    --transform-scale-sm: scale(1.1);
+    --transform-scale-md: scale(1.5, 2);
+    
+    /* Opacity Values */
+    --opacity-hidden: 0;
+    --opacity-visible: 1;
+    --opacity-overlay: 0.5;
+    --opacity-overlay-light: 0.6;
+    
+    /* ============================================
+       Z-INDEX LAYERS
+       ============================================ */
+    
+    --z-index-base: 1;
+    --z-index-dropdown: 10;
+    --z-index-sticky: 100;
+    --z-index-fixed: 200;
+    --z-index-modal-backdrop: 900;
+    --z-index-modal: 1000;
+    --z-index-tooltip: 1100;
+    --z-index-popover: 1200;
+    
+    /* ============================================
+       BREAKPOINTS (for reference in JS/Media Queries)
+       ============================================ */
+    
+    /* Mobile First Approach */
+    --breakpoint-xs: 0px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+    --breakpoint-xxxl: 1920px;
+    --breakpoint-4k: 2560px;
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Optional - for future use)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode color overrides can be added here */
+        /* --color-text-primary: #ffffff; */
+        /* --color-bg-primary: #1a1a1a; */
+    }
+}
+

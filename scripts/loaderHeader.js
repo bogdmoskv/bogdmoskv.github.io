@@ -3,14 +3,19 @@
  * Использует оптимизированную загрузку с кэшированием и параллельной загрузкой
  */
 
+/**
+ * Импорт централизованной конфигурации
+ */
+import { languageConfig } from './core/config.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     // Инициализируем язык по умолчанию
-    if (!localStorage.getItem('selectedLanguage')) {
-        localStorage.setItem('selectedLanguage', 'ukrainian');
+    if (!localStorage.getItem(languageConfig.storageKey)) {
+        localStorage.setItem(languageConfig.storageKey, languageConfig.defaultLanguage);
     }
 
     // Получаем текущий выбранный язык из localStorage
-    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    const selectedLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
 
     // Callback при изменении языка
     function handleLanguageChange(newLanguage) {
@@ -29,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 const buttonImg = document.querySelector('.dropdown-button img');
                 if (buttonImg) {
-                    const flagSrc = selectedLanguage === 'ukrainian' 
-                        ? '../images/Flag_of_Ukraine.png'
-                        : '../images/Flag_of_the_United_States_(51_stars).svg.png';
-                    buttonImg.setAttribute('src', flagSrc);
+                    const flagSrc = languageConfig.getFlagPath(selectedLanguage);
+                    if (flagSrc) {
+                        buttonImg.setAttribute('src', flagSrc);
+                    }
                 }
             }, 100);
         }

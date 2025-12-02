@@ -3,16 +3,24 @@
  * Вынесен из loaderHeader.js для переиспользования и устранения дублирования
  */
 
+import { languageConfig } from '../core/config.js';
+
 /**
  * Обновляет отображение контента в зависимости от выбранного языка
  * @param {string} language - Выбранный язык ('ukrainian' или 'american')
  */
 export function updateContentDisplay(language) {
+    const langConfig = languageConfig.getLanguageConfig(language);
+    if (!langConfig) {
+        console.warn(`updateContentDisplay: Invalid language: ${language}`);
+        return;
+    }
+
     // Находим все элементы с классом, содержащим 'content-'
     const contentElements = document.querySelectorAll('[class*="content-"]');
 
     contentElements.forEach(element => {
-        if (element.classList.contains(`content-${language}`)) {
+        if (element.classList.contains(langConfig.contentClass)) {
             element.style.display = 'block'; // Отображаем контент для выбранного языка
         } else {
             element.style.display = 'none'; // Скрываем контент для других языков
@@ -25,11 +33,17 @@ export function updateContentDisplay(language) {
  * @param {string} language - Выбранный язык ('ukrainian' или 'american')
  */
 export function toggleFlexContent(language) {
+    const langConfig = languageConfig.getLanguageConfig(language);
+    if (!langConfig) {
+        console.warn(`toggleFlexContent: Invalid language: ${language}`);
+        return;
+    }
+
     // Находим все элементы с классом, содержащим 'content-'
     const contentElements = document.querySelectorAll('.custom-translation[class*="content-"]');
 
     contentElements.forEach(element => {
-        if (element.classList.contains(`content-${language}`)) {
+        if (element.classList.contains(langConfig.contentClass)) {
             element.classList.remove('d-none');
             element.style.display = 'block'; // Отображаем контент для выбранного языка
         } else {
@@ -50,18 +64,12 @@ export function updateFlagIcon(language) {
         return;
     }
 
-    let flagSrc;
-
-    switch (language) {
-        case 'ukrainian':
-            flagSrc = '../images/Flag_of_Ukraine.png';
-            break;
-        case 'american':
-            flagSrc = '../images/Flag_of_the_United_States_(51_stars).svg.png';
-            break;
-        default:
-            flagSrc = '../images/Flag_of_Ukraine.png';
-            break;
+    const flagSrc = languageConfig.getFlagPath(language);
+    if (!flagSrc) {
+        console.warn(`updateFlagIcon: Invalid language: ${language}. Using default.`);
+        const defaultFlagSrc = languageConfig.getFlagPath(languageConfig.defaultLanguage);
+        buttonImg.setAttribute('src', defaultFlagSrc);
+        return;
     }
 
     buttonImg.setAttribute('src', flagSrc);
@@ -113,8 +121,13 @@ export function initLanguageDropdown(onLanguageChange = null) {
             // Обновляем изображение в кнопке на выбранную иконку
             buttonImg.setAttribute('src', imgSrc);
 
-            // Сохраняем выбранный язык
-            localStorage.setItem('selectedLanguage', dataValue);
+            // Сохраняем выбранный язык (валидация выполняется в setSelectedLanguage)
+            if (languageConfig.isValidLanguage(dataValue)) {
+                localStorage.setItem(languageConfig.storageKey, dataValue);
+            } else {
+                console.warn(`Invalid language selected: ${dataValue}`);
+                return;
+            }
 
             // Обновляем отображение контента
             updateContentDisplay(dataValue);
@@ -151,7 +164,7 @@ export function initStatisticsTimers(selectedLanguage) {
                 // Выбираем все элементы, названия которых начинаются с display
                 const displays = document.querySelectorAll('[class^="display"]');
 
-                const startIndex = selectedLanguage === "ukrainian" ? 0 : 4; // 0-3 для укр, 4-7 для англ
+                const startIndex = selectedLanguage === languageConfig.defaultLanguage ? 0 : 4; // 0-3 для укр, 4-7 для англ
                 const endIndex = startIndex + 4;
 
                 for (let i = startIndex; i < endIndex; i++) {

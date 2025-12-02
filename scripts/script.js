@@ -42,11 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // createTimer доступен глобально через timer-global.js
 
+/**
+ * Импорт централизованной конфигурации
+ */
+import { languageConfig } from './core/config.js';
+
 // Language initialization
-let selectedLanguage = localStorage.getItem('selectedLanguage');
-if (!selectedLanguage) {
-    selectedLanguage = 'ukrainian';
-    localStorage.setItem('selectedLanguage', selectedLanguage);
+let selectedLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
+if (!selectedLanguage || !languageConfig.isValidLanguage(selectedLanguage)) {
+    selectedLanguage = languageConfig.defaultLanguage;
+    localStorage.setItem(languageConfig.storageKey, selectedLanguage);
 }
 
 // Intersection Observer for timer animations
@@ -59,7 +64,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             //Выбираем все элементы, названия которых начинаются с display
             const displays = document.querySelectorAll('[class^="display"]');
 
-            const startIndex = selectedLanguage === "ukrainian" ? 0 : 4; //0-3 для укр, 4-7 для англ
+            const startIndex = selectedLanguage === languageConfig.defaultLanguage ? 0 : 4; //0-3 для укр, 4-7 для англ
             const endIndex = startIndex + 4;
 
             for (let i = startIndex; i < endIndex; i++) {

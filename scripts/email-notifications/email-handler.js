@@ -1,41 +1,29 @@
 /**
- * Определяет правильный путь к конфигурационному файлу на основе текущего местоположения
- * @returns {string} Путь к emailjs-config.json
+ * Импорт централизованной конфигурации
  */
-function getConfigPath() {
-    const currentPath = window.location.pathname;
-    // Если страница в подпапке (например, pages/), используем ../emailjs-config.json
-    // Если в корне, используем emailjs-config.json
-    if (currentPath.includes('/pages/') || currentPath.endsWith('/pages/')) {
-        return '../emailjs-config.json';
-    }
-    return 'emailjs-config.json';
-}
+import { emailjsConfig, appConfig, languageConfig } from '../core/config.js';
 
-export async function loadEmailConfig() {
-    const configPath = getConfigPath();
-    const response = await fetch(configPath);
-    if (!response.ok) {
-        throw new Error(`Failed to load email config: ${response.status} ${response.statusText}`);
-    }
-    return await response.json();
-}
-
+/**
+ * Инициализирует EmailJS с использованием централизованной конфигурации
+ * @returns {Object} Конфигурация EmailJS
+ */
 export async function initEmailJs() {
-    const config = await loadEmailConfig();
-    emailjs.init(config.publicKey);
-    return config;
+    emailjs.init(emailjsConfig.publicKey);
+    return emailjsConfig;
 }
 
-export async function sendEmail(config, formData) {
-    const templateParams = {
-        from_name: formData.name,
-        phone_number: formData.phone,
-        to_email: formData.email,
-        message: formData.messageText,
-        input_website: formData.inputWebsite,
-        input_topic: formData.inputTopic
-    };
+/**
+ * Отправляет email используя EmailJS
+ * @param {Object} config - Конфигурация EmailJS (можно передать emailjsConfig или использовать по умолчанию)
+ * @param {Object} formData - Данные формы
+ */
+export async function sendEmail(config = emailjsConfig, formData) {
+    // Используем маппинг из конфигурации для преобразования данных формы
+    const templateParams = {};
+    Object.keys(emailjsConfig.templateParamsMapping).forEach(key => {
+        const formField = emailjsConfig.templateParamsMapping[key];
+        templateParams[key] = formData[formField] || '';
+    });
 
     try {
         const response = await emailjs.send(
@@ -44,14 +32,33 @@ export async function sendEmail(config, formData) {
             templateParams
         );
 
-        showBootstrapAlert('✅ Сповіщення успішно відправлено!', 'success');
+        // Получаем текущий язык для сообщения
+        const currentLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
+        const successMessage = appConfig.notifications.messages.success[currentLanguage] || 
+                              appConfig.notifications.messages.success[languageConfig.defaultLanguage];
+        showBootstrapAlert(successMessage, 'success', appConfig.notifications.defaultTimeout);
     } catch (error) {
         console.log('FAILED...', error);
-        showBootstrapAlert('❌ Помилка при відпраці сповіщення!', 'danger');
+        
+        // Получаем текущий язык для сообщения об ошибке
+        const currentLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
+        const errorMessage = appConfig.notifications.messages.error[currentLanguage] || 
+                           appConfig.notifications.messages.error[languageConfig.defaultLanguage];
+        showBootstrapAlert(errorMessage, 'danger', appConfig.notifications.defaultTimeout);
     }
 }
 
-export function showBootstrapAlert(message, type='success', timeout = 4000){
+/**
+ * Показывает Bootstrap alert с сообщением
+ * @param {string} message - Текст сообщения
+ * @param {string} type - Тип alert ('success', 'danger', 'warning', 'info')
+ * @param {number} timeout - Время отображения в миллисекундах
+ */
+export function showBootstrapAlert(message, type='success', timeout = null){
+    // Используем timeout из конфигурации, если не указан явно
+    if (timeout === null) {
+        timeout = appConfig.notifications.defaultTimeout;
+    }
     const alertContainer = document.querySelector('#alert-container');
     if (!alertContainer) {
         console.warn('Alert container not found');

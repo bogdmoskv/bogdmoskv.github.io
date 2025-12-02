@@ -1,4 +1,5 @@
 import { initEmailJs, sendEmail, showBootstrapAlert } from './email-handler.js';
+import { appConfig, languageConfig } from '../core/config.js';
 
 /**
  * Ожидает загрузки необходимых зависимостей
@@ -42,8 +43,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         };
 
         // Валидация обязательных полей
-        if (!formData.name || !formData.email) {
-            showBootstrapAlert('❌ Будь ласка, заповніть обов\'язкові поля (ім\'я та email)', 'warning');
+        const currentLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
+        const requiredFields = appConfig.validation.requiredFields;
+        const hasAllRequiredFields = requiredFields.every(field => formData[field] && formData[field].trim() !== '');
+        
+        if (!hasAllRequiredFields) {
+            const validationMessage = appConfig.notifications.messages.validation[currentLanguage] || 
+                                    appConfig.notifications.messages.validation[languageConfig.defaultLanguage];
+            showBootstrapAlert(validationMessage, 'warning');
             return;
         }
 

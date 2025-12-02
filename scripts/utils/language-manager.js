@@ -3,13 +3,14 @@
  */
 
 import { updateMetaTags } from './meta-manager.js';
+import { languageConfig } from '../core/config.js';
 
 /**
  * Получает текущий выбранный язык из localStorage
  * @returns {string} Выбранный язык ('ukrainian' или 'american')
  */
 export function getSelectedLanguage() {
-    return localStorage.getItem('selectedLanguage') || 'ukrainian';
+    return localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
 }
 
 /**
@@ -17,15 +18,20 @@ export function getSelectedLanguage() {
  * @param {string} language - Язык для установки ('ukrainian' или 'american')
  */
 export function setSelectedLanguage(language) {
-    localStorage.setItem('selectedLanguage', language);
+    if (languageConfig.isValidLanguage(language)) {
+        localStorage.setItem(languageConfig.storageKey, language);
+    } else {
+        console.warn(`Invalid language: ${language}. Using default: ${languageConfig.defaultLanguage}`);
+        localStorage.setItem(languageConfig.storageKey, languageConfig.defaultLanguage);
+    }
 }
 
 /**
  * Инициализирует язык по умолчанию, если он не установлен
  */
 export function initDefaultLanguage() {
-    if (!localStorage.getItem('selectedLanguage')) {
-        localStorage.setItem('selectedLanguage', 'ukrainian');
+    if (!localStorage.getItem(languageConfig.storageKey)) {
+        localStorage.setItem(languageConfig.storageKey, languageConfig.defaultLanguage);
     }
 }
 

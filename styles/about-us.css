@@ -293,7 +293,6 @@
     font-weight: bold;
     color: rgb(29, 29, 189);
 }
-
 /* планшеты */
 @media (min-width: 768px) and (max-width: 1025px){
     .advantage-text, .advantage-text-insurance-icon{

@@ -1,24 +1,29 @@
+/**
+ * Инициализация EmailJS и языковых настроек для главной страницы
+ */
+import { emailjsConfig, languageConfig } from './scripts/core/config.js';
+
 (function () {
     emailjs.init({
-        publicKey: "Obgg-ftcAlkqx3k9k",
+        publicKey: emailjsConfig.publicKey,
     });
 })();
 
-let selectedLanguage = localStorage.getItem('selectedLanguage');
+const selectedLanguage = localStorage.getItem(languageConfig.storageKey) || languageConfig.defaultLanguage;
+const langConfig = languageConfig.getLanguageConfig(selectedLanguage);
 
 const htmlTag = document.documentElement;
 
-
-if (selectedLanguage == "ukrainian"){
-    document.title = "Митний брокер для юридичних осіб Київ, Україна - консультація, Польща, Болгарія"
-
-    document.querySelector('meta[property="og:description"').setAttribute(
-        'content',
-        "Міжнародна логістична транспортна компания AS-Trans ❇️ Митно-брокерські послуги ❇️ Митне оформлення вантажнів ❇️ Детальніше ТУТ!"
-    );
+if (langConfig) {
+    // Устанавливаем язык HTML элемента
+    htmlTag.setAttribute('lang', langConfig.code);
     
-    htmlTag.setAttribute('lang', 'uk');
-} else if (selectedLanguage == "american"){
-    document.title = "Customs broker for legal entities Kyiv, Ukraine - consultation, Poland, Bulgaria"
-    htmlTag.setAttribute('lang', 'en');
+    // Устанавливаем заголовок страницы
+    document.title = langConfig.defaultTitle;
+    
+    // Устанавливаем Open Graph описание
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+        ogDescription.setAttribute('content', langConfig.defaultDescription);
+    }
 }
