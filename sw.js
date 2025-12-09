@@ -17,20 +17,20 @@ const PRECACHE_RESOURCES = [
     '/style.css',
     '/scripts/utils/component-loader.js',
     '/scripts/utils/timer-global.js',
-    '/scripts/loaderHeader.js',
-    '/scripts/loaderFooter.js',
+    '/scripts/loader-header.js',
+    '/scripts/loader-footer.js',
     '/scripts/elements/contact-widget.js',
     '/elements/header.html',
     '/elements/footer.html',
     '/elements/contact-widget.html',
-    '/styles/headerStyle.css',
+    '/styles/header-style.css',
     '/styles/about-us.css',
     '/styles/contact-page.css',
     '/styles/international-transportation.css',
-    '/styles/page1style.css',
-    '/styles/page2style.css',
-    '/styles/page3style.css',
-    '/styles/ukraine-estonia-shipping.css'
+    '/styles/service-page.css',
+    '/styles/broker-page.css',
+    '/styles/expeditions-page.css',
+    '/styles/shipping-routes.css'
 ];
 
 // Расширения файлов для стратегии Cache First

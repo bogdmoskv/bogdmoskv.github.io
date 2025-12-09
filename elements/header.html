@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../styles/headerStyle.css">
+    <link rel="stylesheet" href="../styles/header-style.css">
 
 </head>
 
@@ -28,12 +28,10 @@
                 </div>
                 <div class="col-12 col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center">
                     <i class="header__icon color-white fas fa-map-marker-alt"></i>
-                    <span class="header__text-block_color-white content-ukrainian">&nbsp;Україна, Київ</span>
-                    <span class="header__text-block_color-white content-american">&nbsp;Ukraine, Kyiv</span>
+                    <span class="header__text-block_color-white" data-i18n-key="common.location"></span>
                 </div>
                 <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center">
-                    <span class="header__text-block_color-white content-ukrainian">Слідкуйте за нами: </span>
-                    <span class="header__text-block_color-white content-american">Watch us: </span>
+                    <span class="header__text-block_color-white" data-i18n-key="common.watchUs"></span>
                     <i class="header__icon color-white fab fa-facebook ms-2"></i>
                     <i class="header__icon color-white fab fa-instagram ms-2"></i>
                     <i class="header__icon color-white fa-brands fa-x-twitter ms-2"></i>
@@ -59,93 +57,48 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-blue text-center content-ukrainian"
-                            href="../pages/international-transportation.html" role="button">
-                            ВАНТАЖОПЕРЕВЕЗЕННЯ
-                        </a>
-                        <a class="nav-link dropdown-toggle text-blue text-center content-american"
-                            href="../pages/international-transportation.html" role="button">
-                            CARGO TRANSPORTATION
+                        <a class="nav-link dropdown-toggle text-blue text-center"
+                            href="../pages/international-transportation.html" role="button" data-i18n-key="header.nav.cargoTransportation">
                         </a>
                         <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/ukraine-estonia.html">УКРАЇНА-ЕСТОНІЯ</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/ukraine-latvia.html">УКРАЇНА-ЛАТВІЯ</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/ukraine-lytva.html">УКРАЇНА-ЛИТВА</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/ukraine-norway.html">УКРАЇНА-НОРВЕГІЯ</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/ukraine-sweden.html">УКРАЇНА-ШВЕЦІЯ</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/ukraine-finland.html">УКРАЇНА-ФІНЛЯНДІЯ</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/delivery-from-china.html">ДОСТАВКА З КИТАЮ</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/delivery-from-finland.html">ФІНЛЯНДІЯ-ЄС</a></li>
-                            <li><a class="dropdown-item text-center content-ukrainian"
-                                    href="../pages/delivery-from-sweden.html">ШВЕЦІЯ-ЄС</a></li>
-
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/ukraine-estonia.html">UKRAINE–ESTONIA</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/ukraine-latvia.html">UKRAINE–LATVIA</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/ukraine-lytva.html">UKRAINE-LITHUANIA</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/ukraine-norway.html">UKRAINE-NORWAY</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/ukraine-sweden.html">UKRAINE-SWEDEN</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/ukraine-finland.html">UKRAINE-FINLAND</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/delivery-from-china.html">DELIVERY FROM CHINA</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/delivery-from-finland.html">FINLAND-EU</a></li>
-                            <li><a class="dropdown-item text-center content-american"
-                                    href="../pages/delivery-from-sweden.html">SWEDEN-EU</a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/ukraine-estonia.html" data-i18n-key="header.dropdown.ukraineEstonia"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/ukraine-latvia.html" data-i18n-key="header.dropdown.ukraineLatvia"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/ukraine-lithuania.html" data-i18n-key="header.dropdown.ukraineLithuania"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/ukraine-norway.html" data-i18n-key="header.dropdown.ukraineNorway"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/ukraine-sweden.html" data-i18n-key="header.dropdown.ukraineSweden"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/ukraine-finland.html" data-i18n-key="header.dropdown.ukraineFinland"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/delivery-from-china.html" data-i18n-key="header.dropdown.deliveryFromChina"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/delivery-from-finland.html" data-i18n-key="header.dropdown.finlandEu"></a></li>
+                            <li><a class="dropdown-item text-center"
+                                    href="../pages/delivery-from-sweden.html" data-i18n-key="header.dropdown.swedenEu"></a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-ukrainian"
-                            href="../pages/customs-clearance.html">МИТНЕ ОФОРМЛЕННЯ</a>
+                        <a class="nav-link text-blue text-center"
+                            href="../pages/customs-clearance.html" data-i18n-key="header.nav.customsClearance"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-ukrainian"
-                            href="../pages/customs-broker.html">МИТНИЙ БРОКЕР</a>
+                        <a class="nav-link text-blue text-center"
+                            href="../pages/customs-broker.html" data-i18n-key="header.nav.customsBroker"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-ukrainian"
-                            href="../pages/expeditions-page.html">ЕКСПЕДИЦІЯ</a>
+                        <a class="nav-link text-blue text-center"
+                            href="../pages/expeditions-page.html" data-i18n-key="header.nav.forwarding"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-ukrainian" href="../pages/about-us.html">ПРО
-                            НАС</a>
+                        <a class="nav-link text-blue text-center" href="../pages/about-us.html" data-i18n-key="header.nav.aboutUs"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-ukrainian"
-                            href="../pages/contact-page.html">КОНТАКТИ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-american"
-                            href="../pages/customs-clearance.html">CUSTOMS CLEARANCE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-american"
-                            href="../pages/customs-broker.html">CUSTOMS BROKER</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-american"
-                            href="../pages/expeditions-page.html">FORWARDING SERVICES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-american" href="../pages/about-us.html">ABOUT
-                            US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blue text-center content-american"
-                            href="../pages/contact-page.html">CONTACT</a>
+                        <a class="nav-link text-blue text-center"
+                            href="../pages/contact-page.html" data-i18n-key="header.nav.contact"></a>
                     </li>
                     <li class="language-item">
                         <div class="dropdown">

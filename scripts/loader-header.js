@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Callback при изменении языка
     function handleLanguageChange(newLanguage) {
-        // Перезагружаем страницу для применения изменений
-        location.reload();
+        // НЕ перезагружаем страницу - новая система i18n работает без перезагрузки
+        // Все изменения применяются динамически через translatePage()
+        console.log(`Language changed to: ${newLanguage}`);
     }
 
     // Функция инициализации логики языков после загрузки header
