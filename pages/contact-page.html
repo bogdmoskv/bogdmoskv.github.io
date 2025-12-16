@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-page="contact">
 
 <head>
     <meta charset="UTF-8">
@@ -62,12 +62,9 @@
         </div>
 
         <div class="main-menu__button-container">
-            <a class="main-menu__button content-ukrainian" href="../index.html">Домашня</a>
-            <a class="main-menu__button content-american" href="../index.html">Home</a>
+            <a class="main-menu__button" href="../index.html" data-i18n-key="contact.breadcrumb.home"></a>
             <span class="color-white">>></span>
-            <a class="main-menu__button content-ukrainian">Контакти</a>
-            <a class="main-menu__button content-american">Contact</a>
-
+            <a class="main-menu__button" data-i18n-key="contact.breadcrumb.route"></a>
         </div>
     </div>
 
@@ -77,12 +74,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-12 mt-4 text-center d-flex  flex-column align-items-center">
-                        <h2 class="content-ukrainian">Контакти</h2>
-                        <h2 class="content-american">Contact</h2>
-
-
-                        <p class="content-ukrainian service__font__size">Ми чекаємо, щоб и зв'язалися з нами</p>
-                        <p class="content-american service__font__size">We are waiting you to get in touch with us</p>
+                        <h2 data-i18n-key="contact.content.title"></h2>
+                        <p class="service__font__size" data-i18n-key="contact.content.subtitle"></p>
                         <div id="map"></div>
                     </div>
                 </div>
@@ -95,26 +88,17 @@
                             <div class="row">
                                 <div class="d-flex flex-column align-items-start justify-content-center p-5 shadow">
                                     <div class="d-flex flex-column">
-                                        <h4 class="text-start text-blue mt-3 content-ukrainian">Запити</h4>
-                                        <h4 class="text-start text-blue mt-3 content-american">INQUIRY NOW</h4>
-
-                                        <h4 class="text-start content-ukrainian mb-4">Потрібно зробити запит?</h4>
-                                        <h4 class="text-start content-american mb-4">Need to make an enquiry?</h4>
+                                        <h4 class="text-start text-blue mt-3" data-i18n-key="contact.content.form.title"></h4>
+                                        <h4 class="text-start mb-4" data-i18n-key="contact.content.form.subtitle"></h4>
                                     </div>
 
                                     <div class="row w-100">
                                         <div class="col-md-6 mb-3">
-                                            <label for="inputName" class="form-label">
-                                                <span class="content-ukrainian">Ваше ім'я</span>
-                                                <span class="content-american">Your name</span>
-                                            </label>
+                                            <label for="inputName" class="form-label" data-i18n-key="contact.content.form.name"></label>
                                             <input type="text" class="form-control" id="inputName">
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="InputEmail" class="form-label">
-                                                <span class="content-ukrainian">Електронна адреса</span>
-                                                <span class="content-american">Email</span>
-                                            </label>
+                                            <label for="InputEmail" class="form-label" data-i18n-key="contact.content.form.email"></label>
                                             <input type="email" class="form-control" id="InputEmail">
                                         </div>
                                     </div>
@@ -122,19 +106,13 @@
                                     <div class="row w-100">
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
-                                                <label for="inputPhone" class="form-label">
-                                                    <span class="content-ukrainian">Номер телефону</span>
-                                                    <span class="content-american">Phone number</span>
-                                                </label>
+                                                <label for="inputPhone" class="form-label" data-i18n-key="contact.content.form.phone"></label>
                                                 <input type="text" class="form-control" id="inputPhone">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <div class="mb-3">
-                                                <label for="InputWebsite" class="form-label">
-                                                    <span class="content-ukrainian">Вебсайт</span>
-                                                    <span class="content-american">Website</span>
-                                                </label>
+                                                <label for="InputWebsite" class="form-label" data-i18n-key="contact.content.form.website"></label>
                                                 <input type="text" class="form-control" id="InputWebsite">
                                             </div>
                                         </div>
@@ -143,10 +121,7 @@
                                     <div class="row w-100">
                                         <div class="col-12 mb-3">
                                             <div class="mb-3">
-                                                <label for="InputTheme" class="form-label">
-                                                    <span class="content-ukrainian">Тема</span>
-                                                    <span class="content-american">Topic</span>
-                                                </label>
+                                                <label for="InputTheme" class="form-label" data-i18n-key="contact.content.form.topic"></label>
                                                 <input type="text" class="form-control" id="InputTheme">
                                             </div>
                                         </div>
@@ -155,19 +130,14 @@
                                     <div class="row w-100">
                                         <div class="col-12 mb-3">
                                             <div class="mb-3">
-                                                <label for="InputMessage" class="form-label">
-                                                    <span class="content-ukrainian">Повідомлення</span>
-                                                    <span class="content-american">Message</span>
-                                                </label>
+                                                <label for="InputMessage" class="form-label" data-i18n-key="contact.content.form.message"></label>
                                                 <input type="text" class="form-control" id="InputMessage">
                                             </div>
                                         </div>
                                     </div>
 
                                     <button id="formBtn" type="submit" class="btn btn-primary">
-                                        <span class="content-ukrainian">Надіслати</span>
-                                        <span class="content-american">Submit Message</span>
-
+                                        <span data-i18n-key="contact.content.form.submit"></span>
                                     </button>
                                 </div>
                             </div>
@@ -180,18 +150,9 @@
                         <div class="container">
                             <div class="row">
                                 <div>
-                                    <h4 class="text-start content-ukrainian">ЗВ’ЯЖІТЬСЯ З НАМИ</h4>
-                                    <h4 class="text-start content-american">GET IN TOUCH WITH US</h4>
-
-                                    <h4 class="text-start text-blue mt-3 content-ukrainian">МИ ПОДБАЄМО ПРО
-                                        ТРАНСПОРТУВАННЯ ДЛЯ
-                                        ВАШОГО БІЗНЕСУ</h4>
-                                    <h4 class="text-start text-blue mt-3 content-american">WE TAKE CARE ABOUT
-                                        TRANSPORTATION FOR
-                                        YOUR BUSINESS</h4>
-
-                                    <h4 class="text-center mt-4 content-ukrainian">УКРАЇНА</h4>
-                                    <h4 class="text-center mt-4 content-american">UKRAINE</h4>
+                                    <h4 class="text-start" data-i18n-key="contact.content.contactInfo.title"></h4>
+                                    <h4 class="text-start text-blue mt-3" data-i18n-key="contact.content.contactInfo.subtitle"></h4>
+                                    <h4 class="text-center mt-4" data-i18n-key="contact.content.contactInfo.country"></h4>
                                 </div>
 
                                 <div class="container mt-3">
@@ -199,12 +160,7 @@
                                         <div class="icon-circle me-2">
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
-                                        <span class="content-ukrainian service__font__size">Київ вул. Радищева, 3 офіс
-                                            Б-306,
-                                            а/с 25</span>
-                                        <span class="content-american service__font__size">Kyiv st. Radishcheva, 3
-                                            office B-306,
-                                            PO box 25</span>
+                                        <span class="service__font__size" data-i18n-key="contact.content.contactInfo.address"></span>
                                     </div>
 
                                     <div class="d-flex align-items-center my-3">
@@ -252,9 +208,10 @@
     <script src="../scripts/utils/service-worker-register.js" defer></script>
     
     <!-- Module scripts -->
+    <script type="module" src="../scripts/i18n/i18n-manager.js" defer></script>
     <script type="module" src="../scripts/utils/header-language-handler.js" defer></script>
     <script type="module" src="../scripts/email-notifications/email-form-handler.js" defer></script>
-    <script type="module" src="../scripts/script.js" defer></script>
+    <script type="module" src="../scripts/main.js" defer></script>
     
     <!-- Page-specific scripts -->
     <script type="module" src="../scripts/loader-header.js" defer></script>
@@ -262,6 +219,14 @@
     <script type="module" src="../scripts/elements/contact-widget.js" defer></script>
     <script src="../scripts/contact-page.js" defer></script>
     <script type="module" src="../scripts/page-setup/contact-page-setup.js" defer></script>
+    
+    <!-- Initialize i18n system -->
+    <script type="module">
+        import { initI18n } from '../scripts/i18n/i18n-manager.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initI18n();
+        });
+    </script>
 </body>
 
 </html>

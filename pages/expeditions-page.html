@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-page="expeditions">
 
 <head>
     <meta charset="UTF-8">
@@ -52,11 +52,9 @@
         </div>
 
         <div class="main-menu__button-container">
-            <a class="main-menu__button content-ukrainian" href="../index.html">Домашня</a>
-            <a class="main-menu__button content-american" href="../index.html">Home</a>
+            <a class="main-menu__button" href="../index.html" data-i18n-key="expeditions.breadcrumb.home"></a>
             <span class="color-white">>></span>
-            <span class="main-menu__button content-ukrainian">Експедиція</span>
-            <span class="main-menu__button content-american">Forwarding Services</span>
+            <span class="main-menu__button" data-i18n-key="expeditions.breadcrumb.route"></span>
         </div>
     </div>
 
@@ -64,104 +62,76 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 mt-4 text-center d-flex  flex-column align-items-center">
-                <h2 class="content-ukrainian">Напрями</h2>
-                <h2 class="content-american">Directions</h2>
+                <h2 data-i18n-key="expeditions.sidebar.directions"></h2>
                 <div class="destination-box">
                     <div class="destination-box__figure">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-ukrainian">УКРАЇНА - ЛАТВІЯ
-                    </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-american">UKRAINE - LATVIA
-                    </div>
+                    <div class="destination-box__sign destination-box__sign--blue" data-i18n-key="expeditions.sidebar.route1"></div>
                 </div>
                 <div class="destination-box">
                     <div class="destination-box__figure">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-ukrainian">УКРАЇНА - ЕСТОНІЯ
-                    </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-american">UKRAINE - ESTONIA
-                    </div>
+                    <div class="destination-box__sign destination-box__sign--blue" data-i18n-key="expeditions.sidebar.route2"></div>
                 </div>
                 <div class="destination-box">
                     <div class="destination-box__figure">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-ukrainian">УКРАЇНА - ФІНЛЯНДІЯ
-                    </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-american">UKRAINE - FINLAND
-                    </div>
+                    <div class="destination-box__sign destination-box__sign--blue" data-i18n-key="expeditions.sidebar.route3"></div>
                 </div>
                 <div class="destination-box">
                     <div class="destination-box__figure">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-ukrainian">УКРАЇНА - ШВЕЦІЯ
-                    </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-american">UKRAINE - SWEDEN
-                    </div>
+                    <div class="destination-box__sign destination-box__sign--blue" data-i18n-key="expeditions.sidebar.route4"></div>
                 </div>
                 <div class="destination-box">
                     <div class="destination-box__figure">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-ukrainian">УКРАЇНА - НОРВЕГІЯ
-                    </div>
-                    <div class="destination-box__sign destination-box__sign--blue content-american">UKRAINE - NORWAY
-                    </div>
+                    <div class="destination-box__sign destination-box__sign--blue" data-i18n-key="expeditions.sidebar.route5"></div>
                 </div>
                 <div class="destination-box destination-box__blue">
                     <div class="destination-box__figure--blue">
                         <i class="fa-solid fa-truck" style="color: white;"></i>
                     </div>
-                    <div class="destination-box__sign destination-box__sign--white content-ukrainian">
-                        ТРАНСПОРТНО-ЕКСПЕДИТОРСЬКІ ПОСЛУГИ</div>
-                    <div class="destination-box__sign destination-box__sign--white content-american">INTERNATIONAL
-                        FORWARDING SERVICES</div>
+                    <div class="destination-box__sign destination-box__sign--white" data-i18n-key="expeditions.sidebar.route6"></div>
                 </div>
 
 
                 <div class="card mt-3 p-4 shadow bg-body rounded service-sidebar-image">
-                    <h3 class="text-blue content-ukrainian">Залишити заявку</h3>
-                    <h3 class="text-blue content-american">Submit your application</h3>
+                    <h3 class="text-blue" data-i18n-key="expeditions.sidebar.form.title"></h3>
 
                     <div>
                         <div class="mb-3">
-                            <label for="inputName" class="form-label content-ukrainian">Ваше ім'я</label>
-                            <label for="inputName" class="form-label content-american">Your name</label>
+                            <label for="inputName" class="form-label" data-i18n-key="expeditions.sidebar.form.name"></label>
                             <input type="text" class="form-control" id="inputName">
                         </div>
                         <div class="mb-3">
-                            <label for="inputPhone" class="form-label content-ukrainian">Ваш номер телефону:</label>
-                            <label for="inputPhone" class="form-label content-american">Your phone number:</label>
+                            <label for="inputPhone" class="form-label" data-i18n-key="expeditions.sidebar.form.phone"></label>
                             <input type="text" class="form-control" id="inputPhone">
                         </div>
                         <div class="mb-3">
-                            <label for="InputEmail" class="form-label content-ukrainian">Ваш email:</label>
-                            <label for="InputEmail" class="form-label content-american">Your email:</label>
+                            <label for="InputEmail" class="form-label" data-i18n-key="expeditions.sidebar.form.email"></label>
                             <input type="email" class="form-control" id="InputEmail">
                         </div>
 
                         <button id="formBtn" class="btn btn-primary">
-                            <span class="content-ukrainian">Відправити повідомлення</span>
-                            <span class="content-american">Send message</span>
+                            <span data-i18n-key="expeditions.sidebar.form.submit"></span>
                         </button>
                     </div>
                 </div>
                 <div
                     class="card p-4 mt-4 shadow bg-body rounded service-sidebar2-image d-flex justify-content-center align-items-center">
-                    <h3 class="text-white content-ukrainian">Контакти</h3>
-                    <h3 class="text-white content-american">Contacts</h3>
+                    <h3 class="text-white" data-i18n-key="expeditions.sidebar.contacts.title"></h3>
 
-                    <i class="color-white fas fa-map-marker-alt content-ukrainian">&nbsp;&nbsp;&nbsp;Україна, Київ</i>
-                    <i class="color-white fas fa-map-marker-alt content-american">&nbsp;&nbsp;&nbsp;Ukraine, Kyiv</i>
+                    <i class="color-white fas fa-map-marker-alt">&nbsp;&nbsp;&nbsp;<span data-i18n-key="expeditions.sidebar.contacts.location"></span></i>
 
-                    <i class="color-white fas content-ukrainian">вул. Радищева, 3</i>
-                    <i class="color-white fas content-american">street Radishcheva, 3</i>
+                    <i class="color-white fas"><span data-i18n-key="expeditions.sidebar.contacts.street"></span></i>
 
-                    <i class="color-white fas content-ukrainian">офіс Б-306, а/с 25</i>
-                    <i class="color-white fas content-american">office B-306, a / s 25</i>
+                    <i class="color-white fas"><span data-i18n-key="expeditions.sidebar.contacts.office"></span></i>
 
 
                     <i class="color-white fas fa-phone-alt"><span
@@ -175,49 +145,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h2 class="text-center content-ukrainian mb-4">Про надану послугу</h2>
-                            <h2 class="text-center content-american mb-4">About the service provided
-                            </h2>
+                            <h2 class="text-center mb-4" data-i18n-key="expeditions.content.title"></h2>
                             <div>
                                 <div class="customs-clearance-2"></div>
                             </div>
 
                             <ul class="mt-3 service__font__size">
-                                <li class="mt-2 ">
-                                    <span class="content-ukrainian">
-                                        Міжнародні експедиторські послуги на високому професійному рівні надає компанія
-                                        AS-TRANS, Київ. За 20 років роботи на ринку України ми розробили систему, за
-                                        якої перевезення різних вантажів вимагає від наших клієнтів мінімум зусиль, при
-                                        цьому дає максимальний результат.
-                                    </span>
-
-                                    <span class="content-american">
-                                        International freight-forwarding services at a high professional level are
-                                        provided by AS-TRANS, Kyiv. For more than 20 years of work in Ukraine we have
-                                        developed a system, in which the transportation of various goods requires a
-                                        minimum of effort from our customers, while giving the maximum result.
-                                    </span>
-
-                                </li>
-                                <li class="mt-2">
-                                    <span class="content-ukrainian">
-                                        Компанія AS-TRANS, Київ, пропонує своїм клієнтам повний комплекс робіт з
-                                        оформлення, супроводу та доставки різних видів вантажів.
-                                    </span>
-                                    <span class="content-american">
-                                        AS-TRANS Company, Kyiv, offers the clients a full range of services for
-                                        registration, delivery and transport escort of various types of cargo.
-                                    </span>
-                                </li>
-                                <li class="mt-2">
-                                    <span class="content-ukrainian">
-                                        Транспортно-експедиторські послуги, як правило, включають такі етапи:
-                                    </span>
-                                    <span class="content-american">
-                                        Freight forwarding services, as a rule, include the following steps:
-                                    </span>
-
-                                </li>
+                                <li class="mt-2" data-i18n-key="expeditions.content.paragraph1"></li>
+                                <li class="mt-2" data-i18n-key="expeditions.content.paragraph2"></li>
+                                <li class="mt-2" data-i18n-key="expeditions.content.paragraph3"></li>
                             </ul>
 
 
@@ -226,239 +162,66 @@
                                     <div
                                         class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
                                         <img class="advantage-icon1" src="../images/advantage1.webp" alt="">
-                                        <div class="advantage-text content-ukrainian">
-                                            Розробку оптимального маршруту з урахуванням побажань клієнта та специфіки
-                                            вантажу, що перевозиться, а також підбір транспорту
-                                        </div>
-                                        <div class="advantage-text content-american">
-                                            Deciding on the best route, taking into account the client’s preferences and
-                                            the specifics of the transported cargo, as well as the selection of
-                                            transport
-                                        </div>
+                                        <div class="advantage-text" data-i18n-key="expeditions.content.services.service1"></div>
                                     </div>
                                     <div
                                         class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
                                         <img class="advantage-icon1" src="../images/advantage2.png" alt="">
-                                        <div class="advantage-text content-ukrainian">
-                                            Оформлення необхідних супровідних документів
-                                        </div>
-                                        <div class="advantage-text content-american">
-                                            Preparation of necessary accompanying documents
-                                        </div>
+                                        <div class="advantage-text" data-i18n-key="expeditions.content.services.service2"></div>
                                     </div>
                                     <div
                                         class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
                                         <img class="advantage-icon1" src="../images/advantage3.png" alt="">
-                                        <div class="advantage-text content-ukrainian">
-                                            Страхування вантажу
-                                        </div>
-                                        <div class="advantage-text content-american">
-                                            Cargo insurance
-                                        </div>
+                                        <div class="advantage-text" data-i18n-key="expeditions.content.services.service3"></div>
                                     </div>
                                 </div>
                                 <div class="row text-center advantage-row-2">
                                     <div
                                         class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
                                         <img class="advantage-icon1" src="../images/advantage4.png" alt="">
-                                        <div class="advantage-text content-ukrainian">
-                                            При необхідності – упаковку та маркування, а також завантаження та
-                                            розвантаження товарів
-                                        </div>
-                                        <div class="advantage-text content-american">
-                                            Packaging and labeling, as well as loading and unloading of goods
-                                        </div>
+                                        <div class="advantage-text" data-i18n-key="expeditions.content.services.service4"></div>
                                     </div>
                                     <div
                                         class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
                                         <img class="advantage-icon1" src="../images/advantage6.png" alt="">
-                                        <div class="advantage-text content-ukrainian">
-                                            Контроль за збереженням вантажу та його постійне відстеження по всьому шляху
-                                            прямування
-                                        </div>
-                                        <div class="advantage-text content-american">
-                                            Storage and processing of goods in a customs warehouse in Kyiv
-                                        </div>
+                                        <div class="advantage-text" data-i18n-key="expeditions.content.services.service5"></div>
                                     </div>
                                 </div>
                             </div>
 
 
                             <div class="d-flex flex-column align-items-start justify-content-start service__font__size">
-                                <p class="content-ukrainian">
-                                    Серед переваг нашої компанії варто відзначити оперативність реагування на запити
-                                    клієнтів, точну оцінку та прогнозування розвитку ситуації для вибору найкращого
-                                    рішення. Крім того, за роки роботи ми налагодили співпрацю із найбільшими
-                                    міжнародними операторами.
-                                </p>
-                                <p class="content-american">
-                                    Among the advantages of our company, one can figure out the prompt response to
-                                    customer requests, accurate assessment and forecast of the situation development in
-                                    order to select the best solution. In addition, over the years of work, we have
-                                    established cooperation with the largest world operators.
-                                </p>
-
-
-                                <p class="content-ukrainian">
-                                    Замовивши послуги міжнародного експедитора в AS-TRANS, Київ, Ви можете бути
-                                    впевнені, що доставка вантажу буде здійснена точно в строк, з дотриманням усіх
-                                    необхідних правил та норм.
-                                </p>
-                                <p class="content-american">
-                                    By ordering the services of an international freight forwarder in AS-TRANS, Kyiv,
-                                    you can be sure that the delivery of the goods will be carried out on time, in
-                                    compliance with all necessary rules and regulations.
-                                </p>
-
-
-                                <p class="content-ukrainian">
-                                    Щоб отримати більш детальну консультацію, розрахувати вартість експедиторських
-                                    послуг або поставити запитання, що цікавлять – зателефонуйте нам за номером,
-                                    вказаним на сайті.
-                                </p>
-                                <p class="content-american">
-                                    To get more detailed information, calculate the cost of forwarding services or ask
-                                    any questions – call us at the number listed on the site.
-                                </p>
+                                <p data-i18n-key="expeditions.content.advantages.paragraph1"></p>
+                                <p data-i18n-key="expeditions.content.advantages.paragraph2"></p>
+                                <p data-i18n-key="expeditions.content.advantages.paragraph3"></p>
                             </div>
 
                             <div class="d-flex flex-column align-items-start justify-content-start">
-                                <h3 class="text-blue d-flex justify-content-start align-items-start mt-3 mb-4">
-                                    <span class="content-ukrainian">
-                                        МОРСЬКІ ТРАНСПОРТНО-ЕКСПЕДИТОРСЬКІ ПОСЛУГИ
-                                    </span>
-                                    <span class="content-american">
-                                        SEA FREIGHT FORWARDING SERVICES
-                                    </span>
-                                </h3>
+                                <h3 class="text-blue d-flex justify-content-start align-items-start mt-3 mb-4" data-i18n-key="expeditions.content.sea.title"></h3>
                                 <div class="customs-clearance-1"></div>
-                                <p class="mt-3 content-ukrainian service__font__size">
-                                    Морські транспортно-експедиторські послуги користуються популярністю.
-                                    Вантажоперевезення водним транспортом є найбезпечнішими та економічними, дають
-                                    можливість транспортувати великогабаритні, сипкі товари, а також контейнери на
-                                    далекі відстані. У той же час через необхідність оформляти велику кількість
-                                    документів і проходити різні види контролю багато клієнтів переважно звертаються за
-                                    допомогою до професіоналів.
-                                </p>
-
-                                <p class="mt-3 content-american service__font__size">
-                                    Sea freight forwarding services are popular among the customers. Cargo
-                                    transportation by water transport is the safest and most economical. This makes it
-                                    possible to transport bulky, bulk goods, as well as containers over long distances.
-                                    At the same time, due to the need to draw up a number of documents and undergo
-                                    various types of control, a lot of clients prefer to turn to professionals for help.
-                                </p>
-
-                                <p class="content-ukrainian service__font__size">
-                                    В AS-TRANS Ви можете замовити морські експедиторські послуги під ключ та бути
-                                    впевнені, що вантаж буде доставлений до пункту призначення своєчасно та з
-                                    дотриманням усіх необхідних умов та правил.
-                                </p>
-
-                                <p class="content-american service__font__size">
-                                    In AS-TRANS, you can order turnkey sea freight forwarding services. By contacting us
-                                    you can be sure that the cargo will be delivered to its destination on time and in
-                                    compliance with all necessary conditions and rules.
-                                </p>
+                                <p class="mt-3 service__font__size" data-i18n-key="expeditions.content.sea.paragraph1"></p>
+                                <p class="mt-3 service__font__size" data-i18n-key="expeditions.content.sea.paragraph2"></p>
                             </div>
 
 
                             <div>
-                                <h3 class="text-blue d-flex justify-content-start align-items-start mt-3 mb-4">
-                                    <span class="content-ukrainian">
-                                        АВІАЦІЙНІ ЕКСПЕДИТОРСЬКІ ПОСЛУГИ
-                                    </span>
-                                    <span class="content-american">
-                                        AIR FORWARDING SERVICES
-                                    </span>
-                                </h3>
+                                <h3 class="text-blue d-flex justify-content-start align-items-start mt-3 mb-4" data-i18n-key="expeditions.content.air.title"></h3>
 
                                 <div class="customs-clearance-3"></div>
-                                <p class="mt-2 content-ukrainian service__font__size">
-                                    Авіаційні експедиторські послуги також користуються попитом на сьогоднішній день.
-                                    Доставка вантажів літаком має незаперечну перевагу в порівнянні з іншими – це
-                                    швидкість та зручність. У той же час авіадоставка та експедиторські послуги мають
-                                    свої особливості, пов’язані як безпосередньо з транспортуванням вантажів, так і
-                                    упаковкою, маркуванням, заповненням необхідної документації.
-                                </p>
-
-                                <p class="mt-2 content-american service__font__size">
-                                    Aviation forwarding services are also in demand today. Delivery of goods by air has
-                                    an undeniable advantage over the rest – it’s speed and convenience. At the same
-                                    time, air delivery and forwarding services have their own peculiarities, related
-                                    both directly to the transportation of goods, and packaging, labeling, filling out
-                                    the necessary documentation.
-                                </p>
-
-                                <p class="mt-2 content-ukrainian service__font__size">
-                                    Звертаючись до професіоналів AS-TRANS, Ви можете бути впевнені як у збереженні
-                                    вантажів і дотриманні умов доставки, так і всіх дозвільних та інших документів.
-                                </p>
-
-                                <p class="mt-2 content-american service__font__size">
-                                    Turning to AS-TRANS professionals, you can be sure both in the safety of goods and
-                                    compliance with the terms of delivery, as well as in the availability of all permits
-                                    and other documents.
-                                </p>
+                                <p class="mt-2 service__font__size" data-i18n-key="expeditions.content.air.paragraph1"></p>
+                                <p class="mt-2 service__font__size" data-i18n-key="expeditions.content.air.paragraph2"></p>
                             </div>
 
 
 
 
                             <div>
-                                <h3 class="text-blue d-flex justify-content-start align-items-start mt-3 mb-4">
-                                    <span class="content-ukrainian">
-                                        ЦІНА ЕКСПЕДИТОРСЬКИХ ПОСЛУГ
-                                    </span>
-                                    <span class="content-american">
-                                        THE COST OF FORWARDING SERVICES
-                                    </span>
-                                </h3>
+                                <h3 class="text-blue d-flex justify-content-start align-items-start mt-3 mb-4" data-i18n-key="expeditions.content.cost.title"></h3>
 
                                 <div class="customs-clearance-4"></div>
-                                <p class="mt-2 content-ukrainian service__font__size">
-                                    Ціна експедиторських послуг може відрізнятися залежно від особливостей
-                                    вантажоперевезень. Вона залежить від використаного транспорту, специфіки вантажу та
-                                    багатьох інших факторів. Вартість всього комплексу робіт розраховується
-                                    індивідуально кожному за клієнта.
-                                </p>
-
-                                <p class="mt-2 content-american service__font__size">
-                                    The price of forwarding services can vary greatly depending on the characteristics
-                                    of cargo transportation. It depends on the transport used, the specifics of the
-                                    cargo and many other factors. The cost of the entire complex of works is calculated
-                                    individually for each client.
-                                </p>
-
-
-                                <p class="mt-2 content-ukrainian service__font__size">
-                                    Варто зазначити, що компанія AS-TRANS має штат висококваліфікованих співробітників,
-                                    власний автопарк, а також тривалий час співпрацює з найбільшими міжнародними
-                                    операторами автомобільних, авіа-, залізничних та морських перевезень. Таким чином,
-                                    ми можемо запропонувати замовникам з України, Європи та Азії найвигідніші ціни на
-                                    якісні транспортно-експедиторські послуги.
-                                </p>
-
-                                <p class="mt-2 content-american service__font__size">
-                                    It should be noted that AS-TRANS has a staff of highly qualified employees, its own
-                                    fleet of vehicles, and has been cooperating for a long time with the largest
-                                    international operators of road, air, rail and sea transportation. Thus, we can
-                                    offer customers from Ukraine, Europe and Asia the most favorable prices for
-                                    high-quality freight-forwarding services.
-                                </p>
-
-
-                                <p class="mt-2 content-ukrainian service__font__size">
-                                    Якщо Ви хочете уточнити деталі процесу, скористатися послугами експедитора або
-                                    поставити уточнюючі питання – зв’яжіться з нами та отримайте компетентні та докладні
-                                    відповіді!
-                                </p>
-
-                                <p class="mt-2 content-american service__font__size">
-                                    If you want to clarify the details of the process, order the services of a freight
-                                    forwarder or ask any questions you are interested in – contact us and get competent
-                                    and detailed answers!
-                                </p>
+                                <p class="mt-2 service__font__size" data-i18n-key="expeditions.content.cost.paragraph1"></p>
+                                <p class="mt-2 service__font__size" data-i18n-key="expeditions.content.cost.paragraph2"></p>
+                                <p class="mt-2 service__font__size" data-i18n-key="expeditions.content.cost.paragraph3"></p>
                             </div>
                         </div>
                     </div>
@@ -481,6 +244,7 @@
     <script src="../scripts/utils/service-worker-register.js" defer></script>
     
     <!-- Module scripts -->
+    <script type="module" src="../scripts/i18n/i18n-manager.js" defer></script>
     <script type="module" src="../scripts/utils/header-language-handler.js" defer></script>
     <script type="module" src="../scripts/email-notifications/email-form-handler.js" defer></script>
     
@@ -491,6 +255,14 @@
     <script src="../scripts/page-setup.js" defer></script>
     <script type="module" src="../scripts/expeditions.js" defer></script>
     <script type="module" src="../scripts/page-setup/expeditions-page-setup.js" defer></script>
+    
+    <!-- Initialize i18n system -->
+    <script type="module">
+        import { initI18n } from '../scripts/i18n/i18n-manager.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initI18n();
+        });
+    </script>
 </body>
 
 </html>
