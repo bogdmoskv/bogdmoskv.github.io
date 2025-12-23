@@ -3,6 +3,11 @@
  * Использует оптимизированную загрузку с кэшированием и общей логикой переключения языков
  */
 
+/**
+ * Импорт централизованной конфигурации
+ */
+import { languageConfig } from '../core/config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const placeholder = document.querySelector('#contact-widget');
 
@@ -21,11 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-/**
- * Импорт централизованной конфигурации
- */
-import { languageConfig } from '../core/config.js';
 
     // Callback после загрузки компонента
     function initContactWidget(placeholderElement, html) {
